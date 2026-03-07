@@ -2,47 +2,62 @@
   min-height: 100svh;
   display: flex;
   align-items: center;
+  padding-top: 120px;
 }
 
 .inner {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: var(--space-xl);
   align-items: center;
 }
 
 .copy {
-  max-width: 520px;
+  max-width: 620px;
+}
+
+.eyebrow {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-subtle);
 }
 
 .title {
-  margin: 0;
-  font-size: clamp(40px, 8vw, var(--font-size-2xl));
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-h1);
   line-height: 0.95;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 .description {
   margin-top: var(--space-md);
+  max-width: 36ch;
+  font-size: var(--font-size-sm);
+  line-height: 1.8;
   color: var(--color-text-subtle);
 }
 
 .visual {
-  min-height: 420px;
+  min-height: 560px;
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   border-radius: var(--radius-md);
   display: grid;
   place-items: center;
   color: var(--color-text-subtle);
+  box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 900px) {
+  .root {
+    padding-top: 140px;
+    min-height: auto;
+  }
+
   .inner {
     grid-template-columns: 1fr;
   }
 
   .visual {
-    min-height: 280px;
+    min-height: 320px;
   }
 }

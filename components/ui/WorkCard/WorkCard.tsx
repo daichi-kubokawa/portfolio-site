@@ -10,7 +10,7 @@ export default function WorkCard({ work }: Props) {
   return (
     <article className={styles.root}>
       <Link href={`/works/${work.slug}`} className={styles.link}>
-        <div className={styles.thumbnail}>
+        <div className={styles.thumbnail} aria-hidden="true">
           <span className={styles.thumbnailLabel}>{work.title}</span>
         </div>
 

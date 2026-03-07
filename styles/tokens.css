@@ -8,14 +8,20 @@
 
   --font-sans: "Helvetica Neue", Arial, sans-serif;
 
+  --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-md: 16px;
   --font-size-lg: 20px;
-  --font-size-xl: 32px;
-  --font-size-2xl: 56px;
+  --font-size-xl: 28px;
 
-  --line-height-base: 1.6;
+  --font-size-h1: clamp(40px, 5vw, 72px);
+  --font-size-h2: clamp(32px, 4vw, 56px);
+  --font-size-h3: clamp(24px, 3vw, 32px);
+
   --line-height-tight: 1.2;
+  --line-height-base: 1.7;
+
+  --letter-spacing-wide: 0.05em;
 
   --space-xs: 8px;
   --space-sm: 16px;
@@ -30,6 +36,6 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
 
-  --container-width: 1120px;
+  --container-width: 1440px;
   --transition-base: 0.3s ease;
 }

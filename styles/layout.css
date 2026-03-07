@@ -1,8 +1,11 @@
 .container {
-  width: min(var(--container-width), calc(100% - 2rem));
+  width: min(var(--container-width), calc(100% - 10rem));
   margin-inline: auto;
 }
-
+.containerHeader {
+  width: min(var(--container-width), calc(100% - 3rem));
+  margin-inline: auto;
+}
 .section {
-  padding-block: var(--space-xl);
+  padding: var(--space-xl) 0;
 }

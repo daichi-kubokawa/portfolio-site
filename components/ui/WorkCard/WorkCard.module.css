@@ -29,7 +29,7 @@
 
 .thumbnailLabel {
   font-size: var(--font-size-sm);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 .body {
@@ -37,19 +37,20 @@
 }
 
 .category {
-  margin: 0;
   font-size: var(--font-size-sm);
   color: var(--color-text-subtle);
 }
 
 .title {
-  margin: var(--space-xs) 0 0;
+  margin-top: var(--space-xs);
   font-size: var(--font-size-lg);
   line-height: var(--line-height-tight);
 }
 
 .description {
-  margin: var(--space-sm) 0 0;
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
   color: var(--color-text-subtle);
 }
 
@@ -57,4 +58,5 @@
   display: inline-block;
   margin-top: var(--space-md);
   font-size: var(--font-size-sm);
+  color: var(--color-text);
 }

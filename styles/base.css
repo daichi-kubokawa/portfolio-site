@@ -17,6 +17,25 @@ body {
   line-height: var(--line-height-base);
 }
 
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-tight);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-tight);
+}
+
+p {
+  margin: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -38,4 +57,19 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+section {
+  display: block;
+}
+
+strong {
+  font-weight: 600;
 }

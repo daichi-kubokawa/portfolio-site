@@ -1,5 +1,5 @@
 .root {
-  background: var(--color-bg);
+  margin-top: var(--space-2xl);
 }
 
 .heading {
@@ -7,16 +7,15 @@
 }
 
 .eyebrow {
-  margin: 0;
   font-size: var(--font-size-sm);
   color: var(--color-text-subtle);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
 }
 
 .title {
-  margin: var(--space-xs) 0 0;
-  font-size: var(--font-size-xl);
+  margin-top: var(--space-xs);
+  font-size: var(--font-size-h2);
   line-height: var(--line-height-tight);
 }
 

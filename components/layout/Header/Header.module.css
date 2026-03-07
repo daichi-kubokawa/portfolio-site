@@ -1,0 +1,107 @@
+.root {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  padding-top: var(--space-sm);
+  background: rgba(245, 244, 240, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.link {
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+  transition: color var(--transition-base);
+}
+
+.link:hover {
+  color: var(--color-text-subtle);
+}
+
+.menuButton,
+.closeButton {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-text);
+  display: none;
+  place-items: center;
+}
+
+.menuButton :global(.material-symbols-outlined),
+.closeButton :global(.material-symbols-outlined) {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--color-bg);
+}
+
+.overlayInner {
+  position: relative;
+  width: min(var(--container-width), calc(100% - 3rem));
+  min-height: 100svh;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+}
+
+.closeButton {
+  position: absolute;
+  top: var(--space-sm);
+  right: 0;
+  display: grid;
+}
+
+.modalNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.modalLink {
+  font-size: clamp(32px, 6vw, 56px);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  transition: color var(--transition-base);
+}
+
+.modalLink:hover {
+  color: var(--color-text-subtle);
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+
+  .menuButton {
+    display: grid;
+  }
+}
