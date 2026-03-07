@@ -1,22 +1,8 @@
-// app/layout.tsx
 import "./globals.css";
-import type { Metadata } from "next";
-import { Inter, Noto_Sans_JP } from "next/font/google";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-en",
-  display: "swap",
-});
-const noto = Noto_Sans_JP({
-  weight: ["400", "500", "700"], // 使う太さを列挙
-  variable: "--font-jp",
-  display: "swap",
-});
-
-export const metadata: Metadata = {
-  title: "my-app",
-  description: "portfolio",
+export const metadata = {
+  title: "Portfolio Site",
+  description: "Daichi Kubokawa Portfolio",
 };
 
 export default function RootLayout({
@@ -26,9 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={`${inter.variable} ${noto.variable} antialiased`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
