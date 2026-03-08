@@ -97,6 +97,23 @@
   color: var(--color-text-subtle);
 }
 
+.result {
+  margin-top: var(--space-md);
+  max-width: 760px;
+}
+
+.resultLabel {
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.resultText {
+  margin-top: 4px;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+}
 @media (max-width: 900px) {
   .meta {
     grid-template-columns: 1fr;

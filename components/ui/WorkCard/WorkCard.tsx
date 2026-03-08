@@ -25,9 +25,13 @@ export default function WorkCard({ work }: Props) {
         </div>
 
         <div className={styles.body}>
+          <p className={styles.category}>{work.category}</p>
+
           <h3 className={styles.title}>{work.title}</h3>
 
           <p className={styles.description}>{work.description}</p>
+
+          {work.result && <p className={styles.result}>{work.result}</p>}
 
           <Link href={`/works/${work.slug}`} className={styles.cta}>
             ケーススタディを読む

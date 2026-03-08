@@ -77,6 +77,21 @@
   background: rgba(255, 255, 255, 0.35);
 }
 
+.result {
+  margin-top: var(--space-sm);
+  max-width: 30ch;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-text-subtle);
+}
+
+.category {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-subtle);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
 @media (max-width: 900px) {
   .card {
     grid-template-columns: 1fr;

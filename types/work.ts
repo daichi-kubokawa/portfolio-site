@@ -23,6 +23,7 @@ export type Work = {
   role: string;
   period: string;
   tools: string[];
+  result?: string;
 
   content: WorkContentBlock[];
 };

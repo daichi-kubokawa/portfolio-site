@@ -6,7 +6,8 @@
   --color-border: #e5e5e5;
   --color-accent: #c5b999;
 
-  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-inter), var(--font-noto-sans-jp), sans-serif;
+  --font-en: var(--font-inter), Arial, sans-serif;
 
   --font-size-xs: 12px;
   --font-size-sm: 14px;

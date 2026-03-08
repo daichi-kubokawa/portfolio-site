@@ -90,6 +90,13 @@ export default async function WorkDetailPage({ params }: Props) {
             </div>
           </div>
 
+          {work.result && (
+            <div className={styles.result}>
+              <span className={styles.resultLabel}>Result</span>
+              <p className={styles.resultText}>{work.result}</p>
+            </div>
+          )}
+
           {work.content.map((block, index) => {
             if (block.type === "text") {
               return (

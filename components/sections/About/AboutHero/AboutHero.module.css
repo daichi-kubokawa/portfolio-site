@@ -9,11 +9,12 @@
 .eyebrow {
   font-size: var(--font-size-sm);
   color: var(--color-text-subtle);
+  font-family: var(--font-en);
 }
 
 .title {
-  margin-top: var(--space-sm);
-  font-size: var(--font-size-h1);
+  margin: var(--space-sm) 0 0;
+  font-size: clamp(40px, 5vw, 72px);
   line-height: 1.05;
   letter-spacing: 0.02em;
 }
@@ -51,6 +52,7 @@
   font-size: var(--font-size-sm);
   line-height: 1.8;
   color: var(--color-text-subtle);
+  font-family: var(--font-sans);
 }
 
 @media (max-width: 900px) {

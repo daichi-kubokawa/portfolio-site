@@ -2,18 +2,16 @@ import "./globals.css";
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
 import type { Metadata } from "next";
+import { inter, notoSansJp } from "@/app/fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.daichikubokawa.com"),
-
   title: {
     default: "Daichi Kubokawa | UI/UX Designer",
     template: "%s | Daichi Kubokawa",
   },
-
   description:
     "UI/UXデザイナー窪川大地のポートフォリオサイト。サービスデザイン、UI/UXデザイン、Webデザインの制作事例を掲載しています。",
-
   openGraph: {
     title: "Daichi Kubokawa | UI/UX Designer",
     description:
@@ -31,7 +29,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Daichi Kubokawa | UI/UX Designer",
@@ -54,7 +51,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
         />
       </head>
-      <body>
+      <body className={`${notoSansJp.variable} ${inter.variable}`}>
         <Header />
         {children}
         <Footer />
