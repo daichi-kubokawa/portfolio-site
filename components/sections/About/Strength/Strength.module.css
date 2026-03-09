@@ -9,17 +9,18 @@
 
 .headingArea {
   display: flex;
-  align-items: baseline;
-  gap: var(--space-sm);
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.eyebrow {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-subtle);
 }
 
 .title {
   font-size: var(--font-size-h2);
-}
-
-.caption {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-subtle);
+  line-height: var(--line-height-tight);
 }
 
 .list {
@@ -42,7 +43,7 @@
 
 .text {
   font-size: var(--font-size-sm);
-  line-height: var(--line-height-base);
+  line-height: 1.8;
   color: var(--color-text-subtle);
 }
 

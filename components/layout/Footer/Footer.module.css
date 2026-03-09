@@ -31,26 +31,6 @@
   color: var(--color-text);
 }
 
-.meta {
-  margin-top: var(--space-lg);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-md);
-  max-width: 760px;
-}
-
-.metaItem {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.metaLabel {
-  font-size: var(--font-size-xs);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-text-subtle);
-}
 @media (max-width: 640px) {
   .inner {
     flex-direction: column;

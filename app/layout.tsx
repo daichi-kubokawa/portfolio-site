@@ -2,7 +2,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
 import type { Metadata } from "next";
-import { inter, notoSansJp } from "@/app/fonts";
+import { manrope, notoSansJp } from "@/app/fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.daichikubokawa.com"),
@@ -44,14 +44,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={`${manrope.variable} ${notoSansJp.variable}`}>
       <head>
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
         />
       </head>
-      <body className={`${notoSansJp.variable} ${inter.variable}`}>
+      <body>
         <Header />
         {children}
         <Footer />

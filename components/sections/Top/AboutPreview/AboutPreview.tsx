@@ -7,8 +7,8 @@ export default function AboutPreview() {
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.headingArea}>
-            <p className={styles.eyebrow}>About</p>
-            <h2 className={styles.title}>A little about me</h2>
+            <p className={`uppercaseLabel ${styles.eyebrow}`}>About</p>
+            <h2 className={`fontEn ${styles.title}`}>A little about me</h2>
           </div>
 
           <div className={styles.content}>
@@ -18,7 +18,7 @@ export default function AboutPreview() {
               情報を整理し、伝わる形に落とし込むことを意識して制作しています。
             </p>
 
-            <Link href="/about" className={styles.link}>
+            <Link href="/about" className={`fontEn ${styles.link}`}>
               View About
             </Link>
           </div>

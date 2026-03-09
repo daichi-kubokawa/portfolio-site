@@ -9,7 +9,6 @@
 .eyebrow {
   font-size: var(--font-size-sm);
   color: var(--color-text-subtle);
-  font-family: var(--font-en);
 }
 
 .title {
@@ -45,6 +44,7 @@
 .lead {
   font-size: var(--font-size-lg);
   line-height: 1.6;
+  color: var(--color-text);
 }
 
 .text {
@@ -52,7 +52,6 @@
   font-size: var(--font-size-sm);
   line-height: 1.8;
   color: var(--color-text-subtle);
-  font-family: var(--font-sans);
 }
 
 @media (max-width: 900px) {

@@ -13,3 +13,17 @@
   border: 0;
   white-space: nowrap;
 }
+
+.fontSans {
+  font-family: var(--font-sans);
+}
+
+.fontEn {
+  font-family: var(--font-en);
+}
+
+.uppercaseLabel {
+  font-family: var(--font-en);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

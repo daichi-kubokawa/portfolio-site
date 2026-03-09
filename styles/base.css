@@ -10,11 +10,42 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
   font-size: var(--font-size-md);
   line-height: var(--line-height-base);
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(0, 0, 0, 0.025) 0.8px,
+      transparent 0.8px
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(0, 0, 0, 0.02) 0.7px,
+      transparent 0.7px
+    ),
+    radial-gradient(
+      circle at 40% 70%,
+      rgba(0, 0, 0, 0.018) 0.9px,
+      transparent 0.9px
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(0, 0, 0, 0.02) 0.8px,
+      transparent 0.8px
+    );
+  background-size:
+    180px 180px,
+    220px 220px,
+    200px 200px,
+    240px 240px;
+  background-position:
+    0 0,
+    40px 60px,
+    100px 20px,
+    140px 120px;
 }
 
 h1 {
@@ -58,6 +89,7 @@ button {
   border: none;
   background: none;
 }
+
 h1,
 h2,
 h3 {

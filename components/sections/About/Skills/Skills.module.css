@@ -9,24 +9,24 @@
 
 .headingArea {
   display: flex;
-  align-items: baseline;
-  gap: var(--space-sm);
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.eyebrow {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-subtle);
 }
 
 .title {
   font-size: var(--font-size-h2);
-}
-
-.caption {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-subtle);
+  line-height: var(--line-height-tight);
 }
 
 .list {
   margin-top: var(--space-lg);
   padding: 0;
   list-style: none;
-
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -38,4 +38,10 @@
   border: 1px solid var(--color-border);
   border-radius: 999px;
   background: var(--color-bg);
+}
+
+@media (max-width: 900px) {
+  .list {
+    gap: 10px;
+  }
 }

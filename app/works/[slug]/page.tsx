@@ -1,9 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { works } from "@/data/works";
 import styles from "./page.module.css";
-import type { Metadata } from "next";
+import WorkHero from "@/components/sections/WorkDetail/WorkHero/WorkHero";
+import WorkMeta from "@/components/sections/WorkDetail/WorkMeta/WorkMeta";
+import WorkContent from "@/components/sections/WorkDetail/WorkContent/WorkContent";
+import NextProject from "@/components/sections/WorkDetail/NextProject/NextProject";
 
 type Props = {
   params: Promise<{
@@ -54,101 +56,12 @@ export default async function WorkDetailPage({ params }: Props) {
     <main className={styles.root}>
       <div className="container">
         <article className={styles.article}>
-          <header className={styles.header}>
-            <p className={styles.category}>{work.category}</p>
-            <h1 className={styles.title}>{work.title}</h1>
-            <p className={styles.description}>{work.description}</p>
-          </header>
-
-          <div className={styles.thumbnail}>
-            {work.thumbnail ? (
-              <Image
-                src={work.thumbnail}
-                alt={work.title}
-                fill
-                className={styles.image}
-              />
-            ) : (
-              <span>{work.title}</span>
-            )}
-          </div>
-
-          <div className={styles.meta}>
-            <div className={styles.metaItem}>
-              <span className={styles.metaLabel}>Role</span>
-              <span>{work.role}</span>
-            </div>
-
-            <div className={styles.metaItem}>
-              <span className={styles.metaLabel}>Period</span>
-              <span>{work.period}</span>
-            </div>
-
-            <div className={styles.metaItem}>
-              <span className={styles.metaLabel}>Tools</span>
-              <span>{work.tools.join(", ")}</span>
-            </div>
-          </div>
-
-          {work.result && (
-            <div className={styles.result}>
-              <span className={styles.resultLabel}>Result</span>
-              <p className={styles.resultText}>{work.result}</p>
-            </div>
-          )}
-
-          {work.content.map((block, index) => {
-            if (block.type === "text") {
-              return (
-                <section
-                  key={`${block.type}-${index}`}
-                  className={styles.section}
-                >
-                  <h2 className={styles.heading}>{block.title}</h2>
-                  <p className={styles.text}>{block.body}</p>
-                </section>
-              );
-            }
-
-            if (block.type === "image") {
-              return (
-                <figure
-                  key={`${block.type}-${index}`}
-                  className={styles.figure}
-                >
-                  <div className={styles.figureImageWrap}>
-                    <Image
-                      src={block.src}
-                      alt={block.alt}
-                      fill
-                      className={styles.figureImage}
-                    />
-                  </div>
-
-                  {block.caption && (
-                    <figcaption className={styles.caption}>
-                      {block.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              );
-            }
-
-            return null;
-          })}
+          <WorkHero work={work} />
+          <WorkMeta work={work} />
+          <WorkContent content={work.content} />
         </article>
 
-        <section className={styles.nextProject}>
-          <p className={styles.nextLabel}>Next Project</p>
-
-          <Link href={`/works/${nextWork.slug}`} className={styles.nextCard}>
-            <div className={styles.nextCardBody}>
-              <p className={styles.nextCategory}>{nextWork.category}</p>
-              <h2 className={styles.nextTitle}>{nextWork.title}</h2>
-              <span className={styles.nextLink}>View Project →</span>
-            </div>
-          </Link>
-        </section>
+        <NextProject work={nextWork} />
       </div>
     </main>
   );

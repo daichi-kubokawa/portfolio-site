@@ -41,17 +41,31 @@
   justify-content: center;
 }
 
+.category {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-subtle);
+}
+
 .title {
-  font-size: clamp(28px, 3vw, 40px);
-  line-height: 1.15;
+  margin-top: 6px;
+  font-size: clamp(32px, 3vw, 44px);
+  line-height: 1.1;
+}
+
+.result {
+  margin-top: var(--space-sm);
+  max-width: 30ch;
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+  color: var(--color-text);
 }
 
 .description {
   margin-top: var(--space-sm);
-  max-width: 24ch;
-  font-size: var(--font-size-md);
-  line-height: 1.7;
-  color: var(--color-text);
+  max-width: 30ch;
+  font-size: var(--font-size-sm);
+  line-height: 1.8;
+  color: var(--color-text-subtle);
 }
 
 .cta {
@@ -77,21 +91,6 @@
   background: rgba(255, 255, 255, 0.35);
 }
 
-.result {
-  margin-top: var(--space-sm);
-  max-width: 30ch;
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-base);
-  color: var(--color-text-subtle);
-}
-
-.category {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-subtle);
-  letter-spacing: var(--letter-spacing-wide);
-  text-transform: uppercase;
-}
-
 @media (max-width: 900px) {
   .card {
     grid-template-columns: 1fr;
@@ -102,8 +101,12 @@
     min-height: 220px;
   }
 
-  .description {
+  .title {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .description,
+  .result {
     max-width: none;
-    font-size: var(--font-size-sm);
   }
 }

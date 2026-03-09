@@ -21,8 +21,8 @@ export default function Strength() {
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.headingArea}>
-            <h2 className={styles.title}>Strength</h2>
-            <p className={styles.caption}>強み</p>
+            <p className={`uppercaseLabel ${styles.eyebrow}`}>Strength</p>
+            <h2 className={styles.title}>強み</h2>
           </div>
 
           <div className={styles.list}>

@@ -1,32 +1,58 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        handleClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <>
       <header className={styles.root}>
         <div className={`containerHeader ${styles.inner}`}>
-          <Link href="/" className={styles.logo} onClick={handleClose}>
+          <Link
+            href="/"
+            className={`fontEn ${styles.logo}`}
+            onClick={handleClose}
+          >
             Daichi Kubokawa
           </Link>
 
           <nav className={styles.nav} aria-label="Global navigation">
-            <Link href="/#works" className={styles.link}>
+            <Link href="/#works" className={`fontEn ${styles.link}`}>
               Works
             </Link>
 
-            <Link href="/about" className={styles.link}>
+            <Link href="/about" className={`fontEn ${styles.link}`}>
               About
             </Link>
 
-            <a href="mailto:yourmail@example.com" className={styles.link}>
+            <a
+              href="mailto:contact@daichikubokawa.com"
+              className={`fontEn ${styles.link}`}
+            >
               Contact
             </a>
           </nav>
@@ -34,7 +60,7 @@ export default function Header() {
           <button
             type="button"
             className={styles.menuButton}
-            onClick={() => setIsOpen(true)}
+            onClick={handleOpen}
             aria-label="Open menu"
             aria-expanded={isOpen}
             aria-controls="global-menu"
@@ -64,7 +90,7 @@ export default function Header() {
             <nav className={styles.modalNav} aria-label="Mobile navigation">
               <Link
                 href="/#works"
-                className={styles.modalLink}
+                className={`fontEn ${styles.modalLink}`}
                 onClick={handleClose}
               >
                 Works
@@ -72,15 +98,15 @@ export default function Header() {
 
               <Link
                 href="/about"
-                className={styles.modalLink}
+                className={`fontEn ${styles.modalLink}`}
                 onClick={handleClose}
               >
                 About
               </Link>
 
               <a
-                href="mailto:yourmail@example.com"
-                className={styles.modalLink}
+                href="mailto:contact@daichikubokawa.com"
+                className={`fontEn ${styles.modalLink}`}
                 onClick={handleClose}
               >
                 Contact

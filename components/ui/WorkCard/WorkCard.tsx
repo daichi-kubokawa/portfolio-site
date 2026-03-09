@@ -8,6 +8,8 @@ type Props = {
 };
 
 export default function WorkCard({ work }: Props) {
+  const titleFontClass = work.titleFont === "en" ? "fontEn" : "fontSans";
+
   return (
     <article className={styles.root}>
       <div className={styles.card}>
@@ -25,16 +27,16 @@ export default function WorkCard({ work }: Props) {
         </div>
 
         <div className={styles.body}>
-          <p className={styles.category}>{work.category}</p>
+          <p className={`uppercaseLabel ${styles.category}`}>{work.category}</p>
 
-          <h3 className={styles.title}>{work.title}</h3>
-
-          <p className={styles.description}>{work.description}</p>
+          <h3 className={`${titleFontClass} ${styles.title}`}>{work.title}</h3>
 
           {work.result && <p className={styles.result}>{work.result}</p>}
 
-          <Link href={`/works/${work.slug}`} className={styles.cta}>
-            ケーススタディを読む
+          <p className={styles.description}>{work.description}</p>
+
+          <Link href={`/works/${work.slug}`} className={`fontEn ${styles.cta}`}>
+            View Case Study
           </Link>
         </div>
       </div>

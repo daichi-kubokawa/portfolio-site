@@ -3,7 +3,8 @@ import { Work } from "@/types/work";
 export const works: Work[] = [
   {
     slug: "graduation-project",
-    title: "HIKETANE",
+    title: "ヒケタネ",
+    titleFont: "sans",
     category: "Service Design",
     description:
       "楽器挫折者の再挑戦を支えるリハビリアプリのコンセプトプロジェクト。",
@@ -56,6 +57,7 @@ export const works: Work[] = [
   {
     slug: "resonote",
     title: "RESONOTE",
+    titleFont: "en",
     category: "App Design",
     description:
       "共通の趣味や感性をきっかけに人とつながるSNSアプリのUIデザイン。",
@@ -97,6 +99,7 @@ export const works: Work[] = [
   {
     slug: "naterra",
     title: "Naterra",
+    titleFont: "en",
     category: "Web Design",
     description: "ブランドの世界観を伝えるECサイトのUIデザインと実装。",
     thumbnail: "/images/works/naterra.jpg",

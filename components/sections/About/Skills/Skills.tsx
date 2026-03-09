@@ -17,15 +17,20 @@ export default function Skills() {
   return (
     <section className={styles.root}>
       <div className="container">
-        <h2 className={styles.title}>Skills</h2>
+        <div className={styles.inner}>
+          <div className={styles.headingArea}>
+            <p className={`uppercaseLabel ${styles.eyebrow}`}>Skills</p>
+            <h2 className={styles.title}>できること</h2>
+          </div>
 
-        <ul className={styles.list}>
-          {skills.map((skill) => (
-            <li key={skill} className={styles.tag}>
-              {skill}
-            </li>
-          ))}
-        </ul>
+          <ul className={styles.list}>
+            {skills.map((skill) => (
+              <li key={skill} className={`fontEn ${styles.tag}`}>
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

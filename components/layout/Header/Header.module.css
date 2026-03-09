@@ -58,7 +58,8 @@
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: var(--color-bg);
+  background: rgba(245, 244, 240, 0.98);
+  backdrop-filter: blur(8px);
 }
 
 .overlayInner {

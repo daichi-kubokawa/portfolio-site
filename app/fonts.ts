@@ -1,8 +1,9 @@
-import { Inter, Noto_Sans_JP } from "next/font/google";
+import { Manrope, Noto_Sans_JP } from "next/font/google";
 
-export const inter = Inter({
+export const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-manrope",
   display: "swap",
 });
 

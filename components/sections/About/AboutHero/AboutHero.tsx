@@ -6,7 +6,7 @@ export default function AboutHero() {
     <section className={styles.root}>
       <div className="container">
         <div className={styles.heading}>
-          <p className={styles.eyebrow}>About me</p>
+          <p className={`uppercaseLabel ${styles.eyebrow}`}>About me</p>
           <h1 className={styles.title}>
             こんにちは。
             <br />
@@ -26,8 +26,12 @@ export default function AboutHero() {
 
           <div className={styles.textArea}>
             <p className={styles.lead}>
-              1990年生まれ。神奈川県出身。音楽活動、SEを経て、
-              現在はUI/UXデザインとフロントエンドを学んでいます。
+              複雑な情報を整理し、伝わる体験へ落とし込むことを得意としています。
+            </p>
+
+            <p className={styles.text}>
+              神奈川県出身。音楽活動やSEの経験を経て、現在はUI/UXデザインと
+              フロントエンドを学んでいます。
             </p>
 
             <p className={styles.text}>
@@ -42,8 +46,8 @@ export default function AboutHero() {
             </p>
 
             <p className={styles.text}>
-              UI/UXデザインとフロントエンドを行き来しながら、複雑な情報を整理し、
-              伝わる体験へ落とし込むことを得意としています。
+              UI/UXデザインとフロントエンドを行き来しながら、課題を整理し、
+              伝わる形に落とし込むことを意識して制作しています。
             </p>
           </div>
         </div>

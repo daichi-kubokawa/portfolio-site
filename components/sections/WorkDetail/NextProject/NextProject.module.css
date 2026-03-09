@@ -1,0 +1,41 @@
+.nextProject {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.nextLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-subtle);
+}
+
+.nextCard {
+  display: block;
+  margin-top: var(--space-md);
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.nextCardBody {
+  max-width: 760px;
+}
+
+.nextCategory {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-subtle);
+}
+
+.nextTitle {
+  margin-top: var(--space-xs);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-tight);
+}
+
+.nextLink {
+  display: inline-block;
+  margin-top: var(--space-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
