@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
 import type { Metadata } from "next";
 import { manrope, notoSansJp } from "@/app/fonts";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.daichikubokawa.com"),
@@ -43,15 +44,28 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const GA_MEASUREMENT_ID = "G-BG02MVLRP3";
+
   return (
     <html lang="ja" className={`${manrope.variable} ${notoSansJp.variable}`}>
       <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-        />
+        <link rel="stylesheet" href="https://fonts.googleapis.com" />
       </head>
       <body>
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com{GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+
         <Header />
         {children}
         <Footer />
