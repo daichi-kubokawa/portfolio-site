@@ -52,7 +52,6 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://fonts.googleapis.com" />
       </head>
       <body>
-        {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com{GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
