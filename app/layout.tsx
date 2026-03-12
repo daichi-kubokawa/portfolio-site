@@ -44,27 +44,32 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const GA_MEASUREMENT_ID = "G-BG02MVLRP3";
+  const GA_ID = "G-BG02MVLRP3";
 
   return (
     <html lang="ja" className={`${manrope.variable} ${notoSansJp.variable}`}>
       <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com" />
-      </head>
-      <body>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        />
+
+        {/* Google Analytics */}
         <Script
-          src={`https://www.googletagmanager.com{GA_MEASUREMENT_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
-          `}
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_ID}');
+        `}
         </Script>
+      </head>
 
+      <body>
         <Header />
         {children}
         <Footer />
