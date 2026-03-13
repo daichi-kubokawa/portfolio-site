@@ -1,19 +1,18 @@
 .root {
-  min-height: 100svh;
   display: flex;
   align-items: center;
-  padding-top: 120px;
+  padding-top: 200px;
+  padding-bottom: 100px;
 }
 
 .inner {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: var(--space-xl);
-  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .copy {
-  max-width: 620px;
+  max-width: 760px;
+  text-align: center;
 }
 
 .eyebrow {
@@ -30,92 +29,16 @@
 
 .description {
   margin-top: var(--space-md);
-  max-width: 36ch;
+  max-width: 32ch;
+  margin-inline: auto;
   font-size: var(--font-size-sm);
   line-height: 1.8;
   color: var(--color-text-subtle);
 }
 
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-  margin-top: var(--space-lg);
-}
-
-.primaryLink,
-.secondaryLink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 0 24px;
-  font-size: var(--font-size-sm);
-  transition:
-    color var(--transition-base),
-    border-color var(--transition-base),
-    background var(--transition-base);
-}
-
-.primaryLink {
-  border: 1px solid #aab28d;
-  color: #7d8564;
-  background: transparent;
-}
-
-.primaryLink:hover {
-  color: var(--color-text);
-  border-color: var(--color-text-subtle);
-  background: rgba(255, 255, 255, 0.35);
-}
-
-.secondaryLink {
-  color: var(--color-text-subtle);
-}
-
-.secondaryLink:hover {
-  color: var(--color-text);
-}
-
-.visual {
-  min-height: 560px;
-  border: 1px solid var(--color-border);
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  display: grid;
-  place-items: center;
-}
-
-.visualInner {
-  width: min(72%, 420px);
-  aspect-ratio: 4 / 5;
-  border: 1px solid rgba(17, 17, 17, 0.08);
-  background: rgba(255, 255, 255, 0.45);
-  display: grid;
-  place-items: center;
-}
-
-.visualLabel {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-subtle);
-}
-
 @media (max-width: 900px) {
   .root {
-    padding-top: 140px;
-    min-height: auto;
-  }
-
-  .inner {
-    grid-template-columns: 1fr;
-  }
-
-  .visual {
-    min-height: 320px;
-  }
-
-  .visualInner {
-    width: min(80%, 320px);
+    padding-top: 120px;
+    padding-bottom: 72px;
   }
 }

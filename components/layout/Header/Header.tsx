@@ -2,13 +2,38 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Header.module.css";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    handleClose();
+
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const handleWorksClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    handleClose();
+
+    if (pathname === "/") {
+      e.preventDefault();
+      const target = document.getElementById("works");
+
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
 
   useEffect(() => {
     if (!isOpen) return;
@@ -49,25 +74,33 @@ export default function Header() {
           <Link
             href="/"
             className={`fontEn ${styles.logo}`}
-            onClick={handleClose}
+            onClick={handleLogoClick}
           >
             DAICHI KUBOKAWA
           </Link>
 
           <nav className={styles.nav} aria-label="Global navigation">
-            <Link href="/#works" className={`fontEn ${styles.link}`}>
-              Works
+            <Link
+              href="/#works"
+              className={`fontEn ${styles.link}`}
+              onClick={handleWorksClick}
+            >
+              WORKS
             </Link>
 
-            <Link href="/about" className={`fontEn ${styles.link}`}>
-              About
+            <Link
+              href="/about"
+              className={`fontEn ${styles.link}`}
+              onClick={handleClose}
+            >
+              ABOUT
             </Link>
 
             <a
               href="mailto:contact@daichikubokawa.com"
               className={`fontEn ${styles.link}`}
             >
-              Contact
+              CONTACT
             </a>
           </nav>
 
@@ -83,62 +116,76 @@ export default function Header() {
           </button>
         </div>
       </header>
-
-      {isOpen && (
-        <div
-          className={styles.overlay}
-          id="global-menu"
-          role="dialog"
-          aria-modal="true"
-        >
-          <div className={`containerHeader ${styles.overlayHeader}`}>
-            <Link
-              href="/"
-              className={`fontEn ${styles.overlayLogo}`}
-              onClick={handleClose}
-            >
-              DAICHI KUBOKAWA
-            </Link>
-
-            <button
-              type="button"
-              className={styles.closeButton}
-              onClick={handleClose}
-              aria-label="Close menu"
-            >
-              <span className="material-symbols-outlined">close</span>
-            </button>
-          </div>
-
-          <div className={`containerHeader ${styles.overlayInner}`}>
-            <nav className={styles.modalNav} aria-label="Mobile navigation">
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className={styles.overlay}
+            id="global-menu"
+            role="dialog"
+            aria-modal="true"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.16, ease: "easeOut" }}
+          >
+            <div className={`containerHeader ${styles.overlayHeader}`}>
               <Link
-                href="/#works"
-                className={`fontEn ${styles.modalLink}`}
-                onClick={handleClose}
+                href="/"
+                className={`fontEn ${styles.overlayLogo}`}
+                onClick={handleLogoClick}
               >
-                Works
+                DAICHI KUBOKAWA
               </Link>
 
-              <Link
-                href="/about"
-                className={`fontEn ${styles.modalLink}`}
+              <button
+                type="button"
+                className={styles.closeButton}
                 onClick={handleClose}
+                aria-label="Close menu"
               >
-                About
-              </Link>
+                <span className="material-symbols-outlined">close</span>
+              </button>
+            </div>
 
-              <a
-                href="mailto:contact@daichikubokawa.com"
-                className={`fontEn ${styles.modalLink}`}
-                onClick={handleClose}
-              >
-                Contact
-              </a>
-            </nav>
-          </div>
-        </div>
-      )}
+            <motion.div
+              className={`containerHeader ${styles.overlayInner}`}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 6 }}
+              transition={{
+                duration: 0.18,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <nav className={styles.modalNav} aria-label="Mobile navigation">
+                <Link
+                  href="/#works"
+                  className={`fontEn ${styles.modalLink}`}
+                  onClick={handleWorksClick}
+                >
+                  Works
+                </Link>
+
+                <Link
+                  href="/about"
+                  className={`fontEn ${styles.modalLink}`}
+                  onClick={handleClose}
+                >
+                  About
+                </Link>
+
+                <a
+                  href="mailto:contact@daichikubokawa.com"
+                  className={`fontEn ${styles.modalLink}`}
+                  onClick={handleClose}
+                >
+                  Contact
+                </a>
+              </nav>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>{" "}
     </>
   );
 }

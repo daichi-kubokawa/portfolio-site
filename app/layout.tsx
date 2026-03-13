@@ -2,7 +2,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
 import type { Metadata } from "next";
-import { manrope, notoSansJp } from "@/app/fonts";
+import { inter, notoSansJp } from "@/app/fonts";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ export default function RootLayout({
   const GA_ID = "G-BG02MVLRP3";
 
   return (
-    <html lang="ja" className={`${manrope.variable} ${notoSansJp.variable}`}>
+    <html lang="ja" className={`${inter.variable} ${notoSansJp.variable}`}>
       <head>
         <link
           rel="stylesheet"

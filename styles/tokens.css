@@ -1,19 +1,23 @@
 :root {
-  --color-bg: #f5f4f0;
+  --color-bg: #f6f6f6;
   --color-surface: #ffffff;
-  --color-text: #222222;
-  --color-text-subtle: #999999;
+  --color-text: #333333;
+  --color-text-subtle: #888888;
+  /* 後で決める */
+  --color-text-label: #97ad84;
+  /* 後で決める */
   --color-border: #e5e5e5;
   --color-accent: #c5b999;
 
   --font-sans: var(--font-noto-sans-jp), system-ui, sans-serif;
-  --font-en: var(--font-manrope), system-ui, sans-serif;
+  --font-en: var(--font-inter), system-ui, sans-serif;
 
   --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-md: 16px;
   --font-size-lg: 20px;
   --font-size-xl: 28px;
+  --font-size-xxl: 32px;
 
   --font-size-h1: clamp(40px, 5vw, 72px);
   --font-size-h2: clamp(32px, 4vw, 56px);

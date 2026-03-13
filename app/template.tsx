@@ -9,7 +9,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
   return (
     <motion.main
       key={pathname}
-      initial={{ opacity: 0, y: 12 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
         delay: 0.3,

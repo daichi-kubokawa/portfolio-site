@@ -23,33 +23,32 @@
 }
 
 .title {
-  font-size: clamp(40px, 5vw, 72px);
+  font-size: 42px;
   line-height: 1.08;
   letter-spacing: 0.01em;
-}
-
-.intro {
-  max-width: 56ch;
-  font-size: var(--font-size-sm);
-  line-height: 1.9;
-  color: var(--color-text-subtle);
-  padding-top: 6px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 64px 48px;
+  gap: var(--space-lg) var(--space-lg);
   padding-left: var(--space-lg);
   padding-right: var(--space-lg);
 }
 
 .item {
   display: block;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.offsetA {
+  margin-top: 0;
 }
 
 .offsetB {
-  margin-top: 140px;
+  margin-top: 0;
 }
 
 .imageWrap {
@@ -58,6 +57,7 @@
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: #eceee8;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 }
 
 .image {
@@ -74,27 +74,37 @@
 }
 
 .meta {
-  margin-top: var(--space-sm);
+  padding: 1.5rem 1rem;
+  background: #ffffff;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
+.itemSub {
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+  line-height: 1.7;
+  color: var(--color-text-label);
 }
 
 .itemTitle {
-  font-size: clamp(22px, 2.2vw, 32px);
+  margin-top: var(--space-md);
+  font-size: var(--font-size-h3);
   line-height: 1.2;
   letter-spacing: 0.01em;
 }
 
 .itemDescription {
-  margin-top: 10px;
+  margin-top: var(--space-xs);
   font-size: var(--font-size-sm);
   line-height: 1.8;
   color: var(--color-text);
 }
 
-.itemSub {
-  margin-top: 6px;
-  font-size: var(--font-size-xs);
-  line-height: 1.7;
-  color: var(--color-text-subtle);
+@media (hover: hover) and (pointer: fine) {
+  .item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(17, 17, 17, 0.06);
+  }
 }
 
 @media (max-width: 1023px) {
@@ -111,11 +121,19 @@
   .grid {
     column-gap: 24px;
     row-gap: 56px;
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+
+  .offsetB {
+    margin-top: 0;
   }
 }
 
 @media (max-width: 767px) {
   .grid {
+    padding-left: 0;
+    padding-right: 0;
     grid-template-columns: 1fr;
   }
 

@@ -8,7 +8,7 @@ export const works: Work[] = [
     category: "Service Design",
     description:
       "楽器挫折者の再挑戦を支えるリハビリアプリのコンセプトプロジェクト。",
-    thumbnail: "/images/works/graduation.jpg",
+    thumbnail: "/images/works/hiketane/thumbnail.png",
     role: "Service Design / UX Research",
     period: "2024 / 3 months",
     tools: ["Figma", "FigJam", "Notion"],
@@ -61,7 +61,7 @@ export const works: Work[] = [
     category: "App Design",
     description:
       "共通の趣味や感性をきっかけに人とつながるSNSアプリのUIデザイン。",
-    thumbnail: "/images/works/resonote.jpg",
+    thumbnail: "/images/works/resonote/thumbnail.png",
     role: "UI Design / UX Design",
     period: "2024 / Hackathon",
     tools: ["Figma", "Illustrator"],
@@ -102,7 +102,7 @@ export const works: Work[] = [
     titleFont: "en",
     category: "Web Design",
     description: "ブランドの世界観を伝えるECサイトのUIデザインと実装。",
-    thumbnail: "/images/works/naterra.jpg",
+    thumbnail: "/images/works/naterra/thumbnail.png",
     role: "UI Design / Frontend",
     period: "2024",
     tools: ["Figma", "Next.js", "Vercel"],

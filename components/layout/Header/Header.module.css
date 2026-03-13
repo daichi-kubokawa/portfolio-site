@@ -3,7 +3,7 @@
   inset: 0 0 auto 0;
   z-index: 100;
   padding-top: var(--space-sm);
-  background: rgba(245, 244, 240, 0.72);
+  background: rgba(246, 246, 246, 0.72);
   backdrop-filter: blur(8px);
 }
 
@@ -89,7 +89,6 @@
   min-height: calc(100svh - 40px - var(--space-sm));
   display: grid;
   place-items: center;
-  transform: translateY(20px);
 }
 
 .modalNav {
@@ -121,33 +120,7 @@
     display: grid;
   }
 
-  .overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 200;
-    background: rgba(245, 244, 240, 0.8);
-  }
-
-  .overlayHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: var(--space-sm);
-    background-color: var(--color-bg);
-  }
-
   .overlayInner {
-    min-height: calc(100svh - 40px - var(--space-sm));
-    display: grid;
-    place-items: center;
     padding-bottom: 20px;
-  }
-
-  .modalNav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
   }
 }
