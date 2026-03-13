@@ -5,22 +5,12 @@ const links = [
   {
     label: "Portfolio",
     href: "/",
-    note: "トップページ",
-  },
-  {
-    label: "Works",
-    href: "/#works",
-    note: "制作事例",
-  },
-  {
-    label: "About",
-    href: "/about",
-    note: "プロフィール",
+    note: "Selected projects and case studies",
   },
   {
     label: "Contact",
     href: "mailto:contact@daichikubokawa.com",
-    note: "メールで連絡",
+    note: "For work inquiries and collaboration",
     external: true,
   },
 ];
@@ -30,13 +20,10 @@ export default function LinksPage() {
     <main className={styles.root}>
       <div className="container">
         <div className={styles.inner}>
-          <div className={styles.heading}>
-            <p className={`uppercaseLabel ${styles.eyebrow}`}>Links</p>
-            <h1 className={`fontEn ${styles.title}`}>Daichi Kubokawa</h1>
-            <p className={styles.description}>
-              ポートフォリオやプロフィール、連絡先をまとめています。
-            </p>
-          </div>
+          <header className={styles.heading}>
+            <h1 className={`fontEn ${styles.title}`}>DAICHI KUBOKAWA</h1>
+            <p className={`fontEn ${styles.role}`}>UI / UX Designer</p>
+          </header>
 
           <div className={styles.list}>
             {links.map((link) =>

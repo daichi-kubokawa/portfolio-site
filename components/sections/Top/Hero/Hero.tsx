@@ -10,11 +10,7 @@ export default function Hero() {
             UI / UX Designer & Frontend Learner
           </p>
 
-          <h1 className={`fontEn ${styles.title}`}>
-            Daichi
-            <br />
-            Kubokawa
-          </h1>
+          <h1 className={`fontEn ${styles.title}`}>DAICHI KUBOKAWA</h1>
 
           <p className={styles.description}>
             UI/UXデザインとフロントエンド開発を学びながら、

@@ -14,15 +14,16 @@
 }
 
 .logo {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   line-height: 1;
   letter-spacing: 0.02em;
+  font-weight: bold;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
 .link {
@@ -44,8 +45,15 @@
   border: none;
   background: transparent;
   color: var(--color-text);
-  display: none;
   place-items: center;
+}
+
+.menuButton {
+  display: none;
+}
+
+.closeButton {
+  display: grid;
 }
 
 .menuButton :global(.material-symbols-outlined),
@@ -58,35 +66,42 @@
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: rgba(245, 244, 240, 0.98);
-  backdrop-filter: blur(8px);
+  background: rgba(245, 244, 240, 0.8);
+}
+
+.overlayHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-sm);
+  background-color: var(--color-bg);
+}
+
+.overlayLogo {
+  font-size: var(--font-size-md);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-weight: bold;
+  color: var(--color-text);
 }
 
 .overlayInner {
-  position: relative;
-  width: min(var(--container-width), calc(100% - 3rem));
-  min-height: 100svh;
-  margin-inline: auto;
+  min-height: calc(100svh - 40px - var(--space-sm));
   display: grid;
   place-items: center;
-}
-
-.closeButton {
-  position: absolute;
-  top: var(--space-sm);
-  right: 0;
-  display: grid;
+  transform: translateY(20px);
 }
 
 .modalNav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: var(--space-md);
+  justify-content: center;
+  gap: 32px;
 }
 
 .modalLink {
-  font-size: clamp(32px, 6vw, 56px);
+  font-size: var(--font-size-lg);
   line-height: 1.1;
   letter-spacing: 0.02em;
   color: var(--color-text);
@@ -97,12 +112,42 @@
   color: var(--color-text-subtle);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .nav {
     display: none;
   }
 
   .menuButton {
     display: grid;
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(245, 244, 240, 0.8);
+  }
+
+  .overlayHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--space-sm);
+    background-color: var(--color-bg);
+  }
+
+  .overlayInner {
+    min-height: calc(100svh - 40px - var(--space-sm));
+    display: grid;
+    place-items: center;
+    padding-bottom: 20px;
+  }
+
+  .modalNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
   }
 }
