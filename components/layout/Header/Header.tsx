@@ -163,7 +163,7 @@ export default function Header() {
                   className={`fontEn ${styles.modalLink}`}
                   onClick={handleWorksClick}
                 >
-                  Works
+                  WORKS
                 </Link>
 
                 <Link
@@ -171,7 +171,7 @@ export default function Header() {
                   className={`fontEn ${styles.modalLink}`}
                   onClick={handleClose}
                 >
-                  About
+                  ABOUT
                 </Link>
 
                 <a
@@ -179,7 +179,7 @@ export default function Header() {
                   className={`fontEn ${styles.modalLink}`}
                   onClick={handleClose}
                 >
-                  Contact
+                  CONTACT
                 </a>
               </nav>
             </motion.div>

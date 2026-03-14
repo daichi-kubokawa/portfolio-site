@@ -46,6 +46,7 @@
   background: transparent;
   color: var(--color-text);
   place-items: center;
+  transform: translateX(6px);
 }
 
 .menuButton {
@@ -66,7 +67,7 @@
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: rgba(245, 244, 240, 0.8);
+  background: rgba(245, 244, 240, 0.92);
 }
 
 .overlayHeader {
@@ -96,19 +97,19 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: var(--space-md);
 }
 
 .modalLink {
   font-size: var(--font-size-lg);
   line-height: 1.1;
   letter-spacing: 0.02em;
-  color: var(--color-text);
+  color: var(--color-text-subtle);
   transition: color var(--transition-base);
 }
 
 .modalLink:hover {
-  color: var(--color-text-subtle);
+  color: var(--color-text);
 }
 
 @media (max-width: 1023px) {
@@ -121,6 +122,13 @@
   }
 
   .overlayInner {
-    padding-bottom: 20px;
+    padding-bottom: var(--space-sm);
+  }
+}
+
+@media (max-width: 767px) {
+  .modalNav {
+    flex-direction: column;
+    gap: var(--space-lg);
   }
 }

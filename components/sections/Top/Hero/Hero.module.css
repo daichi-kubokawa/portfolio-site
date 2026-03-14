@@ -22,7 +22,7 @@
 
 .title {
   margin-top: var(--space-sm);
-  font-size: var(--font-size-h1);
+  font-size: var(--font-size-h1-pc);
   line-height: 0.95;
   letter-spacing: 0.01em;
 }
@@ -36,9 +36,14 @@
   color: var(--color-text-subtle);
 }
 
-@media (max-width: 900px) {
-  .root {
-    padding-top: 120px;
-    padding-bottom: 72px;
+@media (max-width: 1023px) {
+  .title {
+    font-size: var(--font-size-h1-tab);
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: var(--font-size-h1-sp);
   }
 }

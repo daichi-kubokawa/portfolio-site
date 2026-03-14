@@ -3,44 +3,56 @@
   --color-surface: #ffffff;
   --color-text: #333333;
   --color-text-subtle: #888888;
-  /* 後で決める */
   --color-text-label: #97ad84;
-  /* 後で決める */
+  --color-text-inverse: #ffffff;
   --color-border: #e5e5e5;
   --color-accent: #c5b999;
 
   --font-sans: var(--font-noto-sans-jp), system-ui, sans-serif;
   --font-en: var(--font-inter), system-ui, sans-serif;
 
-  --font-size-xs: 12px;
-  --font-size-sm: 14px;
-  --font-size-md: 16px;
-  --font-size-lg: 20px;
-  --font-size-xl: 28px;
-  --font-size-xxl: 32px;
+  /* body / label */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1rem; /* 16px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 1.75rem; /* 28px */
+  --font-size-xxl: 2rem; /* 32px */
 
-  --font-size-h1: clamp(40px, 5vw, 72px);
-  --font-size-h2: clamp(32px, 4vw, 56px);
-  --font-size-h3: clamp(24px, 3vw, 32px);
+  /* heading - PC */
+  --font-size-h1-pc: 4.5rem; /* 72px */
+  --font-size-h2-pc: 2.625rem; /* 42px */
+  --font-size-h3-pc: 2rem; /* 32px */
+
+  /* heading - Tablet */
+  --font-size-h1-tab: 3.5rem; /* 56px */
+  --font-size-h2-tab: 2.25rem; /* 36px */
+  --font-size-h3-tab: 1.75rem; /* 28px */
+
+  /* heading - SP */
+  --font-size-h1-sp: 3rem; /* 48px */
+  --font-size-h2-sp: 2rem; /* 32px */
+  --font-size-h3-sp: 1.5rem; /* 24px */
 
   --line-height-tight: 1.2;
   --line-height-base: 1.7;
 
   --letter-spacing-wide: 0.05em;
 
-  --space-xs: 8px;
-  --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 40px;
-  --space-xl: 80px;
-  --space-2xl: 120px;
+  --space-2xs: 0.25rem; /* 4px */
+  --space-xs: 0.5rem; /* 8px */
+  --space-sm: 1rem; /* 16px */
+  --space-md: 1.5rem; /* 24px */
+  --space-lg: 2.5rem; /* 40px */
+  --space-xl: 5rem; /* 80px */
+  --space-2xl: 7.5rem; /* 120px */
 
-  --radius-sm: 6px;
-  --radius-md: 12px;
+  --radius-sm: 0.375rem; /* 6px */
+  --radius-md: 0.75rem; /* 12px */
 
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
 
-  --container-width: 1440px;
+  --container-width: 90rem; /* 1440px */
   --transition-base: 0.3s ease;
 }

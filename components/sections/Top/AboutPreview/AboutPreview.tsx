@@ -10,7 +10,7 @@ export default function AboutPreview() {
           <div className={styles.inner}>
             <div className={styles.headingArea}>
               <p className={`uppercaseLabel ${styles.eyebrow}`}>About</p>
-              <h2 className={`fontEn ${styles.title}`}>A little about me</h2>
+              <h2 className={styles.title}>私について</h2>
             </div>
 
             <div className={styles.content}>

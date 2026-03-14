@@ -13,7 +13,7 @@
 
 .title {
   margin: var(--space-sm) 0 0;
-  font-size: clamp(40px, 5vw, 72px);
+  font-size: var(--font-size-h1-pc);
   line-height: 1.05;
   letter-spacing: 0.02em;
 }
@@ -54,6 +54,12 @@
   color: var(--color-text-subtle);
 }
 
+@media (max-width: 1023px) {
+  .title {
+    font-size: var(--font-size-h1-tab);
+  }
+}
+
 @media (max-width: 900px) {
   .content {
     grid-template-columns: 1fr;
@@ -61,5 +67,11 @@
 
   .textArea {
     max-width: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: var(--font-size-h1-sp);
   }
 }

@@ -10,7 +10,7 @@
 .headingArea {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: var(--space-2xs);
 }
 
 .eyebrow {
@@ -19,7 +19,7 @@
 }
 
 .title {
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-h2-pc);
   line-height: var(--line-height-tight);
 }
 
@@ -40,8 +40,20 @@
   background: var(--color-bg);
 }
 
+@media (max-width: 1023px) {
+  .title {
+    font-size: var(--font-size-h2-tab);
+  }
+}
+
 @media (max-width: 900px) {
   .list {
     gap: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: var(--font-size-h2-sp);
   }
 }
