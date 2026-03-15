@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { works } from "@/data/works";
+import { works } from "@/data/works/index";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.daichikubokawa.com";

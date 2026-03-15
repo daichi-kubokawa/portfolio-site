@@ -1,0 +1,152 @@
+import type { Work } from "@/types/work";
+
+export const resonote: Work = {
+  slug: "resonote",
+  title: "RESONOTE",
+  titleFont: "en",
+  category: "UI/UX Design",
+  description: "心が動いた瞬間を、誰かとやさしく分かち合う。",
+  thumbnail: "/images/works/resonote/thumbnail.png",
+  // heroImage: "/images/works/resonote/hero.png",
+  summary: {
+    challenge:
+      "既存のSNSでは、感情の共有が評価や比較に結びつきやすく、日常の小さな心の動きを安心して残し、分かち合える体験が不足していました。",
+    solution: [
+      "心が動いた瞬間を、写真と言葉でやさしく残せる共有体験として設計。",
+      "オンボーディングから投稿導線まで、初回利用でも迷わず始められる流れを重視。",
+    ],
+    role: {
+      text: "UX Research / UI Design",
+      font: "en",
+    },
+    time: {
+      text: "2025 / 約10日",
+      font: "sans",
+    },
+    task: {
+      text: "リサーチ、UI/UX設計、プロトタイプ制作",
+      font: "sans",
+    },
+    tools: [
+      { text: "FigJam", font: "en" },
+      { text: "Figma", font: "en" },
+      { text: "Illustrator", font: "en" },
+    ],
+    award: {
+      text: "第3回 Prototyping Contest 2025 最優秀賞",
+      font: "sans",
+      href: "https://note.com/_dotd/n/n24fcca2fa2cb",
+    },
+    linkLabel: "View Prototype",
+    linkHref:
+      "https://www.figma.com/proto/kc7VH3FATKduokVWalIj37/RESONOTE_App_UI?node-id=102-697&viewport=392%2C173%2C0.6&t=4sHX6QO2KdXFcAZY-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A697",
+  },
+  content: [
+    {
+      type: "text",
+      label: "Overview",
+      title: "プロジェクト概要",
+      titleFont: "sans",
+      body: "RESONOTEは、日常の中で心が動いた瞬間を、写真と言葉でやさしく残し、誰かと静かに共鳴するアプリです。評価や拡散を前提としない共有体験を目指し、感情が自然に循環する場を構想しました。",
+    },
+    {
+      type: "text",
+      label: "Problem",
+      title: "課題",
+      titleFont: "sans",
+      body: "既存のSNSでは、投稿が評価や比較に結びつきやすく、素直な感情をそのまま共有することに心理的な負担があります。特に、日常の小さな感動や静かな気持ちは発信しづらく、共感される前に埋もれてしまうことが課題だと捉えました。",
+    },
+    {
+      type: "text",
+      label: "Research / Insight",
+      title: "着想と洞察",
+      titleFont: "sans",
+      body: "このプロジェクトは、日常の中で心が動いた瞬間を、もっと自然に残し分かち合えたらいいのに、という個人的な違和感から始まりました。観察や分析を進める中で、人は自然そのものを共有したいのではなく、その瞬間に生まれた感情を誰かとやさしく分かち合いたいのだ、という洞察にたどり着きました。",
+    },
+    {
+      type: "image",
+      src: "/images/works/resonote/resonote-detail-01.webp",
+      alt: "RESONOTEの観察・分析・洞察を整理した資料",
+      caption: "観察・分析・洞察の整理",
+      width: 3200,
+      height: 1800,
+    },
+    {
+      type: "text",
+      label: "Persona & Journey",
+      title: "想定ユーザーと体験の流れ",
+      titleFont: "sans",
+      body: "自然や日常の中で心が動く瞬間を大切にしている一方で、それを既存のSNSで共有することにはためらいを感じるユーザーを想定しました。感情が生まれても、その余韻を静かに残せる場所がないこと、投稿が評価や比較につながることが体験上の負荷になっていると整理し、安心して記録し、共鳴し合える流れを設計の起点にしました。",
+    },
+    {
+      type: "image",
+      src: "/images/works/resonote/resonote-detail-02.webp",
+      alt: "RESONOTEのペルソナとカスタマージャーニー",
+      caption: "ペルソナとカスタマージャーニー",
+      width: 3600,
+      height: 2160,
+    },
+    {
+      type: "text",
+      label: "Wireframe",
+      title: "ワイヤーフレーム",
+      titleFont: "sans",
+      body: "初回体験から投稿、タイムライン閲覧までの流れを整理し、どの順番で情報を見せると安心して参加できるかを検討しました。世界観を伝える導入と、迷わず使い始められる導線の両立を意識しながら、画面遷移と情報配置を設計しています。",
+    },
+    {
+      type: "image",
+      src: "/images/works/resonote/resonote-detail-03.webp",
+      alt: "RESONOTEのワイヤーフレーム",
+      caption: "ワイヤーフレーム",
+      width: 3600,
+      height: 1100,
+    },
+    {
+      type: "text",
+      label: "Design Approach",
+      title: "体験設計の方針",
+      titleFont: "sans",
+      body: "体験設計では、まずアプリの価値を理解してもらうため、オンボーディングで世界観を丁寧に伝える構成にしました。登録後は名前入力や好きな写真の選択を通して、自分の感性を持ち込める参加導線を設計し、初回利用でも自然に使い始められる流れを目指しました。投稿画面では、写真・コメント・タグ・位置情報を整理し、感情を負担なく残せるUIを意識しています。",
+    },
+    {
+      type: "text",
+      label: "Design Process",
+      title: "設計プロセス",
+      titleFont: "sans",
+      body: "リサーチで得た気づきをもとに、価値提案と機能定義を行い、どのような体験を届けるべきかを整理しました。その上で、安心して参加できる導線、感情を残しやすい投稿体験、共鳴が広がるタイムライン設計へとつなげ、UIとして一貫した体験に落とし込んでいます。",
+    },
+    {
+      type: "image",
+      src: "/images/works/resonote/resonote-detail-04.webp",
+      alt: "RESONOTEの価値整理・機能定義・設計プロセス",
+      caption: "価値整理・機能定義・設計プロセス",
+      width: 3400,
+      height: 1600,
+    },
+    {
+      type: "text",
+      label: "Prototype Flow",
+      title: "初回体験の流れ",
+      titleFont: "sans",
+      body: "プロトタイプでは、ロゴ導入からオンボーディング、登録、プロフィール設定、Welcome画面、ホーム到達までを一連の体験として設計しました。アプリの世界観を理解し、自分の感性を持ち込みながら、最初の投稿へ自然につながる流れを重視しています。",
+      linkLabel: "View Prototype",
+      linkHref:
+        "https://www.figma.com/proto/kc7VH3FATKduokVWalIj37/RESONOTE_App_UI?node-id=102-697&viewport=392%2C173%2C0.6&t=4sHX6QO2KdXFcAZY-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A697",
+    },
+    {
+      type: "image",
+      src: "/images/works/resonote/resonote-detail-05.webp",
+      alt: "RESONOTEの初回体験のプロトタイプフロー",
+      caption: "初回体験のプロトタイプフロー",
+      width: 2750,
+      height: 1100,
+    },
+    {
+      type: "text",
+      label: "Reflection / Next Step",
+      title: "振り返りと今後のステップ",
+      titleFont: "sans",
+      body: "本プロジェクトは第3回 Prototyping Contest 2025で最優秀賞を受賞しました。審査では、自然や心の機微に着目した世界観と、それに沿って設計されたUI/UXの心地よさが評価されました。一方で、既存SNSとの差別化や事業性の整理についても示唆を得ており、今後は継続利用の動機設計やサービスとしての広がり方まで含めて、体験をさらに深めていきたいと考えています。",
+    },
+  ],
+};

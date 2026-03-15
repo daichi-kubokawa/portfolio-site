@@ -11,17 +11,17 @@ export default function WorkMeta({ work }: Props) {
       <div className={styles.meta}>
         <div className={styles.metaItem}>
           <span className={`uppercaseLabel ${styles.metaLabel}`}>Role</span>
-          <span>{work.role}</span>
+          <span className={styles.metaValue}>{work.role}</span>
         </div>
 
         <div className={styles.metaItem}>
           <span className={`uppercaseLabel ${styles.metaLabel}`}>Period</span>
-          <span>{work.period}</span>
+          <span className={styles.metaValue}>{work.period}</span>
         </div>
 
         <div className={styles.metaItem}>
           <span className={`uppercaseLabel ${styles.metaLabel}`}>Tools</span>
-          <span>{work.tools.join(", ")}</span>
+          <span className={styles.metaValue}>{work.tools.join(", ")}</span>
         </div>
       </div>
 

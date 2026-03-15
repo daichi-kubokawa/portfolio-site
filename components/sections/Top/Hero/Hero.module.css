@@ -17,14 +17,20 @@
 
 .eyebrow {
   font-size: var(--font-size-sm);
-  color: var(--color-text-subtle);
+  font-weight: bold;
+  color: var(--color-text-label);
 }
 
 .title {
-  margin-top: var(--space-sm);
-  font-size: var(--font-size-h1-pc);
+  margin-inline: auto;
+  max-width: 10ch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(3rem, 8vw, 6rem);
   line-height: 0.95;
   letter-spacing: 0.01em;
+  text-align: center;
 }
 
 .description {

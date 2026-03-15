@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Works.module.css";
-import { works } from "@/data/works";
+import { works } from "@/data/works/index";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 
 export default function Works() {
@@ -45,7 +45,7 @@ export default function Works() {
 
                   <div className={styles.meta}>
                     <p className={`fontEn ${styles.itemSub}`}>
-                      {work.role} / {work.category}
+                      {work.category}
                     </p>
                     <h3 className={`${titleFontClass} ${styles.itemTitle}`}>
                       {work.title}

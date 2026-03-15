@@ -1,11 +1,12 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { works } from "@/data/works";
+import { works } from "@/data/works/index";
 import styles from "./page.module.css";
 import WorkHero from "@/components/sections/WorkDetail/WorkHero/WorkHero";
-import WorkMeta from "@/components/sections/WorkDetail/WorkMeta/WorkMeta";
 import WorkContent from "@/components/sections/WorkDetail/WorkContent/WorkContent";
-import NextProject from "@/components/sections/WorkDetail/NextProject/NextProject";
+import NextWork from "@/components/sections/WorkDetail/NextWork/NextWork";
+import WorkSummary from "@/components/sections/WorkDetail/WorkSummary/WorkSummary";
+import FadeInOnScroll from "@/components/FadeInOnScroll";
 
 type Props = {
   params: Promise<{
@@ -56,12 +57,22 @@ export default async function WorkDetailPage({ params }: Props) {
     <main className={styles.root}>
       <div className="container">
         <article className={styles.article}>
-          <WorkHero work={work} />
-          <WorkMeta work={work} />
+          <FadeInOnScroll>
+            <WorkHero work={work} />
+          </FadeInOnScroll>
+
+          {work.summary && (
+            <FadeInOnScroll>
+              <WorkSummary summary={work.summary} />
+            </FadeInOnScroll>
+          )}
+
           <WorkContent content={work.content} />
         </article>
 
-        <NextProject work={nextWork} />
+        <FadeInOnScroll>
+          <NextWork work={nextWork} />
+        </FadeInOnScroll>
       </div>
     </main>
   );

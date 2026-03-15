@@ -1,5 +1,6 @@
 .header {
-  max-width: 760px;
+  max-width: 1000px;
+  margin-inline: auto;
 }
 
 .category {
@@ -9,22 +10,25 @@
 
 .title {
   margin-top: var(--space-xs);
-  font-size: var(--font-size-h1);
+  font-size: var(--font-size-h1-pc);
   line-height: 1;
   letter-spacing: 0.01em;
 }
 
 .description {
-  margin-top: var(--space-md);
+  margin-top: var(--space-sm);
   max-width: 52ch;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
   line-height: 1.8;
   color: var(--color-text-subtle);
 }
 
 .thumbnail {
   position: relative;
+  width: 100%;
+  max-width: 960px;
   margin-top: var(--space-xl);
+  margin-inline: auto;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid var(--color-border);
@@ -34,5 +38,25 @@
 
 .image {
   object-fit: contain;
-  padding: clamp(16px, 3vw, 40px);
+  padding: var(--space-lg);
+}
+
+@media (max-width: 1023px) {
+  .title {
+    font-size: var(--font-size-h1-tab);
+  }
+
+  .image {
+    padding: var(--space-md);
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: var(--font-size-h1-sp);
+  }
+
+  .image {
+    padding: var(--space-sm);
+  }
 }

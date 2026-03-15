@@ -8,23 +8,18 @@ type Props = {
 
 export default function WorkHero({ work }: Props) {
   const titleFontClass = work.titleFont === "en" ? "fontEn" : "fontSans";
+  const heroSrc = work.heroImage || work.thumbnail;
 
   return (
     <>
       <header className={styles.header}>
-        <p className={`uppercaseLabel ${styles.category}`}>{work.category}</p>
         <h1 className={`${titleFontClass} ${styles.title}`}>{work.title}</h1>
         <p className={styles.description}>{work.description}</p>
       </header>
 
       <div className={styles.thumbnail}>
-        {work.thumbnail ? (
-          <Image
-            src={work.thumbnail}
-            alt={work.title}
-            fill
-            className={styles.image}
-          />
+        {heroSrc ? (
+          <Image src={heroSrc} alt={work.title} fill className={styles.image} />
         ) : (
           <span>{work.title}</span>
         )}

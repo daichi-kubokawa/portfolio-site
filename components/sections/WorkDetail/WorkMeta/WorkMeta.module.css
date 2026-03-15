@@ -1,20 +1,32 @@
 .meta {
   margin-top: var(--space-lg);
+  margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
   max-width: 760px;
 }
 
+.result {
+  margin-top: var(--space-md);
+  margin-inline: auto;
+  max-width: 760px;
+}
 .metaItem {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .metaLabel {
   font-size: var(--font-size-xs);
   color: var(--color-text-subtle);
+}
+
+.metaValue {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
 }
 
 .result {
@@ -28,12 +40,12 @@
 }
 
 .resultText {
-  margin-top: 4px;
+  margin-top: 0.25rem;
   font-size: var(--font-size-md);
   line-height: var(--line-height-base);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
   .meta {
     grid-template-columns: 1fr;
   }

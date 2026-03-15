@@ -7,7 +7,7 @@ export default function ViewWorks() {
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.heading}>
-            <p className="uppercaseLabel">Works</p>
+            <p className={`uppercaseLabel ${styles.eyebrow}`}>Works</p>
             <h2 className={styles.title}>制作事例</h2>
           </div>
 

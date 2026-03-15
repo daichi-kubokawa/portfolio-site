@@ -1,0 +1,144 @@
+.root {
+  margin-top: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  width: 100%;
+  min-width: 0;
+}
+
+.left,
+.right {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+}
+
+.title {
+  font-size: var(--font-size-h2-sp);
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+}
+
+.block {
+  margin-top: var(--space-lg);
+}
+
+.label,
+.metaLabel {
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+  color: var(--color-text-label);
+}
+
+.text,
+.metaText,
+.listItem {
+  margin-top: 0;
+  font-size: var(--font-size-sm);
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.listItem + .listItem {
+  margin-top: var(--space-xs);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--space-lg);
+  min-height: 3rem;
+  width: auto;
+  max-width: 100%;
+  padding: 0 1.5rem;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  text-align: center;
+  white-space: normal;
+  transition:
+    color var(--transition-base),
+    border-color var(--transition-base),
+    background var(--transition-base);
+}
+
+.button:hover {
+  color: var(--color-text);
+  border-color: var(--color-text-label);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.toolsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  min-width: 0;
+}
+
+.metaText,
+.metaLink {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.metaLink {
+  margin-top: var(--space-xs);
+  font-size: var(--font-size-sm);
+  line-height: 1.8;
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.metaLink:hover {
+  color: var(--color-text-subtle);
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--font-size-h2-tab);
+  }
+}
+
+@media (min-width: 1024px) {
+  .root {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+
+  .left {
+    flex: 1 1 auto;
+    max-width: 47.5rem;
+  }
+
+  .right {
+    flex: 0 1 20rem;
+    max-width: 20rem;
+  }
+
+  .title {
+    font-size: var(--font-size-h2-pc);
+  }
+}

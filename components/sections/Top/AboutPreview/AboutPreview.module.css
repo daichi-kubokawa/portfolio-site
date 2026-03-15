@@ -18,10 +18,12 @@
 
 .eyebrow {
   font-size: var(--font-size-sm);
-  color: var(--color-text-subtle);
+  font-weight: bold;
+  color: var(--color-text-label);
 }
 
 .title {
+  margin-top: var(--space-2xs);
   font-size: var(--font-size-h2-pc);
   line-height: 1.1;
   letter-spacing: 0.01em;

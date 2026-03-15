@@ -15,7 +15,8 @@
 
 .eyebrow {
   font-size: var(--font-size-sm);
-  color: var(--color-text-subtle);
+  font-weight: bold;
+  color: var(--color-text-label);
 }
 
 .title {
