@@ -20,7 +20,6 @@ type ActiveImage = {
 
 export default function WorkContent({ content }: Props) {
   const [activeImage, setActiveImage] = useState<ActiveImage | null>(null);
-  const [isZoomed, setIsZoomed] = useState(false);
 
   useEffect(() => {
     if (!activeImage) return;
@@ -31,7 +30,6 @@ export default function WorkContent({ content }: Props) {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setActiveImage(null);
-        setIsZoomed(false);
       }
     };
 
@@ -45,12 +43,10 @@ export default function WorkContent({ content }: Props) {
 
   const openImage = (image: ActiveImage) => {
     setActiveImage(image);
-    setIsZoomed(false);
   };
 
   const closeImage = () => {
     setActiveImage(null);
-    setIsZoomed(false);
   };
 
   return (
@@ -149,42 +145,19 @@ export default function WorkContent({ content }: Props) {
             <span className="material-symbols-outlined">close</span>
           </button>
 
-          <button
-            type="button"
-            className={styles.overlayZoomButton}
-            onClick={(event) => {
-              event.stopPropagation();
-              setIsZoomed((prev) => !prev);
-            }}
-            aria-label={isZoomed ? "縮小" : "拡大"}
-          >
-            {isZoomed ? "−" : "+"}
-          </button>
-
           <div
-            className={`${styles.overlayInner} ${
-              isZoomed ? styles.overlayInnerZoomed : ""
-            }`}
+            className={styles.overlayInner}
             onClick={(event) => event.stopPropagation()}
           >
-            <button
-              type="button"
-              className={styles.overlayImageButton}
-              onClick={() => setIsZoomed((prev) => !prev)}
-              aria-label={isZoomed ? "縮小" : "拡大"}
-            >
-              <Image
-                src={activeImage.src}
-                alt={activeImage.alt}
-                width={activeImage.width}
-                height={activeImage.height}
-                className={`${styles.overlayImage} ${
-                  isZoomed ? styles.overlayImageZoomed : ""
-                }`}
-                quality={95}
-                unoptimized
-              />
-            </button>
+            <Image
+              src={activeImage.src}
+              alt={activeImage.alt}
+              width={activeImage.width}
+              height={activeImage.height}
+              className={styles.overlayImage}
+              quality={95}
+              unoptimized
+            />
           </div>
         </div>
       )}
