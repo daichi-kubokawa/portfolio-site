@@ -60,15 +60,20 @@ export default function WorkSummary({ summary }: Props) {
           </ul>
         </div>
 
-        {summary.linkHref && summary.linkLabel && (
-          <Link
-            href={summary.linkHref}
-            className={`fontEn ${styles.button}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {summary.linkLabel}
-          </Link>
+        {summary.links && summary.links.length > 0 && (
+          <div className={styles.linkGroup}>
+            {summary.links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`fontEn ${styles.button}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         )}
       </div>
 
@@ -77,6 +82,13 @@ export default function WorkSummary({ summary }: Props) {
           <p className={`uppercaseLabel ${styles.metaLabel}`}>Role</p>
           <SummaryValue value={summary.role} className={styles.metaText} />
         </div>
+
+        {summary.type && (
+          <div className={styles.metaItem}>
+            <p className={`uppercaseLabel ${styles.metaLabel}`}>Type</p>
+            <SummaryValue value={summary.type} className={styles.metaText} />
+          </div>
+        )}
 
         <div className={styles.metaItem}>
           <p className={`uppercaseLabel ${styles.metaLabel}`}>Time</p>
@@ -104,7 +116,10 @@ export default function WorkSummary({ summary }: Props) {
         {summary.award && (
           <div className={styles.metaItem}>
             <p className={`uppercaseLabel ${styles.metaLabel}`}>Award</p>
-            <SummaryValue value={summary.award} className={styles.metaLink} />
+            <SummaryValue
+              value={summary.award}
+              className={summary.award.href ? styles.metaLink : styles.metaText}
+            />
           </div>
         )}
       </div>

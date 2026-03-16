@@ -13,7 +13,7 @@ export default function AboutHero() {
         <div className={styles.content}>
           <div className={styles.imageWrap}>
             <Image
-              src="/images/about/profile.jpg"
+              src="/images/about/profile.webp"
               alt="Daichi Kubokawa"
               fill
               className={styles.image}
@@ -22,23 +22,19 @@ export default function AboutHero() {
 
           <div className={styles.textArea}>
             <p className={styles.lead}>
-              複雑な情報や感情を整理し、自然と伝わる体験へ落とし込むことを得意としています。
+              無意識の心地よさまで含めて、自然と伝わる体験を考えています。
             </p>
 
             <p className={styles.text}>
-              神奈川県出身。音楽活動やSEの経験を経て、現在はUI/UXデザインとフロントエンドを学び中。
+              神奈川県出身。音楽活動やSEの経験を経て、現在はUI/UXデザインを中心に学んでいます。
             </p>
 
             <p className={styles.text}>
-              これまでの経験を通して、相手の立場で物事を捉え、情報を整理し、伝わる形に整えることの大切さを学びました。いまの制作でも、見た目だけでなく「なぜそこで迷うのか」「どうすれば自然に使えるのか」を考えながら設計しています。
+              制作では、見た目を整えるだけでなく、なぜ迷うのか、どこで伝わりにくくなるのかを考えながら、情報や体験の流れを整理しています。表面的な課題だけでなく、その背景にある感情や無意識の違和感にも目を向けることを大切にしています。
             </p>
 
             <p className={styles.text}>
-              体験の流れを整理し、使いやすさと心地よさの両方を意識しながら、UI/UXデザインとフロントエンドを行き来して制作しています。
-            </p>
-
-            <p className={styles.text}>
-              課題の背景を丁寧に捉え、複雑さをほどきながら、使う人にとって自然で伝わる体験をつくれるデザイナーを目指しています。
+              リサーチからUI、実装まで行き来しながら、使う人にとって自然で心地よい体験を形にできるデザイナーを目指しています。
             </p>
           </div>
         </div>

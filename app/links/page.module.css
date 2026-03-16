@@ -1,35 +1,19 @@
 .root {
   min-height: 100svh;
-  padding-top: 160px;
-  padding-bottom: var(--space-2xl);
+  display: flex;
+  align-items: center;
+  padding: 120px 0;
 }
 
 .inner {
+  width: 100%;
   max-width: 760px;
-}
-
-.heading {
-  max-width: 560px;
-}
-
-.title {
-  margin-top: var(--space-sm);
-  font-size: clamp(36px, 5vw, 72px);
-  line-height: 1;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
-}
-
-.role {
-  margin-top: var(--space-sm);
-  font-size: var(--font-size-sm);
-  color: var(--color-text-subtle);
+  margin: 0 auto;
 }
 
 .list {
   display: grid;
   gap: var(--space-md);
-  margin-top: var(--space-xl);
 }
 
 .card {
@@ -41,6 +25,17 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-text-subtle);
 }
 
 .cardBody {
@@ -52,6 +47,7 @@
 .cardTitle {
   font-size: clamp(24px, 3vw, 32px);
   line-height: 1.1;
+  color: var(--color-text);
 }
 
 .cardNote {
@@ -61,6 +57,7 @@
 }
 
 .arrow {
+  color: var(--color-text);
   flex-shrink: 0;
   font-size: 24px;
   line-height: 1;
@@ -69,7 +66,7 @@
 
 @media (max-width: 640px) {
   .root {
-    padding-top: 140px;
+    padding: 96px 0;
   }
 
   .card {

@@ -71,15 +71,20 @@ export default function WorkContent({ content }: Props) {
 
                 <p className={styles.text}>{block.body}</p>
 
-                {block.linkHref && block.linkLabel && (
-                  <Link
-                    href={block.linkHref}
-                    className={`fontEn ${styles.button}`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {block.linkLabel}
-                  </Link>
+                {block.links && block.links.length > 0 && (
+                  <div className={styles.linkGroup}>
+                    {block.links.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={`fontEn ${styles.button}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
                 )}
               </section>
             </FadeInOnScroll>

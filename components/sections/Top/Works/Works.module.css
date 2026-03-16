@@ -76,7 +76,7 @@
 }
 
 .meta {
-  padding: 1.5rem 1rem;
+  padding: var(--space-sm) var(--space-md);
   background: var(--color-bg-surface);
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
 }
@@ -96,10 +96,17 @@
 }
 
 .itemDescription {
-  margin-top: var(--space-xs);
+  margin-top: var(--space-2xs);
   font-size: var(--font-size-sm);
   line-height: 1.8;
   color: var(--color-text);
+}
+
+.itemAward {
+  margin-top: var(--space-xs);
+  font-size: var(--font-size-xs);
+  line-height: 1.7;
+  color: var(--color-text-subtle);
 }
 
 @media (hover: hover) and (pointer: fine) {

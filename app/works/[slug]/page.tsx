@@ -7,6 +7,7 @@ import WorkContent from "@/components/sections/WorkDetail/WorkContent/WorkConten
 import NextWork from "@/components/sections/WorkDetail/NextWork/NextWork";
 import WorkSummary from "@/components/sections/WorkDetail/WorkSummary/WorkSummary";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
+import BackToTopButton from "@/components/BackToTopButton";
 
 type Props = {
   params: Promise<{
@@ -74,6 +75,8 @@ export default async function WorkDetailPage({ params }: Props) {
           <NextWork work={nextWork} />
         </FadeInOnScroll>
       </div>
+
+      <BackToTopButton />
     </main>
   );
 }

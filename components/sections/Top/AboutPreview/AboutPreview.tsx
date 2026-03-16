@@ -15,9 +15,7 @@ export default function AboutPreview() {
 
             <div className={styles.content}>
               <p className={styles.text}>
-                神奈川県出身。音楽活動やSEの経験を経て、
-                現在はUI/UXデザインとフロントエンドを学んでいます。
-                情報を整理し、伝わる形に落とし込むことを意識して制作しています。
+                神奈川県出身。音楽活動やSEの経験を経て、現在はUI/UXデザインを中心に学んでいます。
               </p>
 
               <Link href="/about" className={`fontEn ${styles.link}`}>

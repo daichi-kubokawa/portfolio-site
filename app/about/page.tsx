@@ -4,6 +4,7 @@ import AboutHero from "@/components/sections/About/AboutHero/AboutHero";
 import Strength from "@/components/sections/About/Strength/Strength";
 import Skills from "@/components/sections/About/Skills/Skills";
 import ViewWorks from "@/components/sections/About/ViewWorks/ViewWorks";
+import FadeInOnScroll from "@/components/FadeInOnScroll";
 
 export const metadata: Metadata = {
   title: "About",
@@ -14,10 +15,21 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className={styles.root}>
-      <AboutHero />
-      <Strength />
-      <Skills />
-      <ViewWorks />
+      <FadeInOnScroll>
+        <AboutHero />
+      </FadeInOnScroll>
+
+      <FadeInOnScroll>
+        <Strength />
+      </FadeInOnScroll>
+
+      <FadeInOnScroll>
+        <Skills />
+      </FadeInOnScroll>
+
+      <FadeInOnScroll>
+        <ViewWorks />
+      </FadeInOnScroll>
     </main>
   );
 }

@@ -12,6 +12,7 @@
 
 .copy {
   max-width: 760px;
+  width: 100%;
   text-align: center;
 }
 
@@ -35,21 +36,35 @@
 
 .description {
   margin-top: var(--space-md);
-  max-width: 32ch;
+  max-width: 40ch;
   margin-inline: auto;
   font-size: var(--font-size-sm);
   line-height: 1.8;
   color: var(--color-text-subtle);
+  text-wrap: balance;
 }
 
 @media (max-width: 1023px) {
   .title {
     font-size: var(--font-size-h1-tab);
   }
+
+  .description {
+    max-width: 34ch;
+  }
 }
 
 @media (max-width: 767px) {
+  .root {
+    padding-top: 160px;
+    padding-bottom: 80px;
+  }
+
   .title {
     font-size: var(--font-size-h1-sp);
+  }
+
+  .description {
+    max-width: 28ch;
   }
 }

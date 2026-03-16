@@ -6,14 +6,18 @@ export type WorkTextValue = {
   href?: string;
 };
 
+export type WorkLink = {
+  label: string;
+  href: string;
+};
+
 export type WorkContentText = {
   type: "text";
   label?: string;
   title: string;
   titleFont?: WorkTitleFont;
   body: string;
-  linkLabel?: string;
-  linkHref?: string;
+  links?: WorkLink[];
 };
 
 export type WorkContentImage = {
@@ -34,9 +38,9 @@ export type WorkSummary = {
   time: WorkTextValue;
   task: WorkTextValue;
   tools: WorkTextValue[];
+  type?: WorkTextValue;
   award?: WorkTextValue;
-  linkLabel?: string;
-  linkHref?: string;
+  links?: WorkLink[];
 };
 
 export type Work = {
@@ -47,6 +51,7 @@ export type Work = {
   description: string;
   thumbnail?: string;
   heroImage?: string;
+  cardAward?: string;
   summary?: WorkSummary;
   content: WorkContent[];
 };

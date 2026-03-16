@@ -114,6 +114,13 @@
   color: var(--color-text-subtle);
 }
 
+.linkGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: var(--space-lg);
+}
+
 @media (min-width: 768px) {
   .title {
     font-size: var(--font-size-h2-tab);

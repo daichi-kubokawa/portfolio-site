@@ -15,7 +15,7 @@ export default function Hero() {
             </h1>
 
             <p className={styles.description}>
-              自然と使える体験をデザインする。
+              自然と伝わる、心地よい体験をデザインする。
             </p>
           </div>
         </FadeInOnScroll>

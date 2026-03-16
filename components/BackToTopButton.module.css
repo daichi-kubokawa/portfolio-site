@@ -1,0 +1,55 @@
+.button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--color-text);
+  box-shadow: 0 8px 24px rgba(17, 17, 17, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.isVisible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .button {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+}

@@ -47,10 +47,16 @@ export default function Works() {
                     <p className={`fontEn ${styles.itemSub}`}>
                       {work.category}
                     </p>
+
                     <h3 className={`${titleFontClass} ${styles.itemTitle}`}>
                       {work.title}
                     </h3>
+
                     <p className={styles.itemDescription}>{work.description}</p>
+
+                    {work.cardAward && (
+                      <p className={styles.itemAward}>{work.cardAward}</p>
+                    )}
                   </div>
                 </Link>
               </FadeInOnScroll>

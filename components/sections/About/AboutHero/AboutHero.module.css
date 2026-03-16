@@ -43,6 +43,7 @@
 }
 
 .lead {
+  padding-bottom: var(--space-md);
   font-size: var(--font-size-lg);
   line-height: 1.6;
   color: var(--color-text);

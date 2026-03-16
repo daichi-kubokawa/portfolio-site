@@ -25,10 +25,10 @@
 }
 
 .list {
-  margin-top: var(--space-lg);
+  margin-top: var(--space-xl);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
 .item {
@@ -51,6 +51,10 @@
 @media (max-width: 1023px) {
   .title {
     font-size: var(--font-size-h2-tab);
+  }
+
+  .list {
+    gap: var(--space-md);
   }
 }
 

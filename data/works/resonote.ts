@@ -4,9 +4,10 @@ export const resonote: Work = {
   slug: "resonote",
   title: "RESONOTE",
   titleFont: "en",
-  category: "UI/UX Design",
-  description: "心が動いた瞬間を、誰かとやさしく分かち合う。",
+  category: "UX Design",
+  description: "心が動いた瞬間を、やさしく残し分かち合う体験。",
   thumbnail: "/images/works/resonote/thumbnail.png",
+  cardAward: "第3回 Prototyping Contest 2025 最優秀賞",
   // heroImage: "/images/works/resonote/hero.png",
   summary: {
     challenge:
@@ -16,15 +17,19 @@ export const resonote: Work = {
       "オンボーディングから投稿導線まで、初回利用でも迷わず始められる流れを重視。",
     ],
     role: {
-      text: "UX Research / UI Design",
+      text: "Concept / UX Research / UI Design / Logo Design",
       font: "en",
+    },
+    type: {
+      text: "コンテスト応募作品",
+      font: "sans",
     },
     time: {
       text: "2025 / 約10日",
       font: "sans",
     },
     task: {
-      text: "リサーチ、UI/UX設計、プロトタイプ制作",
+      text: "リサーチ、体験設計、UI設計、プロトタイプ制作",
       font: "sans",
     },
     tools: [
@@ -37,9 +42,12 @@ export const resonote: Work = {
       font: "sans",
       href: "https://note.com/_dotd/n/n24fcca2fa2cb",
     },
-    linkLabel: "View Prototype",
-    linkHref:
-      "https://www.figma.com/proto/kc7VH3FATKduokVWalIj37/RESONOTE_App_UI?node-id=102-697&viewport=392%2C173%2C0.6&t=4sHX6QO2KdXFcAZY-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A697",
+    links: [
+      {
+        label: "View Prototype",
+        href: "https://www.figma.com/proto/kc7VH3FATKduokVWalIj37/RESONOTE_App_UI?node-id=102-697&viewport=392%2C173%2C0.6&t=4sHX6QO2KdXFcAZY-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A697",
+      },
+    ],
   },
   content: [
     {
@@ -98,8 +106,8 @@ export const resonote: Work = {
       src: "/images/works/resonote/resonote-detail-03.webp",
       alt: "RESONOTEのワイヤーフレーム",
       caption: "ワイヤーフレーム",
-      width: 3600,
-      height: 1100,
+      width: 4000,
+      height: 1000,
     },
     {
       type: "text",
@@ -113,7 +121,7 @@ export const resonote: Work = {
       label: "Design Process",
       title: "設計プロセス",
       titleFont: "sans",
-      body: "リサーチで得た気づきをもとに、価値提案と機能定義を行い、どのような体験を届けるべきかを整理しました。その上で、安心して参加できる導線、感情を残しやすい投稿体験、共鳴が広がるタイムライン設計へとつなげ、UIとして一貫した体験に落とし込んでいます。",
+      body: "リサーチで得た気づきをもとに価値提案と機能定義を行い、届けたい体験を整理しました。その上で、安心して参加できる導線、感情を残しやすい投稿体験、共鳴が広がるタイムライン設計へと落とし込んでいます。",
     },
     {
       type: "image",
@@ -129,9 +137,12 @@ export const resonote: Work = {
       title: "初回体験の流れ",
       titleFont: "sans",
       body: "プロトタイプでは、ロゴ導入からオンボーディング、登録、プロフィール設定、Welcome画面、ホーム到達までを一連の体験として設計しました。アプリの世界観を理解し、自分の感性を持ち込みながら、最初の投稿へ自然につながる流れを重視しています。",
-      linkLabel: "View Prototype",
-      linkHref:
-        "https://www.figma.com/proto/kc7VH3FATKduokVWalIj37/RESONOTE_App_UI?node-id=102-697&viewport=392%2C173%2C0.6&t=4sHX6QO2KdXFcAZY-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A697",
+      links: [
+        {
+          label: "View Prototype",
+          href: "https://www.figma.com/proto/kc7VH3FATKduokVWalIj37/RESONOTE_App_UI?node-id=102-697&viewport=392%2C173%2C0.6&t=4sHX6QO2KdXFcAZY-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A697",
+        },
+      ],
     },
     {
       type: "image",
@@ -144,9 +155,9 @@ export const resonote: Work = {
     {
       type: "text",
       label: "Reflection / Next Step",
-      title: "振り返りと今後のステップ",
+      title: "振り返り",
       titleFont: "sans",
-      body: "本プロジェクトは第3回 Prototyping Contest 2025で最優秀賞を受賞しました。審査では、自然や心の機微に着目した世界観と、それに沿って設計されたUI/UXの心地よさが評価されました。一方で、既存SNSとの差別化や事業性の整理についても示唆を得ており、今後は継続利用の動機設計やサービスとしての広がり方まで含めて、体験をさらに深めていきたいと考えています。",
+      body: "本プロジェクトは第3回 Prototyping Contest 2025で最優秀賞を受賞しました。審査では、自然や心の機微に着目した世界観と、それに沿って設計されたUI/UXの心地よさが評価されました。一方で、既存SNSとの差別化や事業性についても示唆を得ており、今後は継続利用の動機設計やサービスとしての広がり方まで含めて、体験をさらに深めていきたいと考えています。",
     },
   ],
 };

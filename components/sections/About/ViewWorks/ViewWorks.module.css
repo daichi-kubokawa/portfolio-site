@@ -1,6 +1,6 @@
 .root {
   margin-top: var(--space-2xl);
-  padding-top: var(--space-xl);
+  padding-top: var(--space-lg);
   border-top: 1px solid var(--color-border);
 }
 
@@ -39,9 +39,9 @@
   margin-top: var(--space-md);
   min-height: 48px;
   padding: 0 24px;
-  border: 1px solid #aab28d;
+  border: 1px solid var(--color-accent);
   font-size: var(--font-size-sm);
-  color: #7d8564;
+  color: var(--color-accent);
   background: transparent;
   transition:
     color var(--transition-base),
