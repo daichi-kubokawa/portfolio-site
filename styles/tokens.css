@@ -1,13 +1,13 @@
 :root {
   --color-bg: #f6f6f6;
   --color-bg-subtle: #f1f1ee;
-  --color-bg-surface: #ffffff;
+  --color-bg-surface: #fff;
   --color-bg-card: #efede8;
 
-  --color-text: #333333;
-  --color-text-subtle: #888888;
-  --color-text-label: #666666;
-  --color-text-inverse: #ffffff;
+  --color-text: #333;
+  --color-text-subtle: #888;
+  --color-text-label: #666;
+  --color-text-inverse: #fff;
 
   --color-border: #e5e5e5;
   --color-accent: #c5b999;
