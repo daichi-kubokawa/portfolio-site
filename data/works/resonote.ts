@@ -154,7 +154,7 @@ export const resonote: Work = {
     },
     {
       type: "text",
-      label: "Reflection / Next Step",
+      label: "Reflection",
       title: "振り返り",
       titleFont: "sans",
       body: "本プロジェクトは第3回 Prototyping Contest 2025で最優秀賞を受賞しました。審査では、自然や心の機微に着目した世界観と、それに沿って設計されたUI/UXの心地よさが評価されました。一方で、既存SNSとの差別化や事業性についても示唆を得ており、今後は継続利用の動機設計やサービスとしての広がり方まで含めて、体験をさらに深めていきたいと考えています。",

@@ -54,7 +54,7 @@
 }
 
 .caption {
-  margin-top: var(--space-sm);
+  margin-top: var(--space-xs);
   font-size: var(--font-size-xs);
   color: var(--color-text-subtle);
   text-align: center;
