@@ -24,8 +24,8 @@ export const hiketane: Work = {
       font: "sans",
     },
     time: {
-      text: "2025",
-      font: "sans",
+      text: "2025/11 - 2026/03",
+      font: "en",
     },
     task: {
       text: "ユーザーリサーチ、体験設計、UIデザイン、プロトタイプ制作、企画書作成",

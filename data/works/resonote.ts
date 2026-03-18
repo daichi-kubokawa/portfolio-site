@@ -25,8 +25,8 @@ export const resonote: Work = {
       font: "sans",
     },
     time: {
-      text: "2025 / 約10日",
-      font: "sans",
+      text: "2025/10",
+      font: "en",
     },
     task: {
       text: "リサーチ、体験設計、UI設計、プロトタイプ制作",
