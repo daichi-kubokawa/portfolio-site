@@ -6,7 +6,7 @@ export const resonote: Work = {
   titleFont: "en",
   category: "UX Design",
   description: "心が動いた瞬間を、やさしく残し分かち合う体験。",
-  thumbnail: "/images/works/resonote/thumbnail.png",
+  thumbnail: "/images/works/resonote/thumbnail.webp",
   cardAward: "第3回 Prototyping Contest 2025 最優秀賞",
   // heroImage: "/images/works/resonote/hero.png",
   summary: {

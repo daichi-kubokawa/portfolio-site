@@ -31,31 +31,21 @@
   margin-inline: auto;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: var(--color-bg-card);
 }
 
 .image {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 @media (max-width: 1023px) {
   .title {
     font-size: var(--font-size-h1-tab);
   }
-
-  .image {
-    padding: var(--space-md);
-  }
 }
 
 @media (max-width: 767px) {
   .title {
     font-size: var(--font-size-h1-sp);
-  }
-
-  .image {
-    padding: var(--space-sm);
   }
 }

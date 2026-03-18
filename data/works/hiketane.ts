@@ -6,7 +6,7 @@ export const hiketane: Work = {
   titleFont: "sans",
   category: "Service Design",
   description: "もう一度楽器のある日常をつくる練習支援アプリ。",
-  thumbnail: "/images/works/hiketane/thumbnail.png",
+  thumbnail: "/images/works/hiketane/thumbnail.webp",
   cardAward: "クリエイターズオーディション vol.72 ノミネート",
   summary: {
     challenge:
@@ -59,14 +59,14 @@ export const hiketane: Work = {
       titleFont: "sans",
       body: "ヒケタネは、挫折しやすい楽器練習を“小さな達成の積み重ね”に変えることで、もう一度楽器に触れるきっかけをつくる練習支援アプリです。大きすぎる目標を細かい練習単位に分解し、続けやすい体験を目指しました。",
     },
-    {
-      type: "image",
-      src: "/images/works/hiketane/hiketane-detail-01.webp",
-      alt: "ヒケタネのサービス概要資料",
-      caption: "サービス概要",
-      width: 3840,
-      height: 2160,
-    },
+    // {
+    //   type: "image",
+    //   src: "/images/works/hiketane/hiketane-detail-01.webp",
+    //   alt: "ヒケタネのサービス概要資料",
+    //   caption: "サービス概要",
+    //   width: 3840,
+    //   height: 2160,
+    // },
     {
       type: "text",
       label: "Problem",
@@ -130,7 +130,7 @@ export const hiketane: Work = {
       alt: "ヒケタネのUIデザイン画面",
       caption: "主要画面のUIデザイン",
       width: 2000,
-      height: 1000,
+      height: 1180,
     },
     {
       type: "text",
