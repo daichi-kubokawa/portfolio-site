@@ -8,13 +8,20 @@ import Script from "next/script";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.daichikubokawa.com"),
   title: {
-    default: "Daichi Kubokawa | UI/UX Designer",
-    template: "%s | Daichi Kubokawa",
+    default: "窪川大地 | Daichi Kubokawa | UI/UX Designer",
+    template: "%s | 窪川大地",
   },
   description:
     "UI/UXデザイナー窪川大地のポートフォリオサイト。サービスデザイン、UI/UXデザイン、Webデザインの制作事例を掲載しています。",
+  alternates: {
+    canonical: "https://www.daichikubokawa.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: "Daichi Kubokawa | UI/UX Designer",
+    title: "窪川大地 | Daichi Kubokawa | UI/UX Designer",
     description:
       "UI/UXデザイン、サービスデザイン、Webデザインの制作事例を掲載しています。",
     url: "https://www.daichikubokawa.com",
@@ -32,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daichi Kubokawa | UI/UX Designer",
+    title: "窪川大地 | Daichi Kubokawa | UI/UX Designer",
     description:
       "UI/UXデザイン、サービスデザイン、Webデザインの制作事例を掲載しています。",
     images: ["/ogp.jpg"],
