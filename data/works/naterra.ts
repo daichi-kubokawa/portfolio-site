@@ -5,7 +5,7 @@ export const naterra: Work = {
   title: "Naterra",
   titleFont: "en",
   category: "Branding",
-  description: "ブランドの世界観と購入導線を両立したECサイト。",
+  description: "ブランドの世界観と購入導線を両立したECサイト",
   thumbnail: "/images/works/naterra/thumbnail.webp",
   summary: {
     challenge:

@@ -136,7 +136,9 @@
     padding-left: var(--space-md);
     padding-right: var(--space-md);
   }
-
+  .meta {
+    padding: var(--space-xs) var(--space-sm);
+  }
   .offsetB {
     margin-top: var(--space-md); /* 24px */
   }
