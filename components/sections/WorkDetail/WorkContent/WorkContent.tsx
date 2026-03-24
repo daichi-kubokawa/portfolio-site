@@ -1,8 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Lightbox from "yet-another-react-lightbox";
+import Counter from "yet-another-react-lightbox/plugins/counter";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/counter.css";
+
 import styles from "./WorkContent.module.css";
 import type { WorkContent as WorkContentType } from "@/types/work";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
@@ -11,43 +18,27 @@ type Props = {
   content: WorkContentType[];
 };
 
-type ActiveImage = {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-};
-
 export default function WorkContent({ content }: Props) {
-  const [activeImage, setActiveImage] = useState<ActiveImage | null>(null);
+  const [openIndex, setOpenIndex] = useState<number>(-1);
 
-  useEffect(() => {
-    if (!activeImage) return;
+  const imageSlides = useMemo(
+    () =>
+      content
+        .filter(
+          (block): block is Extract<WorkContentType, { type: "image" }> =>
+            block.type === "image",
+        )
+        .map((block) => ({
+          src: block.src,
+          alt: block.alt,
+          width: block.width,
+          height: block.height,
+          title: block.caption,
+        })),
+    [content],
+  );
 
-    const originalOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setActiveImage(null);
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.body.style.overflow = originalOverflow;
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [activeImage]);
-
-  const openImage = (image: ActiveImage) => {
-    setActiveImage(image);
-  };
-
-  const closeImage = () => {
-    setActiveImage(null);
-  };
+  let imageCursor = -1;
 
   return (
     <>
@@ -92,20 +83,16 @@ export default function WorkContent({ content }: Props) {
         }
 
         if (block.type === "image") {
+          imageCursor += 1;
+          const currentImageIndex = imageCursor;
+
           return (
             <FadeInOnScroll key={`${block.type}-${index}`}>
               <figure className={styles.figure}>
                 <button
                   type="button"
                   className={styles.figureButton}
-                  onClick={() =>
-                    openImage({
-                      src: block.src,
-                      alt: block.alt,
-                      width: block.width,
-                      height: block.height,
-                    })
-                  }
+                  onClick={() => setOpenIndex(currentImageIndex)}
                   aria-label={`${block.alt} を拡大表示`}
                 >
                   <Image
@@ -133,39 +120,27 @@ export default function WorkContent({ content }: Props) {
         return null;
       })}
 
-      {activeImage && (
-        <div
-          className={styles.overlay}
-          onClick={closeImage}
-          role="dialog"
-          aria-modal="true"
-          aria-label="画像の拡大表示"
-        >
-          <button
-            type="button"
-            className={styles.overlayClose}
-            onClick={closeImage}
-            aria-label="閉じる"
-          >
-            <span className="material-symbols-outlined">close</span>
-          </button>
-
-          <div
-            className={styles.overlayInner}
-            onClick={(event) => event.stopPropagation()}
-          >
-            <Image
-              src={activeImage.src}
-              alt={activeImage.alt}
-              width={activeImage.width}
-              height={activeImage.height}
-              className={styles.overlayImage}
-              quality={95}
-              unoptimized
-            />
-          </div>
-        </div>
-      )}
+      <Lightbox
+        open={openIndex >= 0}
+        close={() => setOpenIndex(-1)}
+        index={openIndex >= 0 ? openIndex : 0}
+        slides={imageSlides}
+        plugins={[Counter, Zoom]}
+        controller={{ closeOnBackdropClick: true }}
+        carousel={{ finite: false }}
+        counter={{ container: { style: { top: 20, bottom: "auto" } } }}
+        zoom={{
+          maxZoomPixelRatio: 2,
+          zoomInMultiplier: 2,
+          doubleTapDelay: 300,
+          doubleClickDelay: 300,
+          scrollToZoom: true,
+        }}
+        render={{
+          buttonPrev: imageSlides.length <= 1 ? () => null : undefined,
+          buttonNext: imageSlides.length <= 1 ? () => null : undefined,
+        }}
+      />
     </>
   );
 }

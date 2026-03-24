@@ -129,8 +129,8 @@ export const hiketane: Work = {
       src: "/images/works/hiketane/hiketane-detail-04.webp",
       alt: "ヒケタネのUIデザイン画面",
       caption: "主要画面のUIデザイン",
-      width: 2000,
-      height: 1180,
+      width: 4000,
+      height: 2360,
     },
     {
       type: "text",
