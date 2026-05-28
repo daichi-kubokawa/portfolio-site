@@ -4,7 +4,7 @@ import { works } from "@/data/works/index";
 import styles from "./page.module.css";
 import WorkHero from "@/components/sections/WorkDetail/WorkHero/WorkHero";
 import WorkContent from "@/components/sections/WorkDetail/WorkContent/WorkContent";
-import NextWork from "@/components/sections/WorkDetail/NextWork/NextWork";
+import WorkNavigation from "@/components/sections/WorkDetail/WorkNavigation/WorkNavigation";
 import WorkSummary from "@/components/sections/WorkDetail/WorkSummary/WorkSummary";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 import BackToTopButton from "@/components/BackToTopButton";
@@ -52,6 +52,7 @@ export default async function WorkDetailPage({ params }: Props) {
     notFound();
   }
 
+  const prevWork = works[(currentIndex - 1 + works.length) % works.length];
   const nextWork = works[(currentIndex + 1) % works.length];
 
   return (
@@ -72,7 +73,7 @@ export default async function WorkDetailPage({ params }: Props) {
         </article>
 
         <FadeInOnScroll>
-          <NextWork work={nextWork} />
+          <WorkNavigation prevWork={prevWork} nextWork={nextWork} />
         </FadeInOnScroll>
       </div>
 

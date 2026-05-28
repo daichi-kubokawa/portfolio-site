@@ -1,0 +1,175 @@
+import type { Work } from "@/types/work";
+
+export const taskDelivery: Work = {
+  slug: "task-delivery",
+  title: "タスクデリバリー",
+  titleFont: "sans",
+  category: "Service Design",
+  description:
+    "部署をまたぐ定型業務の現在地と次アクションを、工程単位で見える化するアプリ",
+  thumbnail: "/images/works/task-delivery/thumbnail.webp",
+  cardAward: "",
+  summary: {
+    challenge:
+      "前工程の完了状況が見えないことで、次の担当者が作業開始を判断しづらい状態をどう改善するか。",
+    solution: [
+      "製造業の総務担当者へのヒアリングをもとに、課題を「連絡漏れ」ではなく「定型業務の現在地が見えないこと」と定義。",
+      "請求書発行業務を4つの工程に分解し、工程単位で担当・期限・状態・履歴・次アクションを追えるMVPを設計。",
+      "一覧・詳細・モーダル・Toastを通じて、確認・開始・完了までの状態遷移をプロトタイプ化しました。",
+    ],
+    role: {
+      text: "UX Research / Problem Definition / IA / Wireframe / UI Design / Prototype",
+      font: "en",
+    },
+    type: {
+      text: "自主制作作品",
+      font: "sans",
+    },
+    time: {
+      text: "2026/05",
+      font: "en",
+    },
+    task: {
+      text: "業務ヒアリング、課題整理、As-Is / To-Be、HMW、MVP定義、情報設計、ワイヤーフレーム、UIデザイン、状態遷移設計、プロトタイプ制作",
+      font: "sans",
+    },
+    tools: [
+      { text: "FigJam", font: "en" },
+      { text: "Figma", font: "en" },
+      { text: "Claude Code", font: "en" },
+    ],
+    links: [
+      {
+        label: "View Prototype",
+        href: "https://www.figma.com/proto/hlH1EnXZTWTAuMfWY7Dw51/%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC?page-id=145%3A487&node-id=226-5623&viewport=657%2C254%2C0.05&t=ShlEl07Ozl952IWg-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=226%3A5623",
+      },
+    ],
+  },
+  content: [
+    {
+      type: "text",
+      label: "Overview",
+      title: "プロジェクト概要",
+      titleFont: "sans",
+      body: "タスクデリバリーは、部署をまたぐ定型業務を工程単位で追跡する業務進行トラッキングアプリです。今回のMVPでは請求書発行業務に絞り、営業部から総務部へ工程が受け渡される流れを設計しました。",
+    },
+    {
+      type: "text",
+      label: "Background",
+      title: "制作背景",
+      titleFont: "sans",
+      body: "部署をまたぐ定型業務では、前工程の完了状況が見えないことで、次の担当者が確認や待機を行う場面があります。今回は、製造業の請求書発行業務を題材に、工程の受け渡しが発生する業務をどうスムーズに進められるかを検討しました。",
+    },
+    {
+      type: "text",
+      label: "Research",
+      title: "ヒアリングと課題整理",
+      titleFont: "sans",
+      body: "製造業の総務担当者に、業務の流れや困りごとをヒアリングしました。課題は単なる連絡漏れではなく、現在の工程・担当・期限が共有されず、次の作業を始める判断がしづらいことだと整理しました。",
+    },
+    {
+      type: "image",
+      src: "/images/works/task-delivery/task-delivery-detail-01.webp",
+      alt: "タスクデリバリーのヒアリングと課題整理",
+      caption: "ヒアリングと課題整理",
+      width: 3840,
+      height: 2160,
+    },
+    {
+      type: "text",
+      label: "Problem",
+      title: "解くべき課題",
+      titleFont: "sans",
+      body: "課題定義は「前工程の完了状況が見えないことで、次の担当者が作業開始を判断しづらい」こと。HMWは「どうすれば、部署間で業務の現在地を共有し、次の作業へ迷わず進めるだろうか？」と設定しました。",
+    },
+    {
+      type: "image",
+      src: "/images/works/task-delivery/task-delivery-detail-02.webp",
+      alt: "タスクデリバリーのエンパシーマップと主要課題",
+      caption: "エンパシーマップ・課題定義・HMW",
+      width: 3840,
+      height: 2160,
+    },
+    {
+      type: "text",
+      label: "Concept",
+      title: "コンセプトとMVP",
+      titleFont: "sans",
+      body: "コンセプトは「部署をまたぐ定型業務の現在地を見える化し、次の作業へ迷わず進める状態をつくる」。MVPでは請求書発行業務に絞り、注文入力・照合確認・印刷引き渡し・クローズ処理の4工程を対象にしました。チャットやメール通知、分析機能は初期対象から外し、まずは工程の現在地と次アクションを共有する体験に集中しました。",
+    },
+    {
+      type: "image",
+      src: "/images/works/task-delivery/task-delivery-detail-03.webp",
+      alt: "タスクデリバリーのAs-Is To-Be業務フロー",
+      caption: "As-Is / To-Be・MVP定義",
+      width: 3840,
+      height: 2160,
+    },
+    {
+      type: "text",
+      label: "IA",
+      title: "情報設計",
+      titleFont: "sans",
+      body: "中心オブジェクトを「業務タスク」とし、その中に複数の「工程」を持つ構造にしました。各工程には担当部署、担当役割、工程期限、ステータス、コメント、添付資料、履歴を持たせ、工程単位で現在地を把握できるようにしました。",
+    },
+    {
+      type: "image",
+      src: "/images/works/task-delivery/task-delivery-detail-04.webp",
+      alt: "タスクデリバリーの情報設計とワイヤーフレーム",
+      caption: "情報設計・画面構成",
+      width: 3840,
+      height: 2160,
+    },
+    {
+      type: "text",
+      label: "UI Design",
+      title: "UIデザイン",
+      titleFont: "sans",
+      body: "一覧では、進行状況・現在の担当・工程期限・アラート・最終更新を優先して表示し、対応すべきタスクを判断しやすくしました。アラートは、営業部・総務部の双方が注意すべき工程を共有するための情報として扱っています。詳細では、工程ごとの状態・コメント・履歴を確認できるようにし、次アクションの判断材料を集約しました。",
+    },
+    {
+      type: "image",
+      src: "/images/works/task-delivery/task-delivery-detail-05.webp",
+      alt: "タスクデリバリーのタスク一覧UI",
+      caption: "タスク一覧UI",
+      width: 3840,
+      height: 2160,
+    },
+    {
+      type: "image",
+      src: "/images/works/task-delivery/task-delivery-detail-06.webp",
+      alt: "タスクデリバリーのタスク詳細UI",
+      caption: "タスク詳細UI",
+      width: 3840,
+      height: 2160,
+    },
+    {
+      type: "text",
+      label: "Prototype",
+      title: "プロトタイプ",
+      titleFont: "sans",
+      body: "プロトタイプでは、ヒアリングで見えた「前工程の完了状況が分からず、次の作業を始めづらい」という課題に対して、一覧で対応優先度を判断し、詳細で工程の現在地と判断材料を確認し、モーダルで状態変更前の確認・入力を行う流れを再現しました。操作後はToastで結果と次に進める状態を伝え、確認待ちから工程開始・完了までの一連の体験を確認できるようにしました。",
+      links: [
+        {
+          label: "View Prototype",
+          href: "https://www.figma.com/proto/hlH1EnXZTWTAuMfWY7Dw51/%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC?page-id=145%3A487&node-id=226-5623&viewport=657%2C254%2C0.05&t=ShlEl07Ozl952IWg-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=226%3A5623",
+        },
+      ],
+    },
+    {
+      type: "image",
+      src: "/images/works/task-delivery/task-delivery-detail-07.webp",
+      alt: "タスクデリバリーの状態変更とフィードバック設計",
+      caption: "状態変更・フィードバック設計",
+      width: 3840,
+      height: 2160,
+    },
+    {
+      type: "text",
+      label: "Learning",
+      title: "振り返り",
+      titleFont: "sans",
+      body: "このプロジェクトでは、課題を「タスク管理不足」ではなく「定型業務の現在地が見えないことで、次の作業の開始判断が止まること」と捉え直しました。工程単位で状態・担当・期限・履歴を整理することで、部署をまたぐ業務でも次に取るべき行動を判断しやすくできると考えました。一方で、ヒアリング対象は総務担当者1名のため、今後は営業側にもヒアリングし、更新操作の負荷、確認待ち時間の削減、差し戻し時の追跡しやすさを検証したいです。",
+    },
+  ],
+};

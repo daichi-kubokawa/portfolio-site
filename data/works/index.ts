@@ -1,5 +1,7 @@
+import { taskDelivery } from "./task-delivery";
 import { hiketane } from "./hiketane";
 import { resonote } from "./resonote";
 import { naterra } from "./naterra";
+import { takuroMatsui } from "./takuro-matsui";
 
-export const works = [hiketane, resonote, naterra];
+export const works = [resonote, taskDelivery, hiketane, takuroMatsui, naterra];

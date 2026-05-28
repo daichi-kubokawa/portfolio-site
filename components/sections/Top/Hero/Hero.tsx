@@ -7,7 +7,9 @@ export default function Hero() {
       <div className={`container ${styles.inner}`}>
         <FadeInOnScroll>
           <div className={styles.copy}>
-            <p className={`uppercaseLabel ${styles.eyebrow}`}>UI/UX Designer</p>
+            <p className={`uppercaseLabel ${styles.eyebrow}`}>
+              UI/UX / Product Design
+            </p>
 
             <h1 className={`fontEn ${styles.title}`}>
               <span>DAICHI</span>
@@ -15,7 +17,8 @@ export default function Hero() {
             </h1>
 
             <p className={styles.description}>
-              自然と伝わる、心地よい体験をデザインする。
+              業務とユーザーのつまずきを構造化し、
+              使いやすさと成果につながる体験を設計する。
             </p>
           </div>
         </FadeInOnScroll>

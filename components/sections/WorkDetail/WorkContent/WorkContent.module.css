@@ -11,7 +11,7 @@
 }
 
 .heading {
-  margin-top: var(--space-2xs);
+  /* margin-top: var(--space-2xs); */
   font-size: var(--font-size-h3-pc);
   line-height: var(--line-height-tight);
   letter-spacing: 0.01em;

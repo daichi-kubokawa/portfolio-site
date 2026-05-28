@@ -1,0 +1,132 @@
+import type { Work } from "@/types/work";
+
+export const takuroMatsui: Work = {
+  slug: "takuro-matsui",
+  title: "イラストレーターWebサイト",
+  titleFont: "sans",
+  category: "Web Design",
+  description: "作品・実績・問い合わせ導線を整理したクライアントワーク",
+  thumbnail: "/images/works/takuro-matsui/thumbnail.webp",
+  cardAward: "制作中",
+  summary: {
+    challenge:
+      "作品の魅力を損なわずに、依頼検討者が作風・実績・依頼可否・連絡先を短時間で判断できる状態をつくること。あわせて、クライアント本人が継続的に更新しやすい運用性を担保すること。",
+    solution: [
+      "作風・作品詳細・人物像を確認したうえで、Contact導線から問い合わせへ進める流れを設計。",
+      "タグとMasonryレイアウトを組み合わせ、縦横比やテイストの異なる作品を一覧で比較しやすい構成にしました。",
+      "クライアント本人が迷わず更新できるよう、microCMSの項目設計と運用フローを整理しました。",
+      "ChatGPTを活用しながらCMS連携とWeb反映確認を行い、登録内容が各画面に反映されるかを検証しました。",
+    ],
+    role: {
+      text: "Web Design / Information Architecture / CMS Design",
+      font: "en",
+    },
+    type: {
+      text: "クライアントワーク / 制作中",
+      font: "sans",
+    },
+    time: {
+      text: "2026/03 -",
+      font: "en",
+    },
+    task: {
+      text: "要件整理、情報設計、ユーザー導線設計、Webデザイン、CMS設計、AIを活用したCMS連携・Web反映検証",
+      font: "sans",
+    },
+    tools: [
+      { text: "Figma", font: "en" },
+      { text: "microCMS", font: "en" },
+      { text: "ChatGPT", font: "en" },
+    ],
+  },
+  content: [
+    {
+      type: "text",
+      label: "Overview",
+      title: "サイト概要",
+      titleFont: "sans",
+      body: "イラストレーター Takuro Matsui 氏の作品・プロフィール・問い合わせ導線を整理したポートフォリオサイトです。依頼検討者が作風・制作実績・依頼可否・問い合わせ先を短時間で判断できる構成を目指しました。現在制作中のため一部素材は仮ですが、作品の見せ方と公開後の運用性の両立を重視しています。",
+    },
+    {
+      type: "text",
+      label: "Problem",
+      title: "課題",
+      titleFont: "sans",
+      body: "作品の世界観を強く見せる一方で、依頼検討者が必要な情報にたどり着きにくくなるリスクがありました。また、作品追加のたびに制作者側で更新が必要になると、公開後の運用負荷が高くなります。そのため、閲覧者にとって分かりやすく、クライアント本人が継続的に更新しやすい構成が必要でした。",
+    },
+    {
+      type: "text",
+      label: "Planning",
+      title: "要件整理とユーザー導線",
+      titleFont: "sans",
+      body: "ヒアリング内容をもとに、優先して見せたい作品、本人が更新できる運用性、人物像を伝えるAboutページを要件として整理しました。導線は、作品一覧で作風を比較し、作品詳細で実績や作品情報を確認し、Aboutで人物像を補足したうえで、Contact導線から問い合わせへ進む流れを想定しています。",
+    },
+    {
+      type: "image",
+      src: "/images/works/takuro-matsui/takuro-matsui-detail-01.webp",
+      alt: "イラストレーターサイトの要件整理とユーザー導線",
+      caption: "要件整理・ユーザー導線",
+      width: 2136,
+      height: 1217,
+    },
+    {
+      type: "text",
+      label: "Wireframe",
+      title: "ワイヤーフレーム",
+      titleFont: "sans",
+      body: "ワイヤーフレームでは、作品一覧、作品詳細、Aboutの役割と、問い合わせへ進む流れを整理しました。作品一覧では複数の作品を比較しやすくし、作品詳細では画像を大きく見せて魅力や情報を確認できる構成にしています。Aboutでは人物像や実績を整理し、依頼検討につながる流れを設計しました。",
+    },
+    {
+      type: "image",
+      src: "/images/works/takuro-matsui/takuro-matsui-detail-02.webp",
+      alt: "イラストレーターサイトのワイヤーフレーム",
+      caption: "ワイヤーフレーム",
+      width: 2679,
+      height: 1971,
+    },
+    {
+      type: "text",
+      label: "Design",
+      title: "デザイン",
+      titleFont: "sans",
+      body: "イラストの印象を妨げないよう、余白を広く取り、色数や装飾を抑えたミニマルなUIにしました。作品一覧ではMasonryレイアウトとタグ分類により、作品を比較・探索しやすい構成にしています。作品詳細では画像を大きく見せ、Aboutでは人物像や実績を整理しました。",
+    },
+    {
+      type: "image",
+      src: "/images/works/takuro-matsui/takuro-matsui-detail-03.webp",
+      alt: "イラストレーターサイトのUIデザイン",
+      caption: "UIデザイン",
+      width: 2558,
+      height: 1988,
+    },
+    {
+      type: "text",
+      label: "CMS",
+      title: "CMS設計とWeb反映検証",
+      titleFont: "sans",
+      body: "作品情報はmicroCMSで管理できる構成にしました。作品画像、タイトル、説明文、タグ、公開状態、表示順など、クライアント本人が更新する際に迷いにくい項目を整理しています。ChatGPTも活用しながらCMS連携とWeb反映確認を行い、登録内容が作品一覧・作品詳細・Aboutに反映されるかを検証しました。",
+    },
+    {
+      type: "image",
+      src: "/images/works/takuro-matsui/takuro-matsui-detail-04.webp",
+      alt: "イラストレーターサイトのCMS設計とWeb反映検証",
+      caption: "CMS設計・反映検証",
+      width: 3285,
+      height: 1997,
+    },
+    {
+      type: "text",
+      label: "Next",
+      title: "今後の改善",
+      titleFont: "sans",
+      body: "今後は、仮素材の差し替えに加え、Aboutページで伝える制作姿勢、依頼可能な内容、Contact導線の分かりやすさを改善していく予定です。公開後は、作品一覧から作品詳細への遷移や、問い合わせ前に必要な情報へ迷わず到達できているかを確認します。また、クライアント本人にCMSを触ってもらい、作品追加の手順や入力項目の分かりやすさを検証します。",
+    },
+    {
+      type: "text",
+      label: "Reflection",
+      title: "振り返り",
+      titleFont: "sans",
+      body: "この制作では、作品を魅力的に見せることと、依頼検討者が判断しやすい情報設計を両立する難しさを学びました。作品を主役にするために情報量を抑えながらも、依頼判断に必要な実績・人物像・問い合わせ情報は不足させないバランスが重要だと感じました。また、CMS設計では、クライアント本人が継続的に使えるかどうかを基準に項目を整理する必要があると学びました。",
+    },
+  ],
+};
