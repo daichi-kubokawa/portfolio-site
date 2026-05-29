@@ -12,7 +12,7 @@ export default function ViewWorks() {
           </div>
 
           <p className={styles.text}>
-            これまでに制作したUI/UXデザインやサービスデザインの事例を掲載しています。
+            業務改善、体験設計、サービスデザインを中心に、課題設定からUI設計・プロトタイピングまで取り組んだ制作事例を掲載しています。
           </p>
 
           <Link href="/#works" className={`fontEn ${styles.button}`}>

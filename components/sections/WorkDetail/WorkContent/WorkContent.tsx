@@ -60,8 +60,13 @@ export default function WorkContent({ content }: Props) {
                   {block.title}
                 </h2>
 
-                <p className={styles.text}>{block.body}</p>
-
+                <div className={styles.textGroup}>
+                  {block.body.split("\n\n").map((paragraph) => (
+                    <p key={paragraph} className={styles.text}>
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
                 {block.links && block.links.length > 0 && (
                   <div className={styles.linkGroup}>
                     {block.links.map((link) => (

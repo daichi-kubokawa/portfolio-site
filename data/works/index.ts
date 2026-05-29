@@ -4,4 +4,4 @@ import { resonote } from "./resonote";
 import { naterra } from "./naterra";
 import { takuroMatsui } from "./takuro-matsui";
 
-export const works = [resonote, taskDelivery, hiketane, takuroMatsui, naterra];
+export const works = [taskDelivery, resonote, hiketane, takuroMatsui, naterra];

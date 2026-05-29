@@ -14,9 +14,15 @@ export default function AboutPreview() {
             </div>
 
             <div className={styles.content}>
-              <p className={styles.text}>
-                神奈川県出身。音楽活動やSEの経験を経て、現在はUI/UXデザインを中心に学んでいます。
-              </p>
+              <div className={styles.textGroup}>
+                <p className={styles.text}>
+                  業務システムや印刷系システムに携わる中で、仕様理解・品質検証・認識ずれの整理を通じて、利用者や関係者がどこで迷うのかを捉えてきました。
+                </p>
+
+                <p className={styles.text}>
+                  現在はその視点を活かし、業務やユーザーのつまずきを整理しながら、次に取るべき行動が分かるUIとプロダクト体験を設計しています。
+                </p>
+              </div>
 
               <Link href="/about" className={`fontEn ${styles.link}`}>
                 View About

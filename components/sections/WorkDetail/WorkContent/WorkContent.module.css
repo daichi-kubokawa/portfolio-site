@@ -11,24 +11,31 @@
 }
 
 .heading {
-  /* margin-top: var(--space-2xs); */
   font-size: var(--font-size-h3-pc);
   line-height: var(--line-height-tight);
   letter-spacing: 0.01em;
 }
 
-.text {
+.textGroup {
   margin-top: var(--space-sm);
+}
+
+.text {
+  margin: 0;
   font-size: var(--font-size-md);
   line-height: 1.9;
   color: var(--color-text);
+}
+
+.text + .text {
+  margin-top: 0.35em;
 }
 
 .figure {
   margin-top: var(--space-2xl);
   margin-inline: auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 960px;
 }
 
 .figureButton {
@@ -64,7 +71,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: var(--space-lg);
+  margin-top: var(--space-sm);
   min-height: 3rem;
   padding: 0 1.5rem;
   border: 1px solid var(--color-accent);

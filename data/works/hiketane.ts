@@ -5,7 +5,7 @@ export const hiketane: Work = {
   title: "ヒケタネ",
   titleFont: "sans",
   category: "Service Design",
-  description: "楽器再開者の不安を小さな達成体験に変える練習支援アプリ",
+  description: "楽器再開の不安を、小さな達成と進捗実感に変えるアプリ",
   thumbnail: "/images/works/hiketane/thumbnail.webp",
   cardAward: "クリエイターズオーディション vol.72 ノミネート",
   summary: {

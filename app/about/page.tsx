@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import AboutHero from "@/components/sections/About/AboutHero/AboutHero";
 import Strength from "@/components/sections/About/Strength/Strength";
 import Skills from "@/components/sections/About/Skills/Skills";
+import Certificates from "@/components/sections/About/Certificates/Certificates";
 import ViewWorks from "@/components/sections/About/ViewWorks/ViewWorks";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 
@@ -25,6 +26,10 @@ export default function AboutPage() {
 
       <FadeInOnScroll>
         <Skills />
+      </FadeInOnScroll>
+
+      <FadeInOnScroll>
+        <Certificates />
       </FadeInOnScroll>
 
       <FadeInOnScroll>
