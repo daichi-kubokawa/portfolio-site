@@ -15,7 +15,7 @@ export default function Certificates() {
             <p className={`uppercaseLabel ${styles.eyebrow}`}>Certificates</p>
             <h2 className={styles.title}>資格</h2>
             <p className={styles.description}>
-              IT・情報処理の基礎理解と、デザイン学習に関連する資格を掲載しています。
+              IT・情報処理の基礎理解に加え、UI設計や品質観点を支える学習歴として掲載しています。
             </p>
           </div>
 

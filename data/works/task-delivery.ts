@@ -29,7 +29,7 @@ export const taskDelivery: Work = {
     },
 
     time: {
-      text: "約2週間",
+      text: "2026/05（約2週間）",
       font: "sans",
     },
 
