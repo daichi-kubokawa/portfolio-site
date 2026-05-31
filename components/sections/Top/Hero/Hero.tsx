@@ -17,8 +17,7 @@ export default function Hero() {
             </h1>
 
             <p className={styles.description}>
-              業務とユーザーのつまずきを構造化し、
-              使いやすさと成果につながる体験を設計する。
+              情報が多く迷いやすい場面を、選びやすい体験へ。
             </p>
           </div>
         </FadeInOnScroll>

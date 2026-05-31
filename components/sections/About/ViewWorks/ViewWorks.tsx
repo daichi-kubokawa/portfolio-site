@@ -15,8 +15,8 @@ export default function ViewWorks() {
             業務改善、体験設計、サービスデザインを中心に、課題設定からUI設計・プロトタイピングまで取り組んだ制作事例を掲載しています。
           </p>
 
-          <Link href="/#works" className={`fontEn ${styles.button}`}>
-            View Works
+          <Link href="/#works" className={`${styles.button}`}>
+            制作事例を見る
           </Link>
         </div>
       </div>
