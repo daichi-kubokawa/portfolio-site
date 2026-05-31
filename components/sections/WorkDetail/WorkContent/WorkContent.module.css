@@ -71,11 +71,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: var(--space-sm);
-  min-height: 3rem;
-  padding: 0 1.5rem;
-  border: 1px solid var(--color-accent);
-  color: var(--color-accent);
+  margin-top: var(--space-md);
+  min-height: 48px;
+  padding: 0 24px;
+  border: 1px solid var(--color-text-subtle);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.25);
   transition:
     color var(--transition-base),
     border-color var(--transition-base),
@@ -83,9 +85,9 @@
 }
 
 .button:hover {
-  color: var(--color-text);
-  border-color: var(--color-text-subtle);
-  background: rgba(255, 255, 255, 0.35);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.45);
 }
 
 .linkGroup {
