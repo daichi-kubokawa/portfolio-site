@@ -46,7 +46,7 @@ export const taskDelivery: Work = {
     links: [
       {
         label: "View Prototype",
-        href: "https://www.figma.com/proto/hlH1EnXZTWTAuMfWY7Dw51/%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC?page-id=145%3A487&node-id=226-5623&viewport=657%2C254%2C0.05&t=ShlEl07Ozl952IWg-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=226%3A5623",
+        href: "https://www.figma.com/proto/hlH1EnXZTWTAuMfWY7Dw51/%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC?node-id=226-5623&viewport=502%2C157%2C0.07&t=QLUnMxBp2ShHMlXv-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=226%3A5623&page-id=145%3A487",
       },
     ],
   },
@@ -158,7 +158,7 @@ export const taskDelivery: Work = {
       links: [
         {
           label: "View Prototype",
-          href: "https://www.figma.com/proto/hlH1EnXZTWTAuMfWY7Dw51/%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC?page-id=145%3A487&node-id=226-5623&viewport=657%2C254%2C0.05&t=ShlEl07Ozl952IWg-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=226%3A5623",
+          href: "https://www.figma.com/proto/hlH1EnXZTWTAuMfWY7Dw51/%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC?node-id=226-5623&viewport=502%2C157%2C0.07&t=QLUnMxBp2ShHMlXv-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=226%3A5623&page-id=145%3A487",
         },
       ],
     },
