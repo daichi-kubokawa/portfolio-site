@@ -48,11 +48,11 @@ export const naterra: Work = {
 
     links: [
       {
-        label: "Visit Website",
+        label: "サイトを見る",
         href: "https://daichi-kubokawa.github.io/naterra-site/",
       },
       {
-        label: "View Prototype",
+        label: "プロトタイプを見る",
         href: "https://www.figma.com/proto/ePJhrgYoRJlVgX6cm2cNGE/%E8%AA%B2%E9%A1%8C_EC?node-id=250-126&viewport=517%2C403%2C0.1&t=o1jqv9qVY1pOg1HO-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=250%3A126",
       },
     ],
@@ -112,7 +112,7 @@ export const naterra: Work = {
       body: "UIでは、ブランドのやわらかな世界観を保ちながら、商品を探して購入するまでの流れが分かりやすくなるよう設計しました。トップページではブランド訴求、人気商品、新着商品、カテゴリ導線を整理し、初回訪問でも商品一覧や詳細ページへ進みやすい構成にしています。\n\nカートやカテゴリはオーバーレイで表示し、閲覧の流れを大きく妨げずに操作できるよう意識しました。",
       links: [
         {
-          label: "View Prototype",
+          label: "プロトタイプを見る",
           href: "https://www.figma.com/proto/ePJhrgYoRJlVgX6cm2cNGE/%E8%AA%B2%E9%A1%8C_EC?node-id=250-126&viewport=517%2C403%2C0.1&t=o1jqv9qVY1pOg1HO-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=250%3A126",
         },
       ],
@@ -133,7 +133,7 @@ export const naterra: Work = {
       body: "HTML、CSS、JavaScriptを用いて、トップページ、商品一覧、商品詳細、カート、チェックアウト、購入完了までの主要画面を実装しました。\n\n画面デザインだけで終わらせず、商品を探す、カートに入れる、購入手続きへ進むといった一連の購買体験を確認できる形にしています。",
       links: [
         {
-          label: "Visit Website",
+          label: "サイトを見る",
           href: "https://daichi-kubokawa.github.io/naterra-site/",
         },
       ],

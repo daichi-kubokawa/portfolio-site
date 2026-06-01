@@ -50,11 +50,11 @@ export const hiketane: Work = {
 
     links: [
       {
-        label: "View Prototype",
+        label: "プロトタイプを見る",
         href: "https://www.figma.com/proto/T0SnpcN0Z5jBXUxMVHKKgQ/%E3%83%92%E3%82%B1%E3%82%BF%E3%83%8D?node-id=437-4000&viewport=554%2C201%2C0.25&t=dtLUPRN5nOooDRtw-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=437%3A4000",
       },
       {
-        label: "View Proposal",
+        label: "提案資料を見る",
         href: "/files/hiketane/proposal.pdf",
       },
     ],
@@ -164,7 +164,7 @@ export const hiketane: Work = {
       body: "UIでは、再開時の心理的ハードルを下げるために、やわらかい配色とシンプルな情報設計を採用しました。練習選択、練習、リザルト、成長画面を通して、小さな練習・曲とのつながり・成長記録が一連の流れで伝わるように設計しています。\n\nまた、カード、ボタン、ナビゲーションなどをコンポーネント化し、画面間の一貫性と更新しやすさも意識しました。",
       links: [
         {
-          label: "View Prototype",
+          label: "プロトタイプを見る",
           href: "https://www.figma.com/proto/T0SnpcN0Z5jBXUxMVHKKgQ/%E3%83%92%E3%82%B1%E3%82%BF%E3%83%8D?node-id=437-4000&viewport=554%2C201%2C0.25&t=dtLUPRN5nOooDRtw-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=437%3A4000",
         },
       ],

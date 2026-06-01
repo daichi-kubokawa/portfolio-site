@@ -46,7 +46,7 @@ export const taskDelivery: Work = {
 
     links: [
       {
-        label: "View Prototype",
+        label: "プロトタイプを見る",
         href: "https://www.figma.com/proto/hlH1EnXZTWTAuMfWY7Dw51/%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC?node-id=226-5623&viewport=502%2C157%2C0.07&t=QLUnMxBp2ShHMlXv-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=226%3A5623&page-id=145%3A487",
       },
     ],
@@ -190,7 +190,7 @@ export const taskDelivery: Work = {
       body: "ユーザーテスト後の改善を反映したプロトタイプでは、一覧で担当中の案件を判断し、詳細で工程ごとの状態や履歴を確認し、モーダルで状態変更を行う流れを設計しました。\n\n操作後はToastで結果を返し、確認待ち・開始・完了といった状態変化が利用者に伝わるようにしています。画面遷移だけでなく、業務が前に進んだことが分かるフィードバックも設計対象にしました。",
       links: [
         {
-          label: "View Prototype",
+          label: "プロトタイプを見る",
           href: "https://www.figma.com/proto/hlH1EnXZTWTAuMfWY7Dw51/%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC?node-id=226-5623&viewport=502%2C157%2C0.07&t=QLUnMxBp2ShHMlXv-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=226%3A5623&page-id=145%3A487",
         },
       ],
