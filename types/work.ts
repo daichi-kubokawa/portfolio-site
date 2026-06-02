@@ -36,7 +36,6 @@ export type WorkSummary = {
   solution: string[];
   role: WorkTextValue;
   time: WorkTextValue;
-  task: WorkTextValue;
   tools: WorkTextValue[];
   type?: WorkTextValue;
   award?: WorkTextValue;

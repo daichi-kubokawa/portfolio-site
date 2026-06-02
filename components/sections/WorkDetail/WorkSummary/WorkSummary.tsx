@@ -96,11 +96,6 @@ export default function WorkSummary({ summary }: Props) {
         </div>
 
         <div className={styles.metaItem}>
-          <p className={`uppercaseLabel ${styles.metaLabel}`}>Task</p>
-          <SummaryValue value={summary.task} className={styles.metaText} />
-        </div>
-
-        <div className={styles.metaItem}>
           <p className={`uppercaseLabel ${styles.metaLabel}`}>Tools</p>
           <div className={styles.toolsList}>
             {summary.tools.map((tool, index) => (
