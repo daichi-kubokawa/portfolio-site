@@ -35,7 +35,7 @@ export const taskDelivery: Work = {
     },
 
     task: {
-      text: "ヒアリング、課題整理、MVP定義、情報設計、UIデザイン、プロトタイプ制作、ユーザーテスト改善",
+      text: "ヒアリング、課題整理、MVP定義、情報設計、UIデザイン、プロトタイプ制作、ユーザーテスト、改善",
       font: "sans",
     },
 
