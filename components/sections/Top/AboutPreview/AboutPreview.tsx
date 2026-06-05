@@ -16,11 +16,8 @@ export default function AboutPreview() {
             <div className={styles.content}>
               <div className={styles.textGroup}>
                 <p className={styles.text}>
-                  業務システムや印刷系システムに携わる中で、仕様理解・品質検証・認識ずれの整理を通じて、利用者や関係者がどこで迷うのかを捉えてきました。
-                </p>
-
-                <p className={styles.text}>
-                  現在はその視点を活かし、業務やユーザーのつまずきを整理しながら、次に取るべき行動が分かるUIとプロダクト体験を設計しています。
+                  約7年のSE経験を通じて、利用者がどこで迷うかを捉える視点を培いました。
+                  その経験を活かし、次の行動が分かるUI/UXを設計しています。
                 </p>
               </div>
 

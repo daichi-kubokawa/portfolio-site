@@ -46,6 +46,8 @@ const skillGroups = [
       "Photoshop",
       "VS Code",
       "GitHub",
+      "PowerShell",
+      "VBA",
     ],
   },
 ];
