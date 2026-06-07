@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   },
   description:
     "UI/UXデザイナー窪川大地のポートフォリオサイト。サービスデザイン、UI/UXデザイン、Webデザインの制作事例を掲載しています。",
+  verification: {
+    google: "9q2E-BGANlsqZuPSqMsepGazf8W1Us_VexssTsZ7OuE",
+  },
   alternates: {
     canonical: "https://www.daichikubokawa.com",
   },
