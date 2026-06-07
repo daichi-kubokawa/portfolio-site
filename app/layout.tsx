@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
+import BackToTopButton from "@/components/BackToTopButton";
 import type { Metadata } from "next";
 import { inter, notoSansJp } from "@/app/fonts";
 import Script from "next/script";
@@ -70,11 +71,11 @@ export default function RootLayout({
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_ID}');
-        `}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
         </Script>
       </head>
 
@@ -82,6 +83,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <BackToTopButton />
       </body>
     </html>
   );
