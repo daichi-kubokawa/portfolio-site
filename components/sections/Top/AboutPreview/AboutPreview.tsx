@@ -16,7 +16,7 @@ export default function AboutPreview() {
             <div className={styles.content}>
               <div className={styles.textGroup}>
                 <p className={styles.text}>
-                  約7年のSE経験を通じて、利用者がどこで迷うかを捉える視点を培いました。
+                  約7年のエンジニア経験を通じて、仕様理解・品質検証・問い合わせ対応に携わり、利用者がどこで迷うかを捉える視点を培いました。
                   その経験を活かし、次の行動が分かるUI/UXを設計しています。
                 </p>
               </div>
