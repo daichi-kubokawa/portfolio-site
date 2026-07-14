@@ -11,9 +11,6 @@ const skillGroups = [
       "品質検証",
       "自動化テスト",
       "業務改善",
-      "HTML",
-      "CSS",
-      "JavaScript",
     ],
   },
   {
@@ -47,6 +44,9 @@ const skillGroups = [
       "VS Code",
       "GitHub",
       "VBA",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
   },
 ];

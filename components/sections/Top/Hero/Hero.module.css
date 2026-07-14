@@ -46,10 +46,6 @@
   .title {
     font-size: var(--font-size-h1-tab);
   }
-
-  .description {
-    /* max-width: 34ch; */
-  }
 }
 
 @media (max-width: 767px) {
@@ -59,9 +55,5 @@
 
   .title {
     font-size: var(--font-size-h1-sp);
-  }
-
-  .description {
-    /* max-width: 28ch; */
   }
 }
