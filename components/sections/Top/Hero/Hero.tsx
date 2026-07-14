@@ -8,7 +8,7 @@ export default function Hero() {
         <FadeInOnScroll>
           <div className={styles.copy}>
             <p className={`uppercaseLabel ${styles.eyebrow}`}>
-              UI/UX / Product Design
+              QA Engineer / UI・UX Design
             </p>
 
             <h1 className={`fontEn ${styles.title}`}>

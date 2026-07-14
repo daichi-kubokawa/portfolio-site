@@ -11,7 +11,7 @@ import FadeInOnScroll from "@/components/FadeInOnScroll";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "UI/UXデザイナー窪川大地のプロフィール。サービスデザイン、UXデザイン、Webデザインを中心に活動しています。",
+    "品質保証・上流工程エンジニアとしての経験を活かし、UI/UX設計にも取り組む窪川大地のプロフィール。サービスデザイン、UXデザイン、Webデザインを中心に活動しています。",
 };
 
 export default function AboutPage() {

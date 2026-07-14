@@ -9,11 +9,11 @@ import Script from "next/script";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.daichikubokawa.com"),
   title: {
-    default: "窪川大地 | Daichi Kubokawa | UI/UX Designer",
+    default: "窪川大地 | Daichi Kubokawa | QA Engineer / UI・UX",
     template: "%s | 窪川大地",
   },
   description:
-    "UI/UXデザイナー窪川大地のポートフォリオサイト。サービスデザイン、UI/UXデザイン、Webデザインの制作事例を掲載しています。",
+    "品質保証・上流工程の経験を活かしUI/UX設計にも取り組む、窪川大地のポートフォリオサイト。サービスデザイン、UI/UXデザイン、Webデザインの制作事例を掲載しています。",
   verification: {
     google: "9q2E-BGANlsqZuPSqMsepGazf8W1Us_VexssTsZ7OuE",
   },
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "窪川大地 | Daichi Kubokawa | UI/UX Designer",
+    title: "窪川大地 | Daichi Kubokawa | QA Engineer / UI・UX",
     description:
-      "UI/UXデザイン、サービスデザイン、Webデザインの制作事例を掲載しています。",
+      "品質保証・上流工程の経験を活かしUI/UX設計にも取り組む、窪川大地のポートフォリオサイト。サービスデザイン、UI/UXデザイン、Webデザインの制作事例を掲載しています。",
     url: "https://www.daichikubokawa.com",
     siteName: "Daichi Kubokawa Portfolio",
     locale: "ja_JP",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "窪川大地 | Daichi Kubokawa | UI/UX Designer",
+    title: "窪川大地 | Daichi Kubokawa | QA Engineer / UI・UX",
     description:
-      "UI/UXデザイン、サービスデザイン、Webデザインの制作事例を掲載しています。",
+      "品質保証・上流工程の経験を活かしUI/UX設計にも取り組む、窪川大地のポートフォリオサイト。サービスデザイン、UI/UXデザイン、Webデザインの制作事例を掲載しています。",
     images: ["/ogp.jpg"],
   },
 };
