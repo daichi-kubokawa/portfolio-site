@@ -9,7 +9,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.daichikubokawa.com"),
   title: {
-    default: "窪川大地 | Daichi Kubokawa | QA Engineer / UI・UX",
+    default: "窪川大地 | DAICHI KUBOKAWA | QA Engineer / UI・UX",
     template: "%s | 窪川大地",
   },
   description:
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "窪川大地 | Daichi Kubokawa | QA Engineer / UI・UX",
+    title: "窪川大地 | DAICHI KUBOKAWA | QA Engineer / UI・UX",
     description:
       "品質保証・上流工程の経験を活かしUI/UX設計にも取り組む、窪川大地のポートフォリオサイト。サービスデザイン、UI/UXデザイン、Webデザインの制作事例を掲載しています。",
     url: "https://www.daichikubokawa.com",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "窪川大地 | Daichi Kubokawa | QA Engineer / UI・UX",
+    title: "窪川大地 | DAICHI KUBOKAWA | QA Engineer / UI・UX",
     description:
       "品質保証・上流工程の経験を活かしUI/UX設計にも取り組む、窪川大地のポートフォリオサイト。サービスデザイン、UI/UXデザイン、Webデザインの制作事例を掲載しています。",
     images: ["/ogp.jpg"],

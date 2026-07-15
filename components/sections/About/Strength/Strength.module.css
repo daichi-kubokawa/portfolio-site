@@ -47,7 +47,6 @@
   font-size: var(--font-size-md);
   line-height: 1.9;
   letter-spacing: 0.03em;
-  color: var(--color-text-subtle);
 }
 
 @media (max-width: 1023px) {

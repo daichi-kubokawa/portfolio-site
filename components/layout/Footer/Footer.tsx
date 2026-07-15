@@ -20,6 +20,14 @@ export default function Footer() {
           >
             CONTACT
           </a>
+          <a
+            href="https://github.com/daichi-kubokawa"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`fontEn ${styles.link}`}
+          >
+            GITHUB
+          </a>
         </nav>
         <p className={`fontEn ${styles.copy}`}>
           &copy; {new Date().getFullYear()} DAICHI KUBOKAWA
