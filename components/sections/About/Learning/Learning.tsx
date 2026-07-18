@@ -5,7 +5,7 @@ const learningItems = [
     title: "デジタルハリウッド",
     course: "本科 UI/UXデザイン専攻 サービスデザインコース",
     period: "2025.04 - 2026.03 修了",
-    text: "UX基礎、サービス企画設計、情報設計、UI設計、プロトタイピング、Webサービス制作を学びました。",
+    text: "UXリサーチ・情報設計からUI設計・プロトタイピングまでを実践。卒業制作では実在サービスの改善提案を行いました。",
   },
 ];
 
@@ -17,9 +17,6 @@ export default function Learning() {
           <div className={styles.headingArea}>
             <p className={`uppercaseLabel ${styles.eyebrow}`}>Learning</p>
             <h2 className={styles.title}>学習歴</h2>
-            <p className={styles.description}>
-              UI/UXデザインへの転向に向けて、ユーザー視点の設計、情報設計、UI制作を体系的に学びました。
-            </p>
           </div>
 
           <div className={styles.list}>

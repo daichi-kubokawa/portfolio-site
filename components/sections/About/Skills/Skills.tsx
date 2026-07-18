@@ -59,9 +59,6 @@ export default function Skills() {
           <div className={styles.headingArea}>
             <p className={`uppercaseLabel ${styles.eyebrow}`}>Skills</p>
             <h2 className={styles.title}>スキル</h2>
-            <p className={styles.description}>
-              実務で培った開発理解・品質観点と、UI/UX学習・制作で取り組んだ設計スキルを整理しています。
-            </p>
           </div>
 
           <div className={styles.groups}>

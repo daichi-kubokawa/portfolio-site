@@ -25,7 +25,7 @@
 }
 
 .list {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-lg);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
