@@ -8,17 +8,13 @@ export default function Hero() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.copy}>
           <p className={`uppercaseLabel ${styles.eyebrow}`}>
-            QA / UI・UX Design
+            UI/UX Design / Engineering
           </p>
 
           <h1 className={`fontEn ${styles.title}`}>
             <span>DAICHI</span>
             <span>KUBOKAWA</span>
           </h1>
-
-          <p className={styles.description}>
-            情報が多く迷いやすい場面を、選びやすい体験へ。
-          </p>
         </div>
       </div>
 
