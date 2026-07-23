@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  max-width: 760px;
+  max-width: 600px;
   margin-top: var(--space-xl);
   margin-inline: auto;
 }
