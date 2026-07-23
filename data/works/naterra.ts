@@ -105,12 +105,6 @@ export const naterra: Work = {
       title: "UIデザイン",
       titleFont: "sans",
       body: "UIでは、ブランドのやわらかな世界観を保ちながら、商品を探して購入するまでの流れが分かりやすくなるよう設計しました。トップページではブランド訴求、人気商品、新着商品、カテゴリ導線を整理し、初回訪問でも商品一覧や詳細ページへ進みやすい構成にしています。\n\nカートやカテゴリはオーバーレイで表示し、閲覧の流れを大きく妨げずに操作できるよう意識しました。",
-      links: [
-        {
-          label: "プロトタイプを見る",
-          href: "https://www.figma.com/proto/ePJhrgYoRJlVgX6cm2cNGE/%E8%AA%B2%E9%A1%8C_EC?node-id=250-126&viewport=517%2C403%2C0.1&t=o1jqv9qVY1pOg1HO-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=250%3A126",
-        },
-      ],
     },
     {
       type: "image",
@@ -119,6 +113,14 @@ export const naterra: Work = {
       caption: "主要画面UI",
       width: 3448,
       height: 5000,
+    },
+    {
+      type: "figma",
+      label: "prototype",
+      title: "プロトタイプ",
+      titleFont: "sans",
+      href: "https://www.figma.com/proto/ePJhrgYoRJlVgX6cm2cNGE/%E8%AA%B2%E9%A1%8C_EC?node-id=250-126&viewport=517%2C403%2C0.1&t=o1jqv9qVY1pOg1HO-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=250%3A126",
+      device: "mobile",
     },
     {
       type: "text",

@@ -1,7 +1,20 @@
 .root {
+  position: relative;
   display: flex;
   align-items: center;
-  padding-top: 200px;
+  padding-top: 180px;
+  padding-bottom: 56px;
+  overflow: clip;
+}
+
+.birdArea {
+  position: absolute;
+  inset: 80px 0 0;
+  pointer-events: none;
+}
+
+.birdArea > * {
+  pointer-events: auto;
 }
 
 .inner {
@@ -10,9 +23,12 @@
 }
 
 .copy {
-  max-width: 760px;
+  position: relative;
+  z-index: 1;
   width: 100%;
+  max-width: 760px;
   text-align: center;
+  pointer-events: none;
 }
 
 .eyebrow {
@@ -22,11 +38,10 @@
 }
 
 .title {
-  margin-inline: auto;
-  max-width: 10ch;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-inline: auto;
   font-size: clamp(3rem, 8vw, 6rem);
   line-height: 0.95;
   letter-spacing: 0.01em;
@@ -43,6 +58,11 @@
 }
 
 @media (max-width: 1023px) {
+  .root {
+    padding-top: 170px;
+    padding-bottom: 48px;
+  }
+
   .title {
     font-size: var(--font-size-h1-tab);
   }
@@ -50,7 +70,8 @@
 
 @media (max-width: 767px) {
   .root {
-    padding-top: 160px;
+    padding-top: 140px;
+    padding-bottom: 40px;
   }
 
   .title {

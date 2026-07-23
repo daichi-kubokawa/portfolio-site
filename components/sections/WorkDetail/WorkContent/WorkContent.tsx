@@ -10,45 +10,60 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/counter.css";
 
-import styles from "./WorkContent.module.css";
-import type { WorkContent as WorkContentType } from "@/types/work";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
+import type { WorkContent as WorkContentType } from "@/types/work";
+
+import styles from "./WorkContent.module.css";
 
 type Props = {
   content: WorkContentType[];
 };
 
+type ImageBlock = Extract<WorkContentType, { type: "image" }>;
+
+function isImageBlock(block: WorkContentType): block is ImageBlock {
+  return block.type === "image";
+}
+
+function getImageIndex(
+  content: readonly WorkContentType[],
+  contentIndex: number,
+): number {
+  const imageCount = content
+    .slice(0, contentIndex + 1)
+    .filter(isImageBlock).length;
+
+  return imageCount - 1;
+}
+
 export default function WorkContent({ content }: Props) {
-  const [openIndex, setOpenIndex] = useState<number>(-1);
+  const [openIndex, setOpenIndex] = useState(-1);
 
   const imageSlides = useMemo(
     () =>
-      content
-        .filter(
-          (block): block is Extract<WorkContentType, { type: "image" }> =>
-            block.type === "image",
-        )
-        .map((block) => ({
-          src: block.src,
-          alt: block.alt,
-          width: block.width,
-          height: block.height,
-          title: block.caption,
-        })),
+      content.filter(isImageBlock).map((block) => ({
+        src: block.src,
+        alt: block.alt,
+        width: block.width,
+        height: block.height,
+        title: block.caption,
+      })),
     [content],
   );
-
-  let imageCursor = -1;
 
   return (
     <>
       {content.map((block, index) => {
+        const blockKey = `${block.type}-${index}`;
+
         if (block.type === "text") {
           const titleFontClass =
             block.titleFont === "en" ? "fontEn" : "fontSans";
 
+          const paragraphs = block.body.split("\n\n");
+
           return (
-            <FadeInOnScroll key={`${block.type}-${index}`}>
+            <FadeInOnScroll key={blockKey}>
               <section className={styles.section}>
                 {block.label && (
                   <p className={`uppercaseLabel ${styles.label}`}>
@@ -61,12 +76,16 @@ export default function WorkContent({ content }: Props) {
                 </h2>
 
                 <div className={styles.textGroup}>
-                  {block.body.split("\n\n").map((paragraph) => (
-                    <p key={paragraph} className={styles.text}>
+                  {paragraphs.map((paragraph, paragraphIndex) => (
+                    <p
+                      key={`${blockKey}-paragraph-${paragraphIndex}`}
+                      className={styles.text}
+                    >
                       {paragraph}
                     </p>
                   ))}
                 </div>
+
                 {block.links && block.links.length > 0 && (
                   <div className={styles.linkGroup}>
                     {block.links.map((link) => (
@@ -88,17 +107,16 @@ export default function WorkContent({ content }: Props) {
         }
 
         if (block.type === "image") {
-          imageCursor += 1;
-          const currentImageIndex = imageCursor;
+          const currentImageIndex = getImageIndex(content, index);
 
           return (
-            <FadeInOnScroll key={`${block.type}-${index}`}>
+            <FadeInOnScroll key={blockKey}>
               <figure className={styles.figure}>
                 <button
                   type="button"
                   className={styles.figureButton}
                   onClick={() => setOpenIndex(currentImageIndex)}
-                  aria-label={`${block.alt} を拡大表示`}
+                  aria-label={`${block.alt}を拡大表示`}
                 >
                   <Image
                     src={block.src}
@@ -122,18 +140,81 @@ export default function WorkContent({ content }: Props) {
           );
         }
 
+        if (block.type === "figma") {
+          const titleFontClass =
+            block.titleFont === "en" ? "fontEn" : "fontSans";
+
+          const deviceClass =
+            block.device === "mobile" ? styles.mobile : styles.desktop;
+
+          const embedUrl =
+            `https://www.figma.com/embed?embed_host=share&url=` +
+            encodeURIComponent(block.href);
+
+          const paragraphs = block.body?.split("\n\n") ?? [];
+
+          return (
+            <FadeInOnScroll key={blockKey}>
+              <section className={styles.section}>
+                {block.label && (
+                  <p className={`uppercaseLabel ${styles.label}`}>
+                    {block.label}
+                  </p>
+                )}
+
+                <h2 className={`${titleFontClass} ${styles.heading}`}>
+                  {block.title}
+                </h2>
+
+                {paragraphs.length > 0 && (
+                  <div className={styles.textGroup}>
+                    {paragraphs.map((paragraph, paragraphIndex) => (
+                      <p
+                        key={`${blockKey}-paragraph-${paragraphIndex}`}
+                        className={styles.text}
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                )}
+
+                <div className={`${styles.figmaEmbed} ${deviceClass}`}>
+                  <iframe
+                    src={embedUrl}
+                    title={`${block.title}のFigmaプロトタイプ`}
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+              </section>
+            </FadeInOnScroll>
+          );
+        }
+
         return null;
       })}
 
       <Lightbox
         open={openIndex >= 0}
         close={() => setOpenIndex(-1)}
-        index={openIndex >= 0 ? openIndex : 0}
+        index={Math.max(openIndex, 0)}
         slides={imageSlides}
         plugins={[Counter, Zoom]}
-        controller={{ closeOnBackdropClick: true }}
-        carousel={{ finite: false }}
-        counter={{ container: { style: { top: 20, bottom: "auto" } } }}
+        controller={{
+          closeOnBackdropClick: true,
+        }}
+        carousel={{
+          finite: false,
+        }}
+        counter={{
+          container: {
+            style: {
+              top: 20,
+              bottom: "auto",
+            },
+          },
+        }}
         zoom={{
           maxZoomPixelRatio: 2,
           zoomInMultiplier: 2,

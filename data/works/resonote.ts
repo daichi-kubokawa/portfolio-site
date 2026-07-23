@@ -176,12 +176,14 @@ export const resonote: Work = {
       title: "プロトタイプ",
       titleFont: "sans",
       body: "プロトタイプでは、オンボーディング、写真選択、ホーム閲覧、投稿編集、投稿完了までを一連の体験として制作しました。見るポイントは、世界観を理解したユーザーが安心して参加し、その瞬間の気持ちを少ない負荷で残せる流れです。",
-      links: [
-        {
-          label: "プロトタイプを見る",
-          href: "https://www.figma.com/proto/kc7VH3FATKduokVWalIj37/RESONOTE_App_UI?node-id=102-697&viewport=392%2C173%2C0.6&t=4sHX6QO2KdXFcAZY-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A697",
-        },
-      ],
+    },
+    {
+      type: "figma",
+      label: "prototype",
+      title: "プロトタイプ",
+      titleFont: "sans",
+      href: "https://www.figma.com/proto/kc7VH3FATKduokVWalIj37/RESONOTE_App_UI?node-id=102-697&viewport=392%2C173%2C0.6&t=4sHX6QO2KdXFcAZY-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A697",
+      device: "mobile",
     },
     {
       type: "text",

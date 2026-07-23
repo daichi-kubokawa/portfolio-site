@@ -21,8 +21,8 @@ export default function AboutPreview() {
                 </p>
               </div>
 
-              <Link href="/about" className={`fontEn ${styles.link}`}>
-                View About
+              <Link href="/about" className={`fontEn ${styles.button}`}>
+                詳しく見る
               </Link>
             </div>
           </div>

@@ -29,7 +29,17 @@ export type WorkContentImage = {
   height: number;
 };
 
-export type WorkContent = WorkContentText | WorkContentImage;
+export type WorkContentFigma = {
+  type: "figma";
+  label?: string;
+  title: string;
+  titleFont?: WorkTitleFont;
+  body?: string;
+  href: string;
+  device: "mobile" | "desktop";
+};
+
+export type WorkContent = WorkContentText | WorkContentImage | WorkContentFigma;
 
 export type WorkSummary = {
   challenge: string;

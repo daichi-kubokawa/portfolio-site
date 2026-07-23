@@ -1,7 +1,8 @@
 .section {
+  width: 100%;
+  max-width: 760px;
   margin-top: var(--space-xl);
   margin-inline: auto;
-  max-width: 760px;
 }
 
 .label {
@@ -32,10 +33,10 @@
 }
 
 .figure {
-  margin-top: var(--space-2xl);
-  margin-inline: auto;
   width: 100%;
   max-width: 960px;
+  margin-top: var(--space-2xl);
+  margin-inline: auto;
 }
 
 .figureButton {
@@ -67,13 +68,19 @@
   text-align: center;
 }
 
+.linkGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: var(--space-lg);
+}
+
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: var(--space-md);
   min-height: 48px;
-  padding: 0 24px;
+  padding-inline: 24px;
   border: 1px solid var(--color-text-subtle);
   font-size: var(--font-size-sm);
   color: var(--color-text);
@@ -85,30 +92,71 @@
 }
 
 .button:hover {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
-  background: rgba(255, 255, 255, 0.45);
+  color: #fff;
+  background: rgb(24, 24, 12);
 }
 
-.linkGroup {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: var(--space-lg);
+.figmaEmbed {
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.figmaEmbed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.mobile {
+  width: min(430px, 100%);
+  height: min(800px, 85vh);
+  min-height: 640px;
+  margin-inline: auto;
+}
+
+.desktop {
+  width: min(1200px, calc(100vw - 48px));
+  aspect-ratio: 1440 / 1024;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (max-width: 1023px) {
   .heading {
     font-size: var(--font-size-h3-tab);
   }
+
+  .desktop {
+    width: calc(100vw - 40px);
+  }
 }
 
 @media (max-width: 767px) {
+  .heading {
+    font-size: var(--font-size-h3-sp);
+  }
+
   .button {
     width: auto;
   }
 
-  .heading {
-    font-size: var(--font-size-h3-sp);
+  .figmaEmbed {
+    margin-top: 24px;
+    border-radius: 12px;
+  }
+
+  .mobile {
+    width: 100%;
+    height: 75vh;
+    min-height: 600px;
+  }
+
+  .desktop {
+    width: calc(100vw - 32px);
+    aspect-ratio: 1440 / 900;
   }
 }

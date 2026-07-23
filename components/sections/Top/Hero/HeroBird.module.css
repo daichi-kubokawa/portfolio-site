@@ -1,0 +1,263 @@
+.iconButton {
+  position: absolute;
+  z-index: 2;
+
+  width: 88px;
+  height: 88px;
+  padding: 0;
+
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  transform: translate3d(-50%, -50%, 0);
+  transform-origin: center;
+
+  will-change: left, top, transform, opacity;
+}
+
+.iconFrame {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  transform-origin: center;
+
+  transition:
+    transform 220ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    filter 220ms ease;
+
+  will-change: transform;
+}
+
+.iconButton:hover:not(.flying):not(.diving):not(.appearing) .iconFrame {
+  transform: translateY(-3px) scale(1.08);
+  filter: brightness(1.05);
+}
+
+.iconButton:active:not(.flying):not(.diving):not(.appearing) .iconFrame {
+  transform: scale(0.98);
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+  border-radius: 50%;
+}
+
+.icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ------------------------- */
+/* 待機中 */
+/* ------------------------- */
+
+.idle .icon {
+  animation: birdFloat 2.8s ease-in-out infinite;
+}
+
+@keyframes birdFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(1deg);
+  }
+}
+
+/* ------------------------- */
+/* 登場 */
+/* ------------------------- */
+
+.appearing {
+  pointer-events: none;
+  animation: birdAppear 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes birdAppear {
+  0% {
+    transform: translate3d(-50%, calc(-50% + 34px), 0) scale(0.2);
+
+    opacity: 0;
+  }
+
+  65% {
+    transform: translate3d(-50%, calc(-50% - 7px), 0) scale(1.08);
+
+    opacity: 1;
+  }
+
+  82% {
+    transform: translate3d(-50%, calc(-50% + 2px), 0) scale(0.98);
+  }
+
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+
+    opacity: 1;
+  }
+}
+
+/* ------------------------- */
+/* 潜る */
+/* ------------------------- */
+
+.diving {
+  pointer-events: none;
+  animation: birdDive 650ms cubic-bezier(0.55, 0, 1, 0.45) both;
+}
+
+@keyframes birdDive {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+
+    opacity: 1;
+  }
+
+  25% {
+    transform: translate3d(-50%, calc(-50% - 5px), 0) scale(1.05);
+
+    opacity: 1;
+  }
+
+  55% {
+    transform: translate3d(-50%, calc(-50% + 8px), 0) scale(0.9, 0.8);
+
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(-50%, calc(-50% + 42px), 0) scale(0.15, 0.05);
+
+    opacity: 0;
+  }
+}
+
+.diving .icon {
+  animation: diveWiggle 320ms ease-in-out;
+}
+
+@keyframes diveWiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  35% {
+    transform: rotate(-7deg);
+  }
+
+  70% {
+    transform: rotate(7deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ------------------------- */
+/* 飛び去る */
+/* ------------------------- */
+
+.flying {
+  pointer-events: none;
+  animation: birdFly 2.6s cubic-bezier(0.3, 0.05, 0.7, 1) forwards;
+}
+
+.flying .icon {
+  animation: birdSpin 2.6s linear forwards;
+}
+
+@keyframes birdFly {
+  from {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(
+        calc(-50% + var(--fly-x)),
+        calc(-50% + var(--fly-y)),
+        0
+      )
+      scale(0.16);
+
+    opacity: 0;
+  }
+}
+
+@keyframes birdSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(var(--fly-spin));
+  }
+}
+
+/* ------------------------- */
+/* 非表示 */
+/* ------------------------- */
+
+.hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* ------------------------- */
+/* 動きを抑える設定 */
+/* ------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .idle .icon {
+    animation: none;
+  }
+
+  .appearing,
+  .diving,
+  .diving .icon,
+  .flying,
+  .flying .icon {
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+  }
+}
+
+/* ------------------------- */
+/* Tablet */
+/* ------------------------- */
+
+@media (max-width: 1023px) {
+  .iconButton {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+/* ------------------------- */
+/* Mobile */
+/* ------------------------- */
+
+@media (max-width: 767px) {
+  .iconButton {
+    width: 52px;
+    height: 52px;
+  }
+
+  .iconButton:hover:not(.flying):not(.diving):not(.appearing) .iconFrame {
+    transform: scale(1.05);
+    filter: none;
+  }
+}

@@ -67,9 +67,8 @@
 }
 
 .button:hover {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
-  background: rgba(255, 255, 255, 0.45);
+  color: #fff;
+  background: rgba(24, 24, 12);
 }
 
 .right {
