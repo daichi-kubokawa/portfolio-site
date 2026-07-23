@@ -34,8 +34,8 @@ export const taskDelivery: Work = {
     },
 
     tools: [
-      { text: "FigJam", font: "en" },
       { text: "Figma", font: "en" },
+      { text: "FigJam", font: "en" },
     ],
 
     links: [

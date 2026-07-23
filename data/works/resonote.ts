@@ -36,7 +36,6 @@ export const resonote: Work = {
       { text: "Figma", font: "en" },
       { text: "FigJam", font: "en" },
       { text: "Illustrator", font: "en" },
-      { text: "Adobe Firefly", font: "en" },
     ],
     award: {
       text: "第3回 Prototyping Contest 2025 最優秀賞",
@@ -138,7 +137,7 @@ export const resonote: Work = {
       alt: "RESONOTEの初回体験から投稿完了までのワイヤーフレーム",
       caption: "初回体験から投稿完了までのワイヤーフレーム",
       width: 3840,
-      height: 1936,
+      height: 1762,
     },
     {
       type: "text",
@@ -153,7 +152,7 @@ export const resonote: Work = {
       alt: "RESONOTEのオンボーディングと初回登録UI",
       caption: "オンボーディングと初回登録UI",
       width: 3840,
-      height: 1572,
+      height: 1310,
     },
     {
       type: "text",
@@ -168,7 +167,7 @@ export const resonote: Work = {
       alt: "RESONOTEの投稿体験とホーム画面UI",
       caption: "投稿体験UI",
       width: 3840,
-      height: 2036,
+      height: 1774,
     },
     {
       type: "text",
