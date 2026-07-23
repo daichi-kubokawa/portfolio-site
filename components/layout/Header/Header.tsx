@@ -56,10 +56,6 @@ export default function Header() {
     mediaQuery.addEventListener("change", handleMediaChange);
     document.body.style.overflow = "hidden";
 
-    if (mediaQuery.matches) {
-      handleClose();
-    }
-
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       mediaQuery.removeEventListener("change", handleMediaChange);

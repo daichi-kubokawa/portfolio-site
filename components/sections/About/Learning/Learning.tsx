@@ -5,7 +5,6 @@ const learningItems = [
     title: "デジタルハリウッド",
     course: "本科 UI/UXデザイン専攻 サービスデザインコース",
     period: "2025.04 - 2026.03 修了",
-    text: "UXリサーチ・情報設計からUI設計・プロトタイピングまでを実践。卒業制作では実在サービスの改善提案を行いました。",
   },
 ];
 
@@ -30,8 +29,6 @@ export default function Learning() {
 
                   <p className={`fontEn ${styles.period}`}>{item.period}</p>
                 </div>
-
-                <p className={styles.text}>{item.text}</p>
               </article>
             ))}
           </div>

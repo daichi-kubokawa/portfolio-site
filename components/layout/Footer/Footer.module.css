@@ -1,6 +1,7 @@
 .root {
   margin-top: var(--space-2xl);
   padding-block: var(--space-lg);
+  background-color: #f4d473;
   border-top: 1px solid var(--color-border);
 }
 
@@ -15,7 +16,7 @@
 
 .copy {
   font-size: var(--font-size-sm);
-  color: var(--color-text-subtle);
+  color: var(--color-text);
 }
 
 .nav {
@@ -27,12 +28,12 @@
 
 .link {
   font-size: var(--font-size-sm);
-  color: var(--color-text-subtle);
+  color: var(--color-text);
   transition: color var(--transition-base);
 }
 
 .link:hover {
-  color: var(--color-text);
+  color: var(--color-text-subtle);
 }
 
 @media (max-width: 767px) {
