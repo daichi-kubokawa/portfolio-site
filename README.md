@@ -1,5 +1,5 @@
 # Daichi Kubokawa Portfolio
 
-窪川大地のポートフォリオサイト（QA Engineer / UI・UX）
+窪川大地のポートフォリオサイト（UI/UX DESIGN | ENGINEERING）
 
 https://www.daichikubokawa.com

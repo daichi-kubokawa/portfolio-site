@@ -8,7 +8,7 @@ export default function Hero() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.copy}>
           <p className={`uppercaseLabel ${styles.eyebrow}`}>
-            UI/UX Design / Engineering
+            UI/UX Design | Engineering
           </p>
 
           <h1 className={`fontEn ${styles.title}`}>
