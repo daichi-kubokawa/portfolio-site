@@ -7,14 +7,13 @@ export default function Hero() {
     <section className={styles.root}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.copy}>
-          <p className={`uppercaseLabel ${styles.eyebrow}`}>
-            UI/UX Design | Engineering
-          </p>
-
           <h1 className={`fontEn ${styles.title}`}>
             <span>DAICHI</span>
             <span>KUBOKAWA</span>
           </h1>
+          <p className={`uppercaseLabel ${styles.eyebrow}`}>
+            UI/UX Design | Engineering
+          </p>
         </div>
       </div>
 
