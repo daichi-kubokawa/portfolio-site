@@ -7,8 +7,8 @@ import { kaguConcierge } from "./kagu-concierge";
 export const works = [
   resonote,
   hiketane,
-  kaguConcierge,
   taskDelivery,
+  kaguConcierge,
   naterra,
   takuroMatsui,
 ];
