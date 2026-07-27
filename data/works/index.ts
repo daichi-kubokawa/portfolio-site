@@ -3,5 +3,12 @@ import { hiketane } from "./hiketane";
 import { resonote } from "./resonote";
 import { naterra } from "./naterra";
 import { takuroMatsui } from "./takuro-matsui";
-
-export const works = [taskDelivery, resonote, hiketane, takuroMatsui, naterra];
+import { kaguConcierge } from "./kagu-concierge";
+export const works = [
+  resonote,
+  hiketane,
+  kaguConcierge,
+  taskDelivery,
+  naterra,
+  takuroMatsui,
+];

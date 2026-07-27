@@ -104,8 +104,9 @@
 .itemAward {
   margin-top: var(--space-xs);
   font-size: var(--font-size-xs);
+  font-weight: bold;
   line-height: 1.7;
-  color: var(--color-text-subtle);
+  color: var(--color-accent);
 }
 
 @media (hover: hover) and (pointer: fine) {

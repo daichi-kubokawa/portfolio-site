@@ -24,7 +24,6 @@
 .thumbnail {
   position: relative;
   width: 100%;
-  max-width: 960px;
   margin-top: var(--space-xl);
   margin-inline: auto;
   aspect-ratio: 16 / 9;
