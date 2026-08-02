@@ -2,7 +2,7 @@ import type { Work } from "@/types/work";
 
 export const adCompass: Work = {
   slug: "ad-compass",
-  title: "AD Compass",
+  title: "AD-Compass",
   titleFont: "sans",
   category: "Product Design",
   description: "UXリサーチから検証・改善まで設計したMVPプロダクト",
