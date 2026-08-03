@@ -10,8 +10,8 @@ export const works = [
   adCompass,
   resonote,
   hiketane,
-  taskDelivery,
   kaguConcierge,
+  taskDelivery,
   naterra,
   takuroMatsui,
 ];
