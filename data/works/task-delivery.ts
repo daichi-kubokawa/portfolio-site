@@ -24,7 +24,7 @@ export const taskDelivery: Work = {
     },
 
     type: {
-      text: "自主制作作品",
+      text: "個人プロジェクト",
       font: "sans",
     },
 
