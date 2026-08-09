@@ -2,11 +2,10 @@ import type { Work } from "@/types/work";
 
 export const productDevelopmentAiWorkflow: Work = {
   slug: "product-development-ai-workflow",
-  title: "AI駆動開発ワークフロー",
+  title: "AI開発ワークフロー",
   titleFont: "sans",
   category: "AI Workflow Design",
-  description:
-    "ヒアリングから仕様化・プロトタイプ制作までをつなぐAI駆動型開発フレームワーク",
+  description: "ヒアリングから仕様化・プロトタイプ制作までをつなぐ開発サイクル",
   thumbnail: "/images/works/product-development-ai-workflow/thumbnail.webp",
 
   summary: {
@@ -80,8 +79,8 @@ export const productDevelopmentAiWorkflow: Work = {
       alt: "AI開発ワークフローの全体構成",
       caption:
         "ヒアリングから仕様化・プロトタイプ制作・レビューまでをつなぐワークフロー",
-      width: 3120,
-      height: 2000,
+      width: 3200,
+      height: 1828,
     },
 
     {
@@ -102,11 +101,11 @@ export const productDevelopmentAiWorkflow: Work = {
 
     {
       type: "image",
-      src: "/images/works/prototyping-agents/detail-agent-architecture.webp",
+      src: "/images/works/prototyping-agents/detail-02.webp",
       alt: "3つのAIエージェントと再利用層・案件層の構成",
       caption: "エージェントや知識を再利用層に、案件ごとの成果物を案件層に分離",
-      width: 1536,
-      height: 864,
+      width: 2816,
+      height: 1536,
     },
 
     {
@@ -119,11 +118,11 @@ export const productDevelopmentAiWorkflow: Work = {
 
     {
       type: "image",
-      src: "/images/works/prototyping-agents/detail-decision-model.webp",
+      src: "/images/works/prototyping-agents/detail-03.webp",
       alt: "プロジェクト情報と判断基準から設計判断を導くAIエージェントの構造",
       caption: "要件・知識・制約をもとに設計を判断し、その根拠をADRとして残す",
-      width: 1536,
-      height: 864,
+      width: 2816,
+      height: 1536,
     },
 
     {
