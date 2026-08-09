@@ -1,5 +1,5 @@
 import { adCompass } from "./ad-compass";
-import { productDevelopmentAiWorkflow } from "./product-development-ai-workflow";
+import { specDrivenPrototyping } from "./spec-driven-prototyping";
 import { taskDelivery } from "./task-delivery";
 import { hiketane } from "./hiketane";
 import { resonote } from "./resonote";
@@ -8,7 +8,7 @@ import { takuroMatsui } from "./takuro-matsui";
 import { kaguConcierge } from "./kagu-concierge";
 
 export const works = [
-  productDevelopmentAiWorkflow,
+  specDrivenPrototyping,
   adCompass,
   resonote,
   hiketane,

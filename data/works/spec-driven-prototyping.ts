@@ -1,12 +1,13 @@
 import type { Work } from "@/types/work";
 
-export const productDevelopmentAiWorkflow: Work = {
-  slug: "product-development-ai-workflow",
-  title: "AI開発ワークフロー",
+export const specDrivenPrototyping: Work = {
+  slug: "spec-driven-prototyping",
+  title: "仕様駆動プロトタイピング",
   titleFont: "sans",
   category: "AI Workflow Design",
-  description: "ヒアリングから仕様化・プロトタイプ制作までをつなぐ開発サイクル",
-  thumbnail: "/images/works/product-development-ai-workflow/thumbnail.webp",
+  description:
+    "顧客との対話中に、判断の根拠を残しながら画面を作るAIワークフロー",
+  thumbnail: "/images/works/spec-driven-prototyping/thumbnail.webp",
 
   summary: {
     challenge:
@@ -75,7 +76,7 @@ export const productDevelopmentAiWorkflow: Work = {
 
     // {
     //   type: "image",
-    //   src: "/images/works/prototyping-agents/detail-01.webp",
+    //   src: "/images/works/spec-driven-prototyping/detail-01.webp",
     //   alt: "AI開発ワークフローの全体構成",
     //   caption:
     //     "ヒアリングから仕様化・プロトタイプ制作・レビューまでをつなぐワークフロー",
@@ -101,7 +102,7 @@ export const productDevelopmentAiWorkflow: Work = {
 
     // {
     //   type: "image",
-    //   src: "/images/works/prototyping-agents/detail-02.webp",
+    //   src: "/images/works/spec-driven-prototyping/detail-02.webp",
     //   alt: "3つのAIエージェントと再利用層・案件層の構成",
     //   caption: "エージェントや知識を再利用層に、案件ごとの成果物を案件層に分離",
     //   width: 2816,
@@ -118,7 +119,7 @@ export const productDevelopmentAiWorkflow: Work = {
 
     // {
     //   type: "image",
-    //   src: "/images/works/prototyping-agents/detail-03.webp",
+    //   src: "/images/works/spec-driven-prototyping/detail-03.webp",
     //   alt: "プロジェクト情報と判断基準から設計判断を導くAIエージェントの構造",
     //   caption: "要件・知識・制約をもとに設計を判断し、その根拠をADRとして残す",
     //   width: 2816,
@@ -130,12 +131,12 @@ export const productDevelopmentAiWorkflow: Work = {
       label: "Quality Gate",
       title: "AIの出力を、そのまま正解にしない",
       titleFont: "sans",
-      body: "AIが生成した内容をそのまま採用せず、確認してから次の工程へ進む仕組みを設けました。\n\n数値で確認できるものは自動検証し、要件や設計の整合性など判断が必要なものは人間がレビューします。\n\n例えばアクセシビリティでは、画面のコントラスト比を自動で計算し、基準を満たしているか確認できるようにしています。",
+      body: "AIが生成した内容をそのまま採用せず、確認してから次の工程へ進む仕組みを設けました。\n\n数値で確認できるものは自動検証し、要件や設計の整合性など判断が必要なものは人間がレビューします。\n\n例えばアクセシビリティでは、画面のコントラスト比を自動で計算し、基準を満たしているか確認できるようにしています。実際にこの検証で、自分が定めたデザイン規約が可読性より優先される書き方になっていた箇所を発見し、規約自体を修正しました。\n\nまた、外部サービスへ渡すファイルに顧客の発言や機密情報が残っていないかも自動検査しています。渡さないと決めたヒアリング記録の内容が、別のファイルへ引用として転記されていた箇所を実際に検出しました。",
     },
 
     // {
     //   type: "image",
-    //   src: "/images/works/prototyping-agents/detail-04.webp",
+    //   src: "/images/works/spec-driven-prototyping/detail-04.webp",
     //   alt: "WCAGコントラスト比を自動検証するスクリプト",
     //   caption: "数値で判定できる品質基準は、AIの自己申告ではなく自動検証",
     //   width: 2342,
@@ -147,12 +148,12 @@ export const productDevelopmentAiWorkflow: Work = {
       label: "Validation",
       title: "実際に動かして、仕組みを改善する",
       titleFont: "sans",
-      body: "設計したワークフローを実際に動かし、生成時間や成果物を検証しました。\n\n初回は21分50秒・866行を要しましたが、処理を分析すると、出力量を制限する指示がAIエージェントまで正しく伝わっていないことが判明しました。\n\n指示する場所と生成範囲を見直した結果、11分31秒・331行まで削減。同一条件で所要時間を約47%、生成量を約62%削減しました。",
+      body: "設計したワークフローを実際に動かし、生成時間や成果物を検証しました。\n\n初回は21分50秒・866行を要しましたが、処理を分析すると、出力量を制限する指示がAIエージェントまで正しく伝わっていないことが判明しました。\n\n指示する場所と生成範囲を見直した結果、11分31秒・331行まで削減。同一の入力で2回計測し、所要時間を約47%、生成量を約62%、エージェント間の受け渡しを約60%削減しました。",
     },
 
     // {
     //   type: "image",
-    //   src: "/images/works/prototyping-agents/detail-03.webp",
+    //   src: "/images/works/spec-driven-prototyping/detail-05.webp",
     //   alt: "AI開発ワークフロー改善前後の比較",
     //   caption: "ワークフロー改善前後：所要時間 約47%削減 / 生成量 約62%削減",
     //   width: 2342,
@@ -164,7 +165,7 @@ export const productDevelopmentAiWorkflow: Work = {
       label: "Output Example",
       title: "ワークフローからプロトタイプへ",
       titleFont: "sans",
-      body: "生成した画面仕様・実文言・デザイントークン・設計判断・非機能要件と専用プロンプトをFigma Makeへ渡し、プロトタイプを生成します。\n\nこれにより、ヒアリングで得た情報が要件・仕様・設計判断を経て、実際の画面まで一貫してつながることを確認しました。",
+      body: "生成した画面仕様・実文言・デザイントークン・設計判断・非機能要件と専用プロンプトをFigma Makeへ渡し、プロトタイプを生成します。\n\n生成されたコードを回収して仕様と照合し、空状態や条件分岐が仕様どおり実装されていること、禁止した実装パターンが混入していないことを確認しました。\n\nヒアリングで得た情報が、要件・仕様・設計判断を経て実際の画面まで一貫してつながることを確認しています。",
       links: [
         {
           label: "ワークフロー全文を見る",
@@ -173,7 +174,14 @@ export const productDevelopmentAiWorkflow: Work = {
       ],
     },
 
-    // ここに実際に生成したプロトタイプ画像を1枚追加推奨
+    // {
+    //   type: "image",
+    //   src: "/images/works/product-development-ai-workflow/detail-06.webp",
+    //   alt: "ワークフローから生成したプロトタイプ画面",
+    //   caption: "仕様・実文言・デザイントークンから生成した実際のプロトタイプ",
+    //   width: 2342,
+    //   height: 1400,
+    // },
 
     {
       type: "text",
