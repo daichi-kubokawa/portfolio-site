@@ -176,7 +176,7 @@ export const specDrivenPrototyping: Work = {
 
     {
       type: "image",
-      src: "/images/works/product-development-ai-workflow/detail-06.webp",
+      src: "/images/works/spec-driven-prototyping/detail-06.webp",
       alt: "ワークフローから生成したプロトタイプ画面",
       caption: "仕様・実文言・デザイントークンから生成した実際のプロトタイプ",
       width: 2101,
