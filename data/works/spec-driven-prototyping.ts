@@ -8,7 +8,7 @@ export const specDrivenPrototyping: Work = {
   description:
     "顧客との対話中に、判断の根拠を残しながら画面を作るAIワークフロー",
   thumbnail: "/images/works/spec-driven-prototyping/thumbnail.webp",
-
+  cardAward: "更新中",
   summary: {
     challenge:
       "顧客との対話をもとにその場でプロトタイプを作るには、スピードだけでなく、要件や設計判断の根拠を残しながら品質を担保する必要がある。",
