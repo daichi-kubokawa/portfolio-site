@@ -174,14 +174,14 @@ export const specDrivenPrototyping: Work = {
       ],
     },
 
-    // {
-    //   type: "image",
-    //   src: "/images/works/product-development-ai-workflow/detail-06.webp",
-    //   alt: "ワークフローから生成したプロトタイプ画面",
-    //   caption: "仕様・実文言・デザイントークンから生成した実際のプロトタイプ",
-    //   width: 2342,
-    //   height: 1400,
-    // },
+    {
+      type: "image",
+      src: "/images/works/product-development-ai-workflow/detail-06.webp",
+      alt: "ワークフローから生成したプロトタイプ画面",
+      caption: "仕様・実文言・デザイントークンから生成した実際のプロトタイプ",
+      width: 2101,
+      height: 1201,
+    },
 
     {
       type: "text",
