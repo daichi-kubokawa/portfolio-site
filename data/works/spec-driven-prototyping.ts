@@ -69,7 +69,7 @@ export const specDrivenPrototyping: Work = {
     {
       type: "text",
       label: "Workflow Design",
-      title: "ヒアリングからプロトタイプまでをつなぐ",
+      title: "ヒアリングからプロトタイプまでつなぐ",
       titleFont: "sans",
       body: "FigJamで整理したヒアリング情報をFigma MCP経由でClaude Codeへ取り込み、ブリーフィングを作成します。\n\nその情報を専門AIエージェントへ引き継ぎ、要件定義書・仕様書・設計判断・Figma Make用プロンプトなどを生成。Figma Makeでプロトタイプへ変換します。\n\n前工程の成果物を次工程の根拠として引き継ぐことで、ヒアリングから画面生成までの情報を一貫してつなぐ構造にしています。",
     },
