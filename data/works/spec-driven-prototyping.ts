@@ -141,7 +141,7 @@ export const specDrivenPrototyping: Work = {
       alt: "WCAGコントラスト比を自動検証するスクリプト",
       caption: "数値で判定できる品質基準は、AIの自己申告ではなく自動検証",
       width: 2342,
-      height: 1072,
+      height: 1126,
     },
 
     {
