@@ -8,7 +8,6 @@ export const specDrivenPrototyping: Work = {
   description:
     "顧客との対話中に、判断の根拠を残しながら画面を作るAIワークフロー",
   thumbnail: "/images/works/spec-driven-prototyping/thumbnail.webp",
-  cardAward: "更新中",
   summary: {
     challenge:
       "顧客との対話をもとにその場でプロトタイプを作るには、スピードだけでなく、要件や設計判断の根拠を残しながら品質を担保する必要がある。",
@@ -74,15 +73,15 @@ export const specDrivenPrototyping: Work = {
       body: "FigJamで整理したヒアリング情報をFigma MCP経由でClaude Codeへ取り込み、ブリーフィングを作成します。\n\nその情報を専門AIエージェントへ引き継ぎ、要件定義書・仕様書・設計判断・Figma Make用プロンプトなどを生成。Figma Makeでプロトタイプへ変換します。\n\n前工程の成果物を次工程の根拠として引き継ぐことで、ヒアリングから画面生成までの情報を一貫してつなぐ構造にしています。",
     },
 
-    // {
-    //   type: "image",
-    //   src: "/images/works/spec-driven-prototyping/detail-01.webp",
-    //   alt: "AI開発ワークフローの全体構成",
-    //   caption:
-    //     "ヒアリングから仕様化・プロトタイプ制作・レビューまでをつなぐワークフロー",
-    //   width: 3200,
-    //   height: 1828,
-    // },
+    {
+      type: "image",
+      src: "/images/works/spec-driven-prototyping/detail-01.webp",
+      alt: "AI開発ワークフローの全体構成",
+      caption:
+        "ヒアリングから仕様化・プロトタイプ制作・レビューまでをつなぐワークフロー",
+      width: 3200,
+      height: 1828,
+    },
 
     {
       type: "text",
@@ -100,14 +99,14 @@ export const specDrivenPrototyping: Work = {
       body: "AIエージェントは、要件・設計・検証の3つの役割に分けました。\n\n役割を細かく分けすぎると受け渡しが増えるため、必要な責務を整理して3つに集約しています。\n\nまた、エージェントや知識を持つ「再利用層」と、案件ごとの要件定義書や仕様書を持つ「案件層」を分離し、別のプロジェクトでも再利用できる構造にしました。",
     },
 
-    // {
-    //   type: "image",
-    //   src: "/images/works/spec-driven-prototyping/detail-02.webp",
-    //   alt: "3つのAIエージェントと再利用層・案件層の構成",
-    //   caption: "エージェントや知識を再利用層に、案件ごとの成果物を案件層に分離",
-    //   width: 2816,
-    //   height: 1536,
-    // },
+    {
+      type: "image",
+      src: "/images/works/spec-driven-prototyping/detail-02.webp",
+      alt: "3つのAIエージェントと再利用層・案件層の構成",
+      caption: "エージェントや知識を再利用層に、案件ごとの成果物を案件層に分離",
+      width: 2816,
+      height: 1536,
+    },
 
     {
       type: "text",
@@ -117,14 +116,14 @@ export const specDrivenPrototyping: Work = {
       body: "AIエージェントには、特定の配色やレイアウトといった「正解」をあらかじめ持たせていません。\n\n代わりに、UIデザインやアクセシビリティなどのベストプラクティスを判断基準として参照し、案件の要件や利用文脈から設計を導く構造にしました。\n\n例えば、夜間利用ではダークUI、屋外利用ではライトUIというように、同じ判断基準から利用文脈に応じた設計を導き、その理由も記録します。",
     },
 
-    // {
-    //   type: "image",
-    //   src: "/images/works/spec-driven-prototyping/detail-03.webp",
-    //   alt: "プロジェクト情報と判断基準から設計判断を導くAIエージェントの構造",
-    //   caption: "要件・知識・制約をもとに設計を判断し、その根拠をADRとして残す",
-    //   width: 2816,
-    //   height: 1536,
-    // },
+    {
+      type: "image",
+      src: "/images/works/spec-driven-prototyping/detail-03.webp",
+      alt: "プロジェクト情報と判断基準から設計判断を導くAIエージェントの構造",
+      caption: "要件・知識・制約をもとに設計を判断し、その根拠をADRとして残す",
+      width: 2816,
+      height: 1536,
+    },
 
     {
       type: "text",
@@ -134,14 +133,14 @@ export const specDrivenPrototyping: Work = {
       body: "AIが生成した内容をそのまま採用せず、確認してから次の工程へ進む仕組みを設けました。\n\n数値で確認できるものは自動検証し、要件や設計の整合性など判断が必要なものは人間がレビューします。\n\n例えばアクセシビリティでは、画面のコントラスト比を自動で計算し、基準を満たしているか確認できるようにしています。実際にこの検証で、自分が定めたデザイン規約が可読性より優先される書き方になっていた箇所を発見し、規約自体を修正しました。\n\nまた、外部サービスへ渡すファイルに顧客の発言や機密情報が残っていないかも自動検査しています。渡さないと決めたヒアリング記録の内容が、別のファイルへ引用として転記されていた箇所を実際に検出しました。",
     },
 
-    // {
-    //   type: "image",
-    //   src: "/images/works/spec-driven-prototyping/detail-04.webp",
-    //   alt: "WCAGコントラスト比を自動検証するスクリプト",
-    //   caption: "数値で判定できる品質基準は、AIの自己申告ではなく自動検証",
-    //   width: 2342,
-    //   height: 1200,
-    // },
+    {
+      type: "image",
+      src: "/images/works/spec-driven-prototyping/detail-04.webp",
+      alt: "WCAGコントラスト比を自動検証するスクリプト",
+      caption: "数値で判定できる品質基準は、AIの自己申告ではなく自動検証",
+      width: 2342,
+      height: 1200,
+    },
 
     {
       type: "text",
@@ -151,14 +150,14 @@ export const specDrivenPrototyping: Work = {
       body: "設計したワークフローを実際に動かし、生成時間や成果物を検証しました。\n\n初回は21分50秒・866行を要しましたが、処理を分析すると、出力量を制限する指示がAIエージェントまで正しく伝わっていないことが判明しました。\n\n指示する場所と生成範囲を見直した結果、11分31秒・331行まで削減。同一の入力で2回計測し、所要時間を約47%、生成量を約62%、エージェント間の受け渡しを約60%削減しました。",
     },
 
-    // {
-    //   type: "image",
-    //   src: "/images/works/spec-driven-prototyping/detail-05.webp",
-    //   alt: "AI開発ワークフロー改善前後の比較",
-    //   caption: "ワークフロー改善前後：所要時間 約47%削減 / 生成量 約62%削減",
-    //   width: 2342,
-    //   height: 1400,
-    // },
+    {
+      type: "image",
+      src: "/images/works/spec-driven-prototyping/detail-05.webp",
+      alt: "AI開発ワークフロー改善前後の比較",
+      caption: "ワークフロー改善前後：所要時間 約47%削減 / 生成量 約62%削減",
+      width: 2342,
+      height: 1400,
+    },
 
     {
       type: "text",
