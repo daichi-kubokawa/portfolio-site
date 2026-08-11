@@ -170,11 +170,11 @@ export const specDrivenPrototyping: Work = {
       body: "生成した画面仕様・実文言・デザイントークン・設計判断・非機能要件と専用プロンプトをFigma Makeへ渡し、プロトタイプを生成します。\n\n生成されたコードを仕様と照合し、空状態や条件分岐が仕様どおり実装されていること、禁止した実装パターンが混入していないことを確認しました。\n\nヒアリングで得た情報が、要件・仕様・設計判断を経て実際の画面まで一貫してつながることを確認しています。",
       links: [
         {
-          label: "プロトタイプ(light)を見る",
+          label: "プロトタイプ（ライト版）を見る",
           href: "https://appeal-slush-81841099.figma.site",
         },
         {
-          label: "プロトタイプ(dark)を見る",
+          label: "プロトタイプ（ダーク版）を見る",
           href: "https://swear-brave-80703018.figma.site",
         },
         {
@@ -189,7 +189,7 @@ export const specDrivenPrototyping: Work = {
       src: "/images/works/spec-driven-prototyping/detail-06.webp",
       alt: "ワークフローから生成したプロトタイプ画面",
       caption:
-        "仕様・実文言・デザイントークンから生成した実際のプロトタイプ（light）",
+        "仕様・実文言・デザイントークンから生成した実際のプロトタイプ（ライト版）",
       width: 3250,
       height: 2122,
     },
@@ -199,7 +199,7 @@ export const specDrivenPrototyping: Work = {
       src: "/images/works/spec-driven-prototyping/detail-07.webp",
       alt: "ワークフローから生成したプロトタイプ画面",
       caption:
-        "仕様・実文言・デザイントークンから生成した実際のプロトタイプ（dark）",
+        "仕様・実文言・デザイントークンから生成した実際のプロトタイプ（ダーク版）",
       width: 3250,
       height: 2122,
     },
