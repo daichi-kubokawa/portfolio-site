@@ -1,8 +1,10 @@
 .root {
-  scroll-margin-top: 80px;
-  margin-top: var(--space-2xl);
+  position: relative;
+  overflow: hidden;
+  /* margin-top: var(--space-2xl); */
+  padding: 40px 0px 80px;
+  background-color: #f4d57050;
 }
-
 .heading {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;

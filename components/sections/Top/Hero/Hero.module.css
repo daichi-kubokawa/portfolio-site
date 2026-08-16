@@ -3,13 +3,20 @@
   display: flex;
   align-items: center;
   padding-top: 180px;
-  padding-bottom: 56px;
+  padding-bottom: 120px;
   overflow: clip;
 }
+
+/* =========================
+   Bird
+========================= */
 
 .birdArea {
   position: absolute;
   inset: 80px 0 0;
+
+  z-index: 1;
+
   pointer-events: none;
 }
 
@@ -17,50 +24,141 @@
   pointer-events: auto;
 }
 
+/* =========================
+   Layout
+========================= */
+
 .inner {
+  position: relative;
+  z-index: 2;
+
   display: flex;
   justify-content: center;
 }
 
 .copy {
-  position: relative;
-  z-index: 1;
   width: 100%;
   max-width: 760px;
+
   text-align: center;
+
   pointer-events: none;
 }
 
-.eyebrow {
-  font-size: var(--font-size-sm);
-  font-weight: bold;
-  color: var(--color-text-label);
-}
+/* =========================
+   Title
+========================= */
 
 .title {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   margin-inline: auto;
+
   font-size: clamp(3rem, 8vw, 6rem);
   line-height: 0.95;
   letter-spacing: 0.01em;
+
   text-align: center;
 }
 
-.description {
-  margin-top: var(--space-md);
-  margin-inline: auto;
-  font-size: var(--font-size-sm);
-  line-height: 1.8;
-  color: var(--color-text-subtle);
-  text-wrap: balance;
+/*
+ * 各行から文字が立ち上がってくるように
+ * はみ出した部分を隠す
+ */
+.line {
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding-bottom: 0.06em;
 }
+
+/* =========================
+   Character
+========================= */
+
+.char {
+  display: inline-block;
+
+  color: inherit;
+
+  opacity: 0;
+
+  transform: translate3d(0, 0.55em, 0);
+
+  animation: charReveal 0.72s cubic-bezier(0.16, 1, 0.3, 1) var(--char-delay)
+    both;
+
+  will-change: transform, opacity;
+}
+
+/* =========================
+   Eyebrow
+========================= */
+
+.eyebrow {
+  margin-top: 8px;
+
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+
+  color: var(--color-text-label);
+
+  opacity: 0;
+
+  transform: translateY(8px);
+
+  animation: eyebrowReveal 0.75s cubic-bezier(0.16, 1, 0.3, 1)
+    var(--eyebrow-delay) both;
+}
+
+/* =========================
+   Character Reveal
+========================= */
+
+@keyframes charReveal {
+  from {
+    opacity: 0;
+
+    transform: translate3d(0, 0.55em, 0);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* =========================
+   Eyebrow Reveal
+========================= */
+
+@keyframes eyebrowReveal {
+  from {
+    opacity: 0;
+
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Tablet
+========================= */
 
 @media (max-width: 1023px) {
   .root {
     padding-top: 170px;
-    padding-bottom: 48px;
+    padding-bottom: 100px;
   }
 
   .title {
@@ -68,13 +166,36 @@
   }
 }
 
+/* =========================
+   Mobile
+========================= */
+
 @media (max-width: 767px) {
   .root {
     padding-top: 140px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
 
   .title {
     font-size: var(--font-size-h1-sp);
+  }
+
+  .birdArea {
+    inset: 60px 0 0;
+  }
+}
+
+/* =========================
+   Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .char,
+  .eyebrow {
+    opacity: 1;
+
+    transform: none;
+
+    animation: none;
   }
 }

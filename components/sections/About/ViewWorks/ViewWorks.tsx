@@ -12,10 +12,11 @@ export default function ViewWorks() {
           </div>
 
           <p className={styles.text}>
-            業務改善、体験設計、サービスデザインを中心に、課題設定からUI設計・プロトタイピングまで取り組んだ制作事例を掲載しています。
+            業務課題やユーザー課題を起点に、課題整理・仮説設計・要件整理・UI/UX設計・プロトタイピングまで取り組んだ事例を掲載しています。
+            アウトプットだけでなく、どのように課題を捉え、判断し、検証したかというプロセスもまとめています。
           </p>
 
-          <Link href="/#works" className={`${styles.button}`}>
+          <Link href="/#works" className={styles.button}>
             制作事例を見る
           </Link>
         </div>
