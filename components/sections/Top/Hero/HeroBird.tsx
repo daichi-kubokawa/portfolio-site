@@ -192,16 +192,16 @@ export default function HeroBird() {
    * Effect本体で同期的にsetStateしない。
    */
   useEffect(() => {
-    const frameId = window.requestAnimationFrame(() => {
+    const timerId = window.setTimeout(() => {
       const initialPosition = getRandomPosition();
 
       positionRef.current = initialPosition;
       setPosition(initialPosition);
       setStatus("appearing");
-    });
+    }, 1500);
 
     return () => {
-      window.cancelAnimationFrame(frameId);
+      window.clearTimeout(timerId);
     };
   }, []);
 

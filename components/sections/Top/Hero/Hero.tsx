@@ -4,14 +4,14 @@ import styles from "./Hero.module.css";
 
 const name = ["DAICHI", "KUBOKAWA"];
 
-const CHAR_START_DELAY = 0.15;
-const CHAR_INTERVAL = 0.1;
-const CHAR_DURATION = 0.22;
+const CHAR_START_DELAY = 0.5;
+const CHAR_INTERVAL = 0.05;
+const CHAR_DURATION = 0.05;
 
 const totalChars = name.join("").length;
 
 const eyebrowDelay =
-  CHAR_START_DELAY + (totalChars - 1) * CHAR_INTERVAL + CHAR_DURATION + 0.18;
+  CHAR_START_DELAY + (totalChars - 1) * CHAR_INTERVAL + CHAR_DURATION + 0.4;
 
 export default function Hero() {
   let charIndex = 0;
