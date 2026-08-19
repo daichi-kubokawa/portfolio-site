@@ -25,6 +25,7 @@
 }
 
 .link {
+  font-weight: bold;
   font-size: var(--font-size-sm);
   letter-spacing: 0.04em;
   color: var(--color-text);

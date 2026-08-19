@@ -37,7 +37,7 @@
 .navTitle {
   font-size: var(--font-size-sm);
   line-height: var(--line-height-tight);
-  color: var(--color-text-label);
+  color: var(--color-text);
 }
 
 .navDirection {
@@ -46,7 +46,7 @@
   gap: 0.4em;
   font-size: var(--font-size-sm);
   letter-spacing: 0.12em;
-  color: var(--color-text-subtle);
+  color: var(--color-text);
 }
 
 .navIcon {
