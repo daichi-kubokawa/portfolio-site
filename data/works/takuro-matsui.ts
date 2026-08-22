@@ -7,7 +7,7 @@ export const takuroMatsui: Work = {
   category: "Web Design",
   description: "作品・実績・問い合わせ導線を整理したクライアントワーク",
   thumbnail: "/images/works/takuro-matsui/thumbnail.webp",
-  cardAward: "制作中",
+  cardAward: "Client Work",
   summary: {
     challenge:
       "依頼検討者が作風・実績・依頼可否・連絡先を短時間で判断でき、クライアント本人も作品を継続更新できる状態にすること。",
@@ -24,7 +24,7 @@ export const takuroMatsui: Work = {
     },
 
     type: {
-      text: "クライアントワーク / 一部更新中",
+      text: "クライアントワーク / 公開済み",
       font: "sans",
     },
 
@@ -45,7 +45,7 @@ export const takuroMatsui: Work = {
       label: "Overview",
       title: "サイト概要",
       titleFont: "sans",
-      body: "イラストレーター Takuro Matsui 氏の作品・プロフィール・問い合わせ導線を整理したポートフォリオサイトです。依頼検討者が作風・制作実績・依頼可否・連絡先を短時間で確認できる構成にしました。\n\n現在はWeb公開済みで、作品データや一部素材はクライアント側で更新中です。作品の見せ方と公開後の更新しやすさの両立を重視しています。",
+      body: "イラストレーター Takuro Matsui 氏の作品・プロフィール・問い合わせ導線を整理したポートフォリオサイトです。依頼検討者が作風・制作実績・依頼可否・連絡先を短時間で確認できる構成にしました。\n\nWeb公開後もクライアント本人が作品を継続的に追加・更新できるよう、CMSを含めた運用設計まで行っています。作品の見せ方と公開後の更新しやすさの両立を重視しました。",
     },
     {
       type: "text",
@@ -116,10 +116,10 @@ export const takuroMatsui: Work = {
     },
     {
       type: "text",
-      label: "Next",
-      title: "今後の改善",
+      label: "Improvement",
+      title: "公開後の改善",
       titleFont: "sans",
-      body: "今後は、クライアント側の作品データ更新に合わせて、Aboutページで伝える制作姿勢、依頼可能な内容、Contact導線の分かりやすさをさらに調整していく予定です。\n\n公開後は、作品一覧から作品詳細への遷移、問い合わせ前に必要な情報へ到達できるか、クライアント本人がCMSで作品を追加しやすいかを確認します。",
+      body: "公開後は、クライアントによる作品追加や運用状況を確認しながら、Aboutページで伝える制作姿勢や依頼可能な内容、Contact導線の分かりやすさを継続的に改善していきます。\n\nあわせて、作品一覧から作品詳細への遷移や、問い合わせ前に必要な情報へ到達しやすいか、クライアント本人がCMSで迷わず作品を追加できるかを確認し、必要に応じて調整します。",
     },
     {
       type: "text",

@@ -8,12 +8,12 @@ import { takuroMatsui } from "./takuro-matsui";
 import { kaguConcierge } from "./kagu-concierge";
 
 export const works = [
-  specDrivenPrototyping,
-  adCompass,
   resonote,
+  specDrivenPrototyping,
+  takuroMatsui,
+  adCompass,
   hiketane,
   kaguConcierge,
   taskDelivery,
   naterra,
-  takuroMatsui,
 ];
