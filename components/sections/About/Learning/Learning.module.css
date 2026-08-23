@@ -67,7 +67,7 @@
 .period {
   flex-shrink: 0;
   font-size: var(--font-size-sm);
-  color: var(--color-text-label);
+  color: var(--color-text);
 }
 
 @media (max-width: 1023px) {
