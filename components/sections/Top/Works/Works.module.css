@@ -2,10 +2,11 @@
   position: relative;
   overflow: hidden;
   /* margin-top: var(--space-2xl); */
-  padding: 40px 0px 80px;
+  padding: 40px 0px 120px;
   background-color: #f4d57050;
 }
 .heading {
+  padding-top: var(--space-lg);
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap: var(--space-xl);

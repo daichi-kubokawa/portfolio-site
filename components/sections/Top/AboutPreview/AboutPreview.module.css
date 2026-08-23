@@ -1,5 +1,6 @@
 .root {
-  margin-top: var(--space-2xl);
+  /* margin-top: var(--space-2xl); */
+  padding: 40px 0px 40px;
 }
 
 .inner {
