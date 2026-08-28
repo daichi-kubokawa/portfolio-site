@@ -8,8 +8,8 @@ import { kaguConcierge } from "./kagu-concierge";
 import { adCompass } from "./ad-compass";
 
 export const works = [
-  resonote,
   specDrivenPrototyping,
+  resonote,
   takuroMatsui,
   adCompass,
   hiketane,
