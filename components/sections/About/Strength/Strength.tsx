@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./Strength.module.css";
 
 const strengths = [
@@ -11,11 +14,21 @@ const strengths = [
   },
   {
     title: "仮説を形にして検証する",
-    text: "課題設定から仮説を立て、UI/UX設計やプロトタイピングを通じて、早い段階で具体的な形にします。生成AIも活用しながら検証可能な状態まで落とし込み、フィードバックをもとに改善を重ねることで、考えるだけで終わらせず次の判断につなげます。",
+    text: "課題設定から仮説を立て、情報整理やUI/UX設計、プロトタイピングなどを通じて、早い段階で具体的な形にします。生成AIも活用しながら検証可能な状態まで落とし込み、フィードバックをもとに改善を重ねることで、考えるだけで終わらせず次の判断につなげます。",
   },
 ];
 
 export default function Strength() {
+  const [openItems, setOpenItems] = useState<boolean[]>(
+    strengths.map(() => false),
+  );
+
+  const handleToggle = (index: number) => {
+    setOpenItems((current) =>
+      current.map((isOpen, i) => (i === index ? !isOpen : isOpen)),
+    );
+  };
+
   return (
     <section className={styles.root}>
       <div className="container">
@@ -26,12 +39,41 @@ export default function Strength() {
           </div>
 
           <div className={styles.list}>
-            {strengths.map((strength) => (
-              <article key={strength.title} className={styles.item}>
-                <h3 className={styles.itemTitle}>{strength.title}</h3>
-                <p className={styles.text}>{strength.text}</p>
-              </article>
-            ))}
+            {strengths.map((strength, index) => {
+              const isOpen = openItems[index];
+
+              return (
+                <article key={strength.title} className={styles.item}>
+                  <button
+                    type="button"
+                    className={styles.cardButton}
+                    onClick={() => handleToggle(index)}
+                    aria-expanded={isOpen}
+                  >
+                    <div className={styles.cardHeader}>
+                      <h3 className={styles.itemTitle}>{strength.title}</h3>
+
+                      <span
+                        className={`${styles.icon} ${
+                          isOpen ? styles.iconOpen : ""
+                        }`}
+                        aria-hidden="true"
+                      />
+                    </div>
+
+                    <div
+                      className={`${styles.content} ${
+                        isOpen ? styles.contentOpen : ""
+                      }`}
+                    >
+                      <div className={styles.contentInner}>
+                        <p className={styles.text}>{strength.text}</p>
+                      </div>
+                    </div>
+                  </button>
+                </article>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -9,11 +9,11 @@ import { adCompass } from "./ad-compass";
 
 export const works = [
   specDrivenPrototyping,
+  taskDelivery,
   resonote,
-  takuroMatsui,
   adCompass,
   hiketane,
   kaguConcierge,
-  taskDelivery,
+  takuroMatsui,
   naterra,
 ];
