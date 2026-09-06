@@ -44,7 +44,7 @@ export const naterra: Work = {
     links: [
       {
         label: "サイトを見る",
-        href: "https://daichi-kubokawa.github.io/naterra-site/",
+        href: "https://daichi-kubokawa.github.io/naterra-site",
       },
       {
         label: "プロトタイプを見る",
@@ -131,7 +131,7 @@ export const naterra: Work = {
       links: [
         {
           label: "サイトを見る",
-          href: "https://daichi-kubokawa.github.io/naterra-site/",
+          href: "https://daichi-kubokawa.github.io/naterra-site",
         },
       ],
     },

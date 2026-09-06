@@ -37,6 +37,12 @@ export const takuroMatsui: Work = {
       { text: "Figma", font: "en" },
       { text: "microCMS", font: "en" },
     ],
+    links: [
+      {
+        label: "サイトを見る",
+        href: "https://takuromatsui.com",
+      },
+    ],
   },
 
   content: [
@@ -120,6 +126,12 @@ export const takuroMatsui: Work = {
       title: "公開後の改善",
       titleFont: "sans",
       body: "公開後は、クライアントによる作品追加や運用状況を確認しながら、Aboutページで伝える制作姿勢や依頼可能な内容、Contact導線の分かりやすさを継続的に改善しています。\n\nあわせて、作品一覧から作品詳細への遷移や、問い合わせ前に必要な情報へ到達しやすいか、クライアント本人がCMSで迷わず作品を追加できるかを確認し、必要に応じて調整しています。",
+      links: [
+        {
+          label: "サイトを見る",
+          href: "https://takuromatsui.com",
+        },
+      ],
     },
     {
       type: "text",
