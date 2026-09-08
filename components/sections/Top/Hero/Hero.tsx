@@ -54,7 +54,7 @@ export default function Hero() {
               } as CSSProperties
             }
           >
-            Design | Engineering
+            UI/UX Design | Engineering
           </p>
         </div>
       </div>
