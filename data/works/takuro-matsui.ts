@@ -29,7 +29,7 @@ export const takuroMatsui: Work = {
     },
 
     time: {
-      text: "2026/03 - 現在",
+      text: "2026/03 - 07",
       font: "en",
     },
 
