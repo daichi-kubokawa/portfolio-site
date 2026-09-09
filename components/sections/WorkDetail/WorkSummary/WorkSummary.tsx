@@ -117,6 +117,30 @@ export default function WorkSummary({ summary }: Props) {
             />
           </div>
         )}
+
+        {summary.featured && (
+          <div className={styles.metaItem}>
+            <p className={`uppercaseLabel ${styles.metaLabel}`}>Featured</p>
+
+            <p className={`fontSans ${styles.metaText}`}>
+              {summary.featured.text}
+            </p>
+
+            <div className={styles.featuredLinks}>
+              {summary.featured.links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`fontSans ${styles.metaLink}`}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

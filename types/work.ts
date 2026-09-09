@@ -11,6 +11,11 @@ export type WorkLink = {
   href: string;
 };
 
+export type WorkFeatured = {
+  text: string;
+  links: WorkLink[];
+};
+
 export type WorkContentText = {
   type: "text";
   label?: string;
@@ -49,6 +54,7 @@ export type WorkSummary = {
   tools: WorkTextValue[];
   type?: WorkTextValue;
   award?: WorkTextValue;
+  featured?: WorkFeatured;
   links?: WorkLink[];
 };
 
